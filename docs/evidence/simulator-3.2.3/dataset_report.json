@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "dataset_id": "mujoco/halfcheetah/medium-v0",
+  "total_episodes": 1000,
+  "total_transitions": 1000000,
+  "observation_dim": 17,
+  "action_dim": 6,
+  "source": {
+    "author": [
+      "Kallinteris Andreas"
+    ],
+    "algorithm_name": "SB3/TQC",
+    "code_permalink": "https://github.com/Farama-Foundation/minari-dataset-generation-scripts",
+    "license": null
+  },
+  "dataset_minari_version": "0.5.2",
+  "collection_requirements": [
+    "mujoco==3.2.3",
+    "gymnasium>=1.0.0"
+  ],
+  "env_spec": {
+    "id": "HalfCheetah-v5",
+    "entry_point": "gymnasium.envs.mujoco.half_cheetah_v5:HalfCheetahEnv",
+    "reward_threshold": 4800.0,
+    "nondeterministic": false,
+    "max_episode_steps": 1000,
+    "order_enforce": true,
+    "disable_env_checker": false,
+    "kwargs": {},
+    "additional_wrappers": [],
+    "vector_entry_point": null
+  },
+  "preprocessing": {
+    "dataset_id": "mujoco/halfcheetah/medium-v0",
+    "observation_dim": 17,
+    "action_dim": 6,
+    "action_low": [
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0,
+      -1.0
+    ],
+    "action_high": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "observation_mean": [
+      -0.08752820640802383,
+      0.8580684661865234,
+      0.11859600991010666,
+      -0.07897203415632248,
+      0.07625232636928558,
+      0.11698107421398163,
+      -0.011801321990787983,
+      -0.012824047356843948,
+      12.426920890808105,
+      -0.0034524938091635704,
+      0.014330502599477768,
+      0.3538106381893158,
+      -0.646164059638977,
+      -0.5256288647651672,
+      0.22116857767105103,
+      -0.4036727249622345,
+      -0.15252946317195892
+    ],
+    "observation_std": [
+      0.11288000643253326,
+      2.825707197189331,
+      0.5606412291526794,
+      0.5305331349372864,
+      0.4228619337081909,
+      0.42985695600509644,
+      0.558085560798645,
+      0.35214102268218994,
+      4.746859550476074,
+      0.88926100730896,
+      1.9102500677108765,
+      11.640573501586914,
+      12.601263046264648,
+      8.492234230041504,
+      10.768314361572266,
+      11.246268272399902,
+      7.584863185882568
+    ],
+    "reward_scale": 1.0,
+    "reward_shift": 0.0,
+    "observation_std_floor": 0.001,
+    "normalization_fit": "offline observations[:-1]; float64 accumulation; population std",
+    "reward_transform": "reward * 1.0 + 0.0 (unchanged)"
+  },
+  "statistics": {
+    "raw_reward": {
+      "min": -3.1578145027160645,
+      "max": 17.46031951904297,
+      "mean": 12.089210357724298,
+      "std": 4.696550681556494
+    },
+    "raw_episode_return": {
+      "min": 234.62614191055764,
+      "max": 14238.905068591237,
+      "mean": 12089.210357724303,
+      "std": 3008.9488621615815
+    },
+    "episode_length": {
+      "min": 1000.0,
+      "max": 1000.0,
+      "mean": 1000.0,
+      "std": 0.0
+    },
+    "terminated_transitions": 0,
+    "truncated_transitions": 1000,
+    "partial_episodes": 0
+  },
+  "config": {
+    "env_id": "HalfCheetah-v5",
+    "dataset_id": "mujoco/halfcheetah/medium-v0",
+    "observation_dim": 17,
+    "action_dim": 6,
+    "discount": 0.99,
+    "expectile": 0.7,
+    "inverse_temperature": 3.0,
+    "max_weight": 100.0,
+    "target_tau": 0.005,
+    "learning_rate": 0.0003,
+    "batch_size": 256,
+    "total_steps": 500000,
+    "eval_interval": 5000,
+    "checkpoint_interval": 50000,
+    "seed": 0,
+    "device": "cpu",
+    "eval_episodes": 10,
+    "eval_seed": 10000,
+    "output_dir": "results"
+  },
+  "source_commit": "1cf763410ce8d9af357d0c5051b3fde779198f69",
+  "source_has_local_changes": false,
+  "source_files_sha256": {
+    "dataset.py": "696ee025910d4bf627d0764476202fa0f36c0e62f34bf0074fb148b751cfb180",
+    "environment.py": "bcab737f73d849e24366d159eaf1964cee28bfcfd68a46220e2f7287c706d03c",
+    "check_dataset.py": "29abe80206609d1a7b82fc393419d96b8032e85adfebfec9e522d0e9b4445fd2",
+    "halfcheetah.toml": "d014ce8f434b75c413723dcc9880456d679323227c62f1140270dafc821bb58f"
+  },
+  "data_files_sha256": {
+    "main_data.hdf5": "db46045497395bc621f2b409089e495f0e51a1182e6257f2f319f7d6654f66c5"
+  },
+  "seed": 0,
+  "versions": {
+    "numpy": "2.2.6",
+    "minari": "0.5.3",
+    "gymnasium": "1.2.2",
+    "mujoco": "3.2.3",
+    "torch": "2.7.1+cpu"
+  },
+  "python_version": "3.11.15",
+  "recovered_env_spec": {
+    "id": "HalfCheetah-v5",
+    "entry_point": "gymnasium.envs.mujoco.half_cheetah_v5:HalfCheetahEnv",
+    "reward_threshold": 4800.0,
+    "nondeterministic": false,
+    "max_episode_steps": 1000,
+    "order_enforce": true,
+    "disable_env_checker": false,
+    "kwargs": {
+      "render_mode": null
+    },
+    "additional_wrappers": [],
+    "vector_entry_point": null
+  },
+  "checks": {
+    "all_transitions_validated": true,
+    "seeded_sampling": true,
+    "env_steps": 10
+  },
+  "elapsed_seconds": 2.0266077000414953
+}
