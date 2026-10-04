@@ -39,8 +39,10 @@ error. Retrying with `--installer uv` succeeded with the same pinned build
 dependencies. The Linux GitHub workflow remains unchanged and reports its own
 status on the PR; local success does not stand in for CI success.
 
-See [the handoff](../../ENVIRONMENT_DATASET.md) for the MuJoCo 3.2.3 collection
-versus 3.3.7 runtime warning and undeclared dataset license. Only the small JSON
+This original report used MuJoCo 3.3.7. The current pin is now 3.2.3, matching
+collection metadata; see [simulator compatibility](../../SIMULATOR_COMPATIBILITY.md)
+for subsequent verification. The original report and its checksum are preserved.
+See [the handoff](../../ENVIRONMENT_DATASET.md) for the undeclared dataset license. Only the small JSON
 report is published; the dataset, cache, build files and other generated artifacts
 remain ignored. Shared API signatures are unchanged; the Person 2 notebook
 sections use the public package API and contain no executed outputs.

@@ -12,7 +12,7 @@ dependencies = [
   "numpy==2.2.6",
   "torch==2.7.1",
   "gymnasium[mujoco,other]==1.2.2",
-  "mujoco==3.3.7",
+  "mujoco==3.2.3",
   "minari[hdf5,gcs,hf]==0.5.3",
   "h5py==3.14.0",
   "typer==0.12.5",

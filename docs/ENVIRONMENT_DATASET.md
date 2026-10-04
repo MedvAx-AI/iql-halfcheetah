@@ -148,11 +148,14 @@ version: 0.5.2. **Dataset license is not declared in the downloaded metadata or
 mirror's dataset card**; `source.license` is recorded as `null`. A collection-code
 license must not be treated as a dataset license.
 
-**Version limitation:** metadata requires `mujoco==3.2.3` and `gymnasium>=1.0.0`.
-Recovery under the team's pinned MuJoCo 3.3.7 emits Minari's version warning and
-passes the reset/step check. EnvSpec kwargs/horizon match, but identical simulator
-numerics to data collection are not claimed. The lead should resolve the shared
-dependency choice before reporting reproducible training/evaluation results.
+**Simulator version decision:** metadata requires `mujoco==3.2.3` and `gymnasium>=1.0.0`.
+The team's dependency pin is now MuJoCo **3.2.3**, matching that requirement.
+Run `uv sync --frozen --extra dev --extra notebook` to update an existing environment.
+Person 2's original report above used the earlier 3.3.7 runtime and its version
+warning; that report is historical evidence and has not been rewritten.
+See [simulator compatibility](SIMULATOR_COMPATIBILITY.md) for the version decision
+and subsequent verification. Matching the engine requirement does not itself prove
+bitwise trajectory parity with the original collector's full software stack.
 Rendering/video and learner updates remain their respective owners' acceptance work.
 
 ## Tests

@@ -20,7 +20,7 @@ No trained agent, measured agent return or completed course demo is supplied at 
 
 ## Chosen stack
 
-Python **3.11**; PyTorch **2.7.1**; Gymnasium **1.2.2**; MuJoCo **3.3.7**;
+Python **3.11**; PyTorch **2.7.1**; Gymnasium **1.2.2**; MuJoCo **3.2.3**;
 Minari **0.5.3**. Exact direct pins live in `pyproject.toml`, complete dependency
 resolution in `uv.lock`. The default environment uses CPU PyTorch on Linux/Windows.
 GPU training needs a separate documented CUDA-compatible dependency lock and a
@@ -30,7 +30,9 @@ Dataset: `mujoco/halfcheetah/medium-v0`, generated from HalfCheetah-v5, 1,000,00
 steps / 1,000 episodes, observations `(17,)`, actions `(6,)` in `[-1, 1]`.
 The source observations are float64; the shared training contract is float32.
 Person 2's loader verifies metadata; the environment factory recovers the dataset's
-specification. See the Person 2 report for the collection/runtime MuJoCo version mismatch.
+specification. MuJoCo is pinned to the dataset's collection requirement; see
+[simulator compatibility](docs/SIMULATOR_COMPATIBILITY.md). Person 2's original
+report used the earlier 3.3.7 pin and is retained as historical evidence.
 See the [official dataset card](https://minari.farama.org/datasets/mujoco/halfcheetah/medium-v0/)
 and [Gymnasium environment documentation](https://gymnasium.farama.org/environments/mujoco/half_cheetah/).
 

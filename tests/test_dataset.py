@@ -1,6 +1,7 @@
 """Person 2 behavior: boundaries, preprocessing, validation and recovery."""
 
 import json
+import warnings
 from dataclasses import fields, replace
 from types import SimpleNamespace
 
@@ -284,13 +285,16 @@ def test_real_minari_hdf5_roundtrip(tmp_path, monkeypatch):
         ref_min_score=0,
         ref_max_score=1,
         data_format="hdf5",
+        requirements=["mujoco==3.2.3"],
     )
     dataset = load_offline_dataset(config)
     assert len(dataset) == 2
     assert dataset.metadata["statistics"]["truncated_transitions"] == 1
     assert dataset.metadata["statistics"]["raw_episode_return"]["mean"] == 6
     dataset.save_metadata(tmp_path / "report.json")
-    env = make_evaluation_env(config)
+    with warnings.catch_warnings():
+        warnings.filterwarnings("error", message=r"Installed mujoco version .*")
+        env = make_evaluation_env(config)
     try:
         assert env.reset(seed=0)[0].shape == (17,)
         assert env.spec.max_episode_steps == 1000
