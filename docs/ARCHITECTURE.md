@@ -19,8 +19,8 @@ environment specification and reuse training observation normalization. The
 artifact contract carries normalization, config, dataset identity and versions.
 
 Default config contains proposed hyperparameters, not validated performance claims.
-Person 3 owns IQL networks, update and checkpoint implementation, including training
-orchestration. Person 4 owns evaluation/recording. Person 5 owns the notebook text,
+Person 3 owns IQL networks, the offline update, checkpoints and `train`
+(`docs/IQL.md`). Person 4 owns evaluation/recording. Person 5 owns the notebook text,
 manual example and slides. Person 1 later integrates their PRs and performs clean
 Colab Run all after those deliverables exist.
 

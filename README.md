@@ -2,15 +2,17 @@
 
 Five-person offline reinforcement learning course project led by **MedvAx-AI**.
 
-**Status: Person 2 environment/data implemented.** The install, configuration,
-interfaces, validated Minari loader and environment recovery are ready.
-IQL, training, evaluation and video recording deliberately raise `NotImplementedError`.
-No trained agent, measured agent return or completed course demo is supplied at this stage.
+**Status: Person 3 IQL and offline training implemented.** The install,
+configuration, Minari loader, IQL update, JSONL log and checkpoint/resume path
+are in place. Evaluation and video recording still raise `NotImplementedError`.
+No measured HalfCheetah return or completed course demo is supplied. A 1,000-update
+real-data run only checks that the losses stay finite; it is not a trained-agent result.
 
 ## Start here
 
 - [Project plan, role deliverables and roadmap](IQL_5_Person_Project_Plan.md)
 - [Person 2 environment, preprocessing and measured dataset statistics](docs/ENVIRONMENT_DATASET.md)
+- [Person 3 IQL losses, likelihood, training and checkpoints](docs/IQL.md)
 - [Shared interfaces and artifact formats](docs/INTERFACES.md)
 - [Contribution / Git workflow](CONTRIBUTING.md)
 - [Team tasks](https://github.com/MedvAx-AI/iql-halfcheetah/issues)
@@ -87,10 +89,10 @@ configs/halfcheetah.toml       shared starting hyperparameters
 src/iql_project/
   config.py, contracts.py     Person 1: shared config and interface contracts
   dataset.py, environment.py  Person 2: validated loader, sampler and environment recovery
-  networks.py, iql.py         Person 3: explicit implementation stubs
-  train.py                   Person 3: training orchestration stub
+  networks.py, iql.py         Person 3: twin Q, expectile V, squashed Gaussian, checkpoints
+  train.py                   Person 3: offline loop, JSONL, manifest, resume
   evaluate.py                Person 4: evaluation and recording stubs
-  cli.py                     scaffold check; train/evaluate fail clearly
+  cli.py                     check and train; evaluate still fails clearly
 notebooks/                   Person 5: valid, unexecuted narrative outline
 tests/                       scaffold contract tests; role PRs add behavioral tests
 scripts/                     dependency/environment/notebook checks

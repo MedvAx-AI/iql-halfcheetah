@@ -1,0 +1,53 @@
+{
+  "dataset_id": "mujoco/halfcheetah/medium-v0",
+  "config_path": "configs/halfcheetah.toml",
+  "seed": 0,
+  "device": "cpu",
+  "batch_size": 256,
+  "updates": 1000,
+  "all_finite": true,
+  "first": {
+    "step": 1,
+    "q_loss": 342.96331787109375,
+    "v_loss": 0.007135015446692705,
+    "policy_loss": 12.086836814880371,
+    "advantage_mean": -0.018926966935396194,
+    "elapsed_seconds": 0.014779833999909897
+  },
+  "last": {
+    "step": 1000,
+    "q_loss": 4.180755138397217,
+    "v_loss": 0.4780832827091217,
+    "policy_loss": -20.8369197845459,
+    "advantage_mean": -0.397691935300827,
+    "elapsed_seconds": 5.635460167000019
+  },
+  "max_abs": {
+    "q_loss": 342.96331787109375,
+    "v_loss": 0.6668897867202759,
+    "policy_loss": 53.623260498046875,
+    "advantage_mean": 0.6149457693099976
+  },
+  "versions": {
+    "python": "3.11.15",
+    "iql_project": "0.1.0",
+    "torch": "2.7.1",
+    "numpy": "2.2.6"
+  },
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "checkpoint": "checkpoints/person3_real_1000/step_1000.pt",
+  "wall_seconds": 25.93001550000008,
+  "base_commit": "ff723119d52c6fe0fc6423b06f29cc91d92caba2",
+  "implementation_sha256": {
+    "src/iql_project/iql.py": "e098151aff9e3cdb21fc1b3bc5e60370e75fe38cbb03f413b236627eda7e3238",
+    "src/iql_project/networks.py": "9030c50ccbcb5157c5a9e015144c20706c4ca5d3134fcd1355483c7a0c44241c",
+    "src/iql_project/train.py": "3cba66e938ffd801f67fde2007fbdaebccd44f1e1d875f4e7c7f4c749d8fd427",
+    "src/iql_project/cli.py": "9fa61080c8359da7bfbc11d1772a11a0953edbbc00be19a37fa8543967c59df5"
+  },
+  "artifact_sha256": {
+    "results/person3_real_1000/training.jsonl": "1bb7c437d53138a3cc640fd8fce1e3c299f0d6062b2a6e9fce58c8a8cb93b59c",
+    "results/person3_real_1000/manifest.json": "9761cb04acb6ec63488b9d60c747fd127c9858f15470dd19a2c9988347d4d141",
+    "checkpoints/person3_real_1000/step_1000.pt": "cb0066a39174e0f3a16c4babd014a2527b98931f79b082391f707486807a95d1"
+  },
+  "note": "Losses stayed finite for 1000 updates. This is not a HalfCheetah return. Negative policy_loss is -E[w log pi] and is finite when the Gaussian is peaked."
+}
