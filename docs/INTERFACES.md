@@ -33,6 +33,11 @@ Checkpoint save/load contains model/target networks, optimizer states, step, RNG
 states, complete config, dataset ID, preprocessing, versions and source commit.
 Person 3 may add a loading factory, but must preserve the protocol and explain how
 evaluation recovers `DatasetInfo` before constructing the agent.
+`dataset_info_from_checkpoint(path)` and `config_from_checkpoint(path)` read that
+metadata without building an agent. Evaluation should rebuild `DatasetInfo` with
+the checkpoint helper, construct `IQLAgent(config, info)`, then call `load`.
+Normalize each raw observation with the restored mean and std before `act`.
+The loss, likelihood and resume conventions are in `docs/IQL.md`.
 
 ## Training and evaluation
 
