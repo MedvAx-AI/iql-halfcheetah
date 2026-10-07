@@ -2,17 +2,19 @@
 
 Five-person offline reinforcement learning course project led by **MedvAx-AI**.
 
-**Status: Person 3 IQL and offline training implemented.** The install,
-configuration, Minari loader, IQL update, JSONL log and checkpoint/resume path
-are in place. Evaluation and video recording still raise `NotImplementedError`.
-No measured HalfCheetah return or completed course demo is supplied. A 1,000-update
-real-data run only checks that the losses stay finite; it is not a trained-agent result.
+**Status: IQL training and Person 4 evaluation/video implemented.** The install,
+configuration, Minari loader, learner, checkpoint/resume, seeded evaluation,
+random baseline, raw metrics, plots and MP4 recording are in place. Learning
+performance is assessed from measured artifacts; installation and loss checks
+alone do not demonstrate a strong policy.
 
 ## Start here
 
 - [Project plan, role deliverables and roadmap](IQL_5_Person_Project_Plan.md)
 - [Person 2 environment, preprocessing and measured dataset statistics](docs/ENVIRONMENT_DATASET.md)
 - [Person 3 IQL losses, likelihood, training and checkpoints](docs/IQL.md)
+- [Person 4 evaluation protocol, experiment commands and artifact formats](docs/EVALUATION.md)
+- [Person 4 measured three-seed results and verification evidence](docs/evidence/person-4/README.md)
 - [Shared interfaces and artifact formats](docs/INTERFACES.md)
 - [Contribution / Git workflow](CONTRIBUTING.md)
 - [Team tasks](https://github.com/MedvAx-AI/iql-halfcheetah/issues)
@@ -91,12 +93,13 @@ src/iql_project/
   dataset.py, environment.py  Person 2: validated loader, sampler and environment recovery
   networks.py, iql.py         Person 3: twin Q, expectile V, squashed Gaussian, checkpoints
   train.py                   Person 3: offline loop, JSONL, manifest, resume
-  evaluate.py                Person 4: evaluation and recording stubs
-  cli.py                     check and train; evaluate still fails clearly
+  evaluate.py, reporting.py  Person 4: rollouts, baseline, recording and seed summaries
+  cli.py                     check, train, evaluate and summarize
 notebooks/                   Person 5: valid, unexecuted narrative outline
 tests/                       scaffold contract tests; role PRs add behavioral tests
 scripts/                     dependency/environment/notebook checks
   check_dataset.py           Person 2: explicit download, statistics and recovery check
+  run_experiments.py         Person 4: three-seed training/evaluation and optional videos
 data/                        local Minari cache guidance; data excluded from Git
 results/, videos/, checkpoints/   artifact conventions; generated files excluded
 docs/                        design, interfaces, verification, presentation outline

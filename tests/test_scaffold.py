@@ -85,7 +85,7 @@ def test_scaffold_cli_reports_ownership_and_contract():
     )
     assert result.returncode == 0, result.stderr
     assert "configuration valid" in result.stdout.lower()
-    assert "not implemented" in result.stdout.lower()
+    assert "performance requires measured artifacts" in result.stdout.lower()
     assert "HalfCheetah-v5" in result.stdout
     assert "Person 3" in result.stdout
 
@@ -99,5 +99,5 @@ def test_evaluate_command_fails_without_artifacts(tmp_path):
         check=False,
     )
     assert result.returncode == 2
-    assert "not implemented" in result.stderr.lower()
+    assert "requires --checkpoint" in result.stderr.lower()
     assert not list(tmp_path.iterdir())
