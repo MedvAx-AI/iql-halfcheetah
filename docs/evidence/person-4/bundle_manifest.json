@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "artifact": {
+    "role": "transfer_bundle",
+    "path": "results/person4_artifacts.tar.gz",
+    "sha256": "bbd914bb2c4f10ac0b1d759498b7010caa2ba6fadd90e0b7b8eee211cefa89bf",
+    "bytes": 63568506
+  },
+  "contains": {
+    "training_seeds": [
+      0,
+      1,
+      2
+    ],
+    "checkpoint_steps": [
+      25000,
+      50000,
+      75000,
+      100000
+    ],
+    "mp4_files": 3,
+    "checkpoints": 12,
+    "source_and_locked_dependencies": true,
+    "full_dataset_included": false
+  },
+  "publication_status": "local; public/team-storage URL pending"
+}

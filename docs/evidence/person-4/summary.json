@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "raw_rewards": true,
+  "minimum_seed_episode_protocol_met": true,
+  "within_run": [
+    {
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 0,
+      "policy_name": "random",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": -287.399828474637,
+      "return_std_population": 56.67802611728339,
+      "return_min": -366.0916291746756,
+      "return_max": -186.12732957408303,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 25000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 1427.9638545750188,
+      "return_std_population": 1117.1140563183817,
+      "return_min": -72.51313939654412,
+      "return_max": 3448.6871479440356,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 50000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 3598.9035467004323,
+      "return_std_population": 1218.7290953930785,
+      "return_min": 1326.2233253588813,
+      "return_max": 5317.632867185005,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 75000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 3392.4447557163126,
+      "return_std_population": 2060.7695435388528,
+      "return_min": 138.0409701327336,
+      "return_max": 7328.211201808855,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 100000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 1964.2847367921283,
+      "return_std_population": 2164.3499183678546,
+      "return_min": -281.57272372159616,
+      "return_max": 5742.627185897753,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 0,
+      "policy_name": "random",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": -287.399828474637,
+      "return_std_population": 56.67802611728339,
+      "return_min": -366.0916291746756,
+      "return_max": -186.12732957408303,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 25000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 1590.5892572346343,
+      "return_std_population": 657.4276217409652,
+      "return_min": 940.2540689461748,
+      "return_max": 2909.3711230848844,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 50000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 987.2401136062975,
+      "return_std_population": 964.0329966779433,
+      "return_min": -401.57932196097596,
+      "return_max": 2353.792194177229,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 75000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 1301.9387032661189,
+      "return_std_population": 917.8045578354449,
+      "return_min": -425.01802079579056,
+      "return_max": 3093.6748967655312,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 100000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 3475.734523602196,
+      "return_std_population": 2548.3227621791857,
+      "return_min": -164.788503033016,
+      "return_max": 6980.989383220709,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 0,
+      "policy_name": "random",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": -287.399828474637,
+      "return_std_population": 56.67802611728339,
+      "return_min": -366.0916291746756,
+      "return_max": -186.12732957408303,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 25000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 763.375597646944,
+      "return_std_population": 629.2099665276637,
+      "return_min": -294.47094573147854,
+      "return_max": 2120.7802716896454,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 50000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 1796.7260162800035,
+      "return_std_population": 1650.9969664079242,
+      "return_min": -571.2204259806701,
+      "return_max": 5690.316141832995,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 75000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 2896.661436634686,
+      "return_std_population": 2422.0148709399286,
+      "return_min": 417.2087312496784,
+      "return_max": 9367.145316098826,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 100000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        10000,
+        10001,
+        10002,
+        10003,
+        10004,
+        10005,
+        10006,
+        10007,
+        10008,
+        10009
+      ],
+      "return_mean": 3099.2027463048607,
+      "return_std_population": 2128.0089919787993,
+      "return_min": 262.4400849960861,
+      "return_max": 7261.298672859706,
+      "episode_length_mean": 1000.0
+    }
+  ],
+  "across_runs": [
+    {
+      "checkpoint_step": 25000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "runs": 3,
+      "all_runs_present": true,
+      "mean_of_run_means": 1260.642903152199,
+      "std_sample_of_run_means": 438.25544519251895
+    },
+    {
+      "checkpoint_step": 50000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "runs": 3,
+      "all_runs_present": true,
+      "mean_of_run_means": 2127.623225528911,
+      "std_sample_of_run_means": 1336.9054544943697
+    },
+    {
+      "checkpoint_step": 75000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "runs": 3,
+      "all_runs_present": true,
+      "mean_of_run_means": 2530.3482985390388,
+      "std_sample_of_run_means": 1092.3336830789542
+    },
+    {
+      "checkpoint_step": 100000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "runs": 3,
+      "all_runs_present": true,
+      "mean_of_run_means": 2846.407335566395,
+      "std_sample_of_run_means": 786.7968316407178
+    }
+  ],
+  "final_checkpoint_steps": {
+    "person4_100k_seed_0": 100000,
+    "person4_100k_seed_1": 100000,
+    "person4_100k_seed_2": 100000
+  }
+}
