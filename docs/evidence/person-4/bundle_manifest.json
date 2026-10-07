@@ -4,7 +4,8 @@
     "role": "transfer_bundle",
     "path": "results/person4_artifacts.tar.gz",
     "sha256": "bbd914bb2c4f10ac0b1d759498b7010caa2ba6fadd90e0b7b8eee211cefa89bf",
-    "bytes": 63568506
+    "bytes": 63568506,
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_artifacts.tar.gz"
   },
   "contains": {
     "training_seeds": [
@@ -23,5 +24,6 @@
     "source_and_locked_dependencies": true,
     "full_dataset_included": false
   },
-  "publication_status": "local; public/team-storage URL pending"
+  "publication_status": "published; anonymous download and SHA-256 verified",
+  "snapshot_note": "Original experiment snapshot before publication links and infinite-floor recording update; includes original videos. Current renderings are separate release assets."
 }

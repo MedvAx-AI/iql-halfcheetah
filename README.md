@@ -8,6 +8,14 @@ random baseline, raw metrics, plots and MP4 recording are in place. Learning
 performance is assessed from measured artifacts; installation and loss checks
 alone do not demonstrate a strong policy.
 
+**Demo assessment:** the current 100k-update policies fall or stall in the fixed-seed
+videos; robust running has not been demonstrated. Watch the actual episodes:
+[seed 0](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4),
+[seed 1](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4),
+[seed 2](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4).
+[Release artifacts and checkpoints](https://github.com/MedvAx-AI/iql-halfcheetah/releases/tag/person4-evaluation-100k)
+include checksums and the original experiment snapshot.
+
 ## Start here
 
 - [Project plan, role deliverables and roadmap](IQL_5_Person_Project_Plan.md)
