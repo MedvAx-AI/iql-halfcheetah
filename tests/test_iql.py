@@ -469,7 +469,7 @@ def test_resume_rejects_a_log_from_a_different_step(tmp_path, monkeypatch):
         train(replace(config, total_steps=3), run_dir=run_dir, resume=checkpoint)
 
 
-def test_train_cli_exposes_resume_and_evaluate_stays_unimplemented(tmp_path):
+def test_train_cli_exposes_resume_and_evaluate_requires_checkpoint(tmp_path):
     help_result = subprocess.run(
         [sys.executable, "-m", "iql_project", "train", "--help"],
         cwd=tmp_path,
@@ -509,7 +509,7 @@ def test_train_cli_exposes_resume_and_evaluate_stays_unimplemented(tmp_path):
         check=False,
     )
     assert evaluate.returncode == 2
-    assert "not implemented" in evaluate.stderr.lower()
+    assert "requires --checkpoint" in evaluate.stderr.lower()
     assert not list(tmp_path.iterdir())
 
 
