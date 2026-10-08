@@ -195,6 +195,35 @@ def test_failed_video_closes_and_leaves_no_final_mp4(monkeypatch, info, tmp_path
     assert not list(tmp_path.iterdir())
 
 
+def test_video_floor_preserves_physics_beyond_visible_rectangle():
+    import mujoco
+
+    original = gym.make("HalfCheetah-v5")
+    extended = gym.make("HalfCheetah-v5")
+    try:
+        evaluation._extend_video_floor(extended)
+        for env in (original, extended):
+            env.reset(seed=10000)
+            env.unwrapped.data.qpos[0] = 75  # Outside the default +/-40 m drawing.
+            mujoco.mj_forward(env.unwrapped.model, env.unwrapped.data)
+        rng = np.random.default_rng(10)
+        contacts = 0
+        for _ in range(1000):
+            action = rng.uniform(-1, 1, size=6).astype(np.float32)
+            first = original.step(action)
+            second = extended.step(action)
+            np.testing.assert_array_equal(first[0], second[0])
+            assert first[1:] == second[1:]
+            np.testing.assert_array_equal(
+                original.unwrapped.data.qpos, extended.unwrapped.data.qpos
+            )
+            contacts += extended.unwrapped.data.ncon
+        assert contacts > 0
+    finally:
+        original.close()
+        extended.close()
+
+
 def test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng(
     monkeypatch, info, tmp_path
 ):

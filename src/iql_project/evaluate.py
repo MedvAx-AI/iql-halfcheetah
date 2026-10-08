@@ -104,6 +104,27 @@ def evaluate(policy: Policy, config: ProjectConfig, info: DatasetInfo) -> Evalua
         env.close()
 
 
+def _extend_video_floor(env: object) -> None:
+    """Render the infinite collision plane beyond the XML's finite visual rectangle.
+
+    MuJoCo plane sizes along x/y control drawing, not collision geometry. The
+    default HalfCheetah floor is drawn only within +/-40 m; a tracking camera can
+    follow the agent outside it, making grounded falls look like falling into a void.
+    """
+    model = getattr(getattr(env, "unwrapped", None), "model", None)
+    if model is None:
+        return
+    import mujoco
+
+    floor = mujoco.mj_name2id(model, mujoco.mjtObj.mjOBJ_GEOM, "floor")
+    if (
+        floor >= 0
+        and model.geom_type[floor] == mujoco.mjtGeom.mjGEOM_PLANE
+        and model.geom_bodyid[floor] == 0
+    ):
+        model.geom_size[floor, :2] = 0
+
+
 def record_video(
     policy: Policy, config: ProjectConfig, info: DatasetInfo, *, output_dir: Path, seed: int
 ) -> Path:
@@ -120,6 +141,7 @@ def record_video(
     env = make_evaluation_env(config, render_mode="rgb_array")
     wrapped = None
     try:
+        _extend_video_floor(env)
         output_dir.mkdir(parents=True, exist_ok=True)
         with TemporaryDirectory(prefix=".recording-", dir=output_dir) as temporary:
             recording_dir = Path(temporary) / "frames"
