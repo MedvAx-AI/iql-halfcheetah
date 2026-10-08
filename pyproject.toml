@@ -32,6 +32,9 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-ra"
+markers = [
+  "real_data: 1000-update Minari run; skipped unless IQL_RUN_REAL_DATA=1",
+]
 
 [tool.ruff]
 target-version = "py311"

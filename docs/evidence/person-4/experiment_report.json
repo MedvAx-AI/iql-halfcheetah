@@ -1,0 +1,1127 @@
+{
+  "schema_version": 1,
+  "run_date": "2026-10-07",
+  "run_timezone": "Europe/Moscow",
+  "source_commit": "c11578b720e1c2bbf64382f51580541dcb8c5328",
+  "source_has_local_changes": true,
+  "source_files_sha256": {
+    "src/iql_project/__init__.py": "d7a23b7f0fb83a95fd6b5f2d5ee858c2a86b268cb4011df419b69524315b31a9",
+    "src/iql_project/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/iql_project/cli.py": "f2c2c527d8e12a1f6559dd36ae4a2a05fc43755671a85f92b62357305ac98497",
+    "src/iql_project/config.py": "d4b9f612cee52c305a7f862b9edb9284e0fa86aca7e4db7043b11a98b9d077d3",
+    "src/iql_project/contracts.py": "e511c5c2a33fb3656d9573fe85e0dbf2ff3c0ceea361c04da5cdb65fb5275046",
+    "src/iql_project/dataset.py": "696ee025910d4bf627d0764476202fa0f36c0e62f34bf0074fb148b751cfb180",
+    "src/iql_project/environment.py": "bcab737f73d849e24366d159eaf1964cee28bfcfd68a46220e2f7287c706d03c",
+    "src/iql_project/evaluate.py": "ecca431273930cb0d4d00b10e7ec64e4817040a615cf17477a018f4ed503e7b3",
+    "src/iql_project/iql.py": "e098151aff9e3cdb21fc1b3bc5e60370e75fe38cbb03f413b236627eda7e3238",
+    "src/iql_project/networks.py": "9030c50ccbcb5157c5a9e015144c20706c4ca5d3134fcd1355483c7a0c44241c",
+    "src/iql_project/reporting.py": "a29b5d97e7b8a70f57eea44a640d1138877f3753ab93efd495856c4517133e8b",
+    "src/iql_project/train.py": "2cb963e684554e776ed33f56641c1eac28ed7e625316328871c6dc3005e8d742"
+  },
+  "supporting_files_sha256": {
+    "scripts/run_experiments.py": "b71d50922f6a906f26e00f784d3c4e033dced82440f72fe0deb8b60f5f305036",
+    "tests/test_evaluate.py": "1beedb92631bfc93cdc9dffffd73f3e87280dd88388cb6b11b16851a10a118fd",
+    "configs/halfcheetah.toml": "d014ce8f434b75c413723dcc9880456d679323227c62f1140270dafc821bb58f",
+    "notebooks/iql_halfcheetah.ipynb": "89e07e90edfadb3f71f7f64e09b1c05ff4b478e1a660c02b8ae7dd23be0fb685",
+    "pyproject.toml": "5eeceef48658fcc81f6543ee8b4e5dbf00d32cef0d013736abdb19adb7706311",
+    "uv.lock": "98a1650f9b61f5b2ee9e46f3a869b41600d23f17386a68ee21a11eb1202b9457",
+    "requirements.lock.txt": "eb3948efa0c0597b7aa9bae3b7796b61ffd9968d57f61916200f09e1c41576c8"
+  },
+  "dataset_id": "mujoco/halfcheetah/medium-v0",
+  "dataset_episodes": 1000,
+  "dataset_transitions": 1000000,
+  "dataset_files_sha256": {
+    "main_data.hdf5": "db46045497395bc621f2b409089e495f0e51a1182e6257f2f319f7d6654f66c5"
+  },
+  "hardware": {
+    "cpu": "Apple M3 Pro",
+    "ram_bytes": 38654705664,
+    "device": "cpu",
+    "torch_threads": 1
+  },
+  "evaluation_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009
+  ],
+  "training_seeds": [
+    0,
+    1,
+    2
+  ],
+  "checkpoint_steps": [
+    25000,
+    50000,
+    75000,
+    100000
+  ],
+  "raw_rewards": true,
+  "checks": {
+    "all_training_metrics_finite": true,
+    "consecutive_updates_per_run": 100000,
+    "all_episodes_length_1000": true,
+    "baseline_identical_across_training_seeds": true,
+    "all_manifest_artifact_checksums_verified": true,
+    "all_three_mp4_decode": true,
+    "seed0_exact_replay_iql_episodes": 40,
+    "seed0_exact_replay_baseline_episodes": 10
+  },
+  "local_validation": {
+    "pytest_with_real_data": "86 passed",
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "environment_smoke": "passed",
+    "notebook_schema_clean_outputs": "passed",
+    "locked_dependency_parity": "passed",
+    "isolated_wheel_sdist_build": "passed (UV_OFFLINE=1)",
+    "remote_ci": "not run for these local changes",
+    "clean_colab": "not run",
+    "fresh_local_notebook_run": {
+      "code_cells_executed": 9,
+      "python_version": "3.11.16",
+      "real_evaluation_plot_displayed": true,
+      "real_mp4_embedded": true,
+      "source_outputs_empty": true
+    }
+  },
+  "runs": [
+    {
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "updates": 100000,
+      "training_seconds": 322.08234500000253,
+      "last_evaluation_invocation_seconds": 1.8630564999766648,
+      "training_config": {
+        "env_id": "HalfCheetah-v5",
+        "dataset_id": "mujoco/halfcheetah/medium-v0",
+        "observation_dim": 17,
+        "action_dim": 6,
+        "discount": 0.99,
+        "expectile": 0.7,
+        "inverse_temperature": 3.0,
+        "max_weight": 100.0,
+        "target_tau": 0.005,
+        "learning_rate": 0.0003,
+        "batch_size": 256,
+        "total_steps": 100000,
+        "eval_interval": 5000,
+        "checkpoint_interval": 25000,
+        "seed": 0,
+        "device": "cpu",
+        "eval_episodes": 10,
+        "eval_seed": 10000,
+        "output_dir": "results"
+      },
+      "evaluation_runtime": {
+        "git_commit": "c11578b720e1c2bbf64382f51580541dcb8c5328",
+        "source_has_local_changes": true,
+        "source_files_sha256": {
+          "__init__.py": "d7a23b7f0fb83a95fd6b5f2d5ee858c2a86b268cb4011df419b69524315b31a9",
+          "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "cli.py": "f2c2c527d8e12a1f6559dd36ae4a2a05fc43755671a85f92b62357305ac98497",
+          "config.py": "d4b9f612cee52c305a7f862b9edb9284e0fa86aca7e4db7043b11a98b9d077d3",
+          "contracts.py": "e511c5c2a33fb3656d9573fe85e0dbf2ff3c0ceea361c04da5cdb65fb5275046",
+          "dataset.py": "696ee025910d4bf627d0764476202fa0f36c0e62f34bf0074fb148b751cfb180",
+          "environment.py": "bcab737f73d849e24366d159eaf1964cee28bfcfd68a46220e2f7287c706d03c",
+          "evaluate.py": "ecca431273930cb0d4d00b10e7ec64e4817040a615cf17477a018f4ed503e7b3",
+          "iql.py": "e098151aff9e3cdb21fc1b3bc5e60370e75fe38cbb03f413b236627eda7e3238",
+          "networks.py": "9030c50ccbcb5157c5a9e015144c20706c4ca5d3134fcd1355483c7a0c44241c",
+          "reporting.py": "a29b5d97e7b8a70f57eea44a640d1138877f3753ab93efd495856c4517133e8b",
+          "train.py": "2cb963e684554e776ed33f56641c1eac28ed7e625316328871c6dc3005e8d742"
+        },
+        "python_version": "3.11.16",
+        "package_versions": {
+          "numpy": "2.2.6",
+          "torch": "2.7.1",
+          "gymnasium": "1.2.2",
+          "mujoco": "3.2.3",
+          "minari": "0.5.3",
+          "moviepy": "2.2.1"
+        },
+        "hardware": {
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "machine": "arm64",
+          "processor": "arm",
+          "device": "cpu",
+          "torch_threads": 1
+        },
+        "elapsed_seconds": 1.8630564999766648
+      },
+      "failed_evaluations": [
+        {
+          "checkpoint": "step_100000.pt",
+          "stage": "video",
+          "exit_code": 134,
+          "error": "Native renderer aborted inside the macOS sandbox; no Python traceback.",
+          "resolved": true,
+          "retry": "Recording outside sandbox succeeded using the saved checkpoint."
+        },
+        {
+          "checkpoint": "step_25000.pt",
+          "error": "PermissionError: [Errno 1] Operation not permitted: '<home>/.minari'",
+          "elapsed_seconds": 0.5151130000595003,
+          "resolved": true,
+          "retry": "Set MINARI_DATASETS_PATH to the existing repository-local cache; replay succeeded."
+        }
+      ],
+      "video_metadata": {
+        "duration_seconds": 50.0,
+        "fps": 20.0,
+        "width": 480,
+        "height": 480,
+        "decodes": true
+      },
+      "artifacts": [
+        {
+          "role": "training_log",
+          "path": "results/person4_100k_seed_0/training.jsonl",
+          "sha256": "6d6a37b458ed60017b239b8926f025fd2b06b708c6dbcf513a2fba1eb0efe233"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_100000.pt",
+          "sha256": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_25000.pt",
+          "sha256": "cea0980f1156430dadcf4a922a57218cfb5e01b2d3b66463ea26463507e848db"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_50000.pt",
+          "sha256": "1ca103c692c3e2d2e9500302a8a5f210848cdb1c18c2c617226b157506ce06a9"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_75000.pt",
+          "sha256": "776f8be22524b508dc220ca935ba3f5d07c1bc0231b756a20a524f027595bc8f"
+        },
+        {
+          "role": "video",
+          "path": "videos/person4_100k_seed_0/demo_seed_10000.mp4",
+          "sha256": "373715bb9b125f3b13451b12c640e3370dd51aac741adcb34d6cc376aae0a6a4",
+          "bytes": 474583,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_demo_seed_10000.mp4"
+        },
+        {
+          "role": "evaluation_csv",
+          "path": "results/person4_100k_seed_0/evaluation.csv",
+          "sha256": "ad8ae98a0e3f73faa290dae023a135de790c0e1a3b86104021267b7389653778",
+          "bytes": 3340
+        },
+        {
+          "role": "summary",
+          "path": "results/person4_100k_seed_0/summary.json",
+          "sha256": "c9418f7507968063515c96294b0461ddcb5105e664e0e03bc5d3f22bb1ba237a",
+          "bytes": 2837
+        },
+        {
+          "role": "plot",
+          "path": "results/person4_100k_seed_0/plots/training_losses.png",
+          "sha256": "9d606b64874589542c4e27fe90defb263bdd265ddc7000a4a1525f9cf76f8358",
+          "bytes": 131583
+        },
+        {
+          "role": "plot",
+          "path": "results/person4_100k_seed_0/plots/evaluation_returns.png",
+          "sha256": "1098f0a56ed9c9abd139a178bcc0f577991f7670412273e1a4c297b2fe827946",
+          "bytes": 50917
+        },
+        {
+          "role": "video_visible_floor",
+          "path": "videos/person4_100k_seed_0_visible_floor/demo_seed_10000.mp4",
+          "sha256": "42a63d4fe617edb1cd446d9bf40701f94e4e03a027b179b9321278b8476064fe",
+          "bytes": 636631,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4"
+        }
+      ],
+      "checkpoint_provenance": {
+        "25000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_25000.pt",
+          "sha256": "cea0980f1156430dadcf4a922a57218cfb5e01b2d3b66463ea26463507e848db",
+          "bytes": 4090056
+        },
+        "50000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_50000.pt",
+          "sha256": "1ca103c692c3e2d2e9500302a8a5f210848cdb1c18c2c617226b157506ce06a9",
+          "bytes": 4090056
+        },
+        "75000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_75000.pt",
+          "sha256": "776f8be22524b508dc220ca935ba3f5d07c1bc0231b756a20a524f027595bc8f",
+          "bytes": 4090056
+        },
+        "100000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_0/step_100000.pt",
+          "sha256": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+          "bytes": 4090181
+        }
+      },
+      "published_video": {
+        "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4",
+        "video": {
+          "width": 480,
+          "height": 480,
+          "fps": 20.0,
+          "duration_seconds": 50.0,
+          "first_and_last_frame_decoded": true
+        },
+        "checkpoint_step": 100000,
+        "evaluation_seed": 10000,
+        "episode_return": 1294.247826173916,
+        "episode_length": 1000,
+        "matches_original_evaluation": true,
+        "rendering": {
+          "plane_xy_half_size": [
+            0,
+            0
+          ],
+          "collision_physics_unchanged": true
+        },
+        "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+        "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+        "recording_source_has_local_changes": true
+      }
+    },
+    {
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "updates": 100000,
+      "training_seconds": 326.20144858397543,
+      "last_evaluation_invocation_seconds": 9.00176008301787,
+      "training_config": {
+        "env_id": "HalfCheetah-v5",
+        "dataset_id": "mujoco/halfcheetah/medium-v0",
+        "observation_dim": 17,
+        "action_dim": 6,
+        "discount": 0.99,
+        "expectile": 0.7,
+        "inverse_temperature": 3.0,
+        "max_weight": 100.0,
+        "target_tau": 0.005,
+        "learning_rate": 0.0003,
+        "batch_size": 256,
+        "total_steps": 100000,
+        "eval_interval": 5000,
+        "checkpoint_interval": 25000,
+        "seed": 1,
+        "device": "cpu",
+        "eval_episodes": 10,
+        "eval_seed": 10000,
+        "output_dir": "results"
+      },
+      "evaluation_runtime": {
+        "git_commit": "c11578b720e1c2bbf64382f51580541dcb8c5328",
+        "source_has_local_changes": true,
+        "source_files_sha256": {
+          "__init__.py": "d7a23b7f0fb83a95fd6b5f2d5ee858c2a86b268cb4011df419b69524315b31a9",
+          "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "cli.py": "f2c2c527d8e12a1f6559dd36ae4a2a05fc43755671a85f92b62357305ac98497",
+          "config.py": "d4b9f612cee52c305a7f862b9edb9284e0fa86aca7e4db7043b11a98b9d077d3",
+          "contracts.py": "e511c5c2a33fb3656d9573fe85e0dbf2ff3c0ceea361c04da5cdb65fb5275046",
+          "dataset.py": "696ee025910d4bf627d0764476202fa0f36c0e62f34bf0074fb148b751cfb180",
+          "environment.py": "bcab737f73d849e24366d159eaf1964cee28bfcfd68a46220e2f7287c706d03c",
+          "evaluate.py": "ecca431273930cb0d4d00b10e7ec64e4817040a615cf17477a018f4ed503e7b3",
+          "iql.py": "e098151aff9e3cdb21fc1b3bc5e60370e75fe38cbb03f413b236627eda7e3238",
+          "networks.py": "9030c50ccbcb5157c5a9e015144c20706c4ca5d3134fcd1355483c7a0c44241c",
+          "reporting.py": "a29b5d97e7b8a70f57eea44a640d1138877f3753ab93efd495856c4517133e8b",
+          "train.py": "2cb963e684554e776ed33f56641c1eac28ed7e625316328871c6dc3005e8d742"
+        },
+        "python_version": "3.11.16",
+        "package_versions": {
+          "numpy": "2.2.6",
+          "torch": "2.7.1",
+          "gymnasium": "1.2.2",
+          "mujoco": "3.2.3",
+          "minari": "0.5.3",
+          "moviepy": "2.2.1"
+        },
+        "hardware": {
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "machine": "arm64",
+          "processor": "arm",
+          "device": "cpu",
+          "torch_threads": 1
+        },
+        "elapsed_seconds": 9.00176008301787
+      },
+      "failed_evaluations": [],
+      "video_metadata": {
+        "duration_seconds": 50.0,
+        "fps": 20.0,
+        "width": 480,
+        "height": 480,
+        "decodes": true
+      },
+      "artifacts": [
+        {
+          "role": "training_log",
+          "path": "results/person4_100k_seed_1/training.jsonl",
+          "sha256": "0cdb4ae0797ce18c506f67993ce83eebf92e3a676ba123f1a4fd39bf52214410"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_100000.pt",
+          "sha256": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_25000.pt",
+          "sha256": "79687d97b26928e8e4e296e4cd14b675c5ca30b836dcb6f54fa02276d1915e20"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_50000.pt",
+          "sha256": "b27c2e53260adbdfcf2976af426020f7c80524d41884195f7de3e740e793dce2"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_75000.pt",
+          "sha256": "d2e302c07b5f444c386299ce42fc5f14514471fc1f4706e8cf8c00a553728672"
+        },
+        {
+          "role": "evaluation_csv",
+          "path": "results/person4_100k_seed_1/evaluation.csv",
+          "sha256": "b47a806e1b0386ea238c6c705ad39054c0b4779da1e5d1037ad7cc964ba12eab",
+          "bytes": 3346
+        },
+        {
+          "role": "summary",
+          "path": "results/person4_100k_seed_1/summary.json",
+          "sha256": "b921fd682e0c27009b3853147d0f380cd2b8089c057601feed0e8a9c0312e24d",
+          "bytes": 2833
+        },
+        {
+          "role": "plot",
+          "path": "results/person4_100k_seed_1/plots/training_losses.png",
+          "sha256": "8d82345935ed0902934422a58aad7d1eea8b81e84bfb3fe5f9745f50cd0df88d",
+          "bytes": 133209
+        },
+        {
+          "role": "plot",
+          "path": "results/person4_100k_seed_1/plots/evaluation_returns.png",
+          "sha256": "4927671c4dafffe4a5c51c33312c540ff00b697626a532b1ada40abf63c0b202",
+          "bytes": 48987
+        },
+        {
+          "role": "video",
+          "path": "videos/person4_100k_seed_1/demo_seed_10000.mp4",
+          "sha256": "0357798bffe76dc1f93e3fd7252edb4a1e4d34be4287c5ceeb751fa1389161b4",
+          "bytes": 560329,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_demo_seed_10000.mp4"
+        },
+        {
+          "role": "video_visible_floor",
+          "path": "videos/person4_100k_seed_1_visible_floor/demo_seed_10000.mp4",
+          "sha256": "f34883f3411e02ffac3e44d2389636bc8719d6ef01812dab37d1f4d51bac63c0",
+          "bytes": 862196,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4"
+        }
+      ],
+      "checkpoint_provenance": {
+        "25000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_25000.pt",
+          "sha256": "79687d97b26928e8e4e296e4cd14b675c5ca30b836dcb6f54fa02276d1915e20",
+          "bytes": 4090120
+        },
+        "50000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_50000.pt",
+          "sha256": "b27c2e53260adbdfcf2976af426020f7c80524d41884195f7de3e740e793dce2",
+          "bytes": 4090120
+        },
+        "75000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_75000.pt",
+          "sha256": "d2e302c07b5f444c386299ce42fc5f14514471fc1f4706e8cf8c00a553728672",
+          "bytes": 4090120
+        },
+        "100000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_1/step_100000.pt",
+          "sha256": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+          "bytes": 4090245
+        }
+      },
+      "published_video": {
+        "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4",
+        "video": {
+          "width": 480,
+          "height": 480,
+          "fps": 20.0,
+          "duration_seconds": 50.0,
+          "first_and_last_frame_decoded": true
+        },
+        "checkpoint_step": 100000,
+        "evaluation_seed": 10000,
+        "episode_return": 1480.4735290344838,
+        "episode_length": 1000,
+        "matches_original_evaluation": true,
+        "rendering": {
+          "plane_xy_half_size": [
+            0,
+            0
+          ],
+          "collision_physics_unchanged": true
+        },
+        "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+        "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+        "recording_source_has_local_changes": true
+      }
+    },
+    {
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "updates": 100000,
+      "training_seconds": 329.647650165949,
+      "last_evaluation_invocation_seconds": 7.224108124850318,
+      "training_config": {
+        "env_id": "HalfCheetah-v5",
+        "dataset_id": "mujoco/halfcheetah/medium-v0",
+        "observation_dim": 17,
+        "action_dim": 6,
+        "discount": 0.99,
+        "expectile": 0.7,
+        "inverse_temperature": 3.0,
+        "max_weight": 100.0,
+        "target_tau": 0.005,
+        "learning_rate": 0.0003,
+        "batch_size": 256,
+        "total_steps": 100000,
+        "eval_interval": 5000,
+        "checkpoint_interval": 25000,
+        "seed": 2,
+        "device": "cpu",
+        "eval_episodes": 10,
+        "eval_seed": 10000,
+        "output_dir": "results"
+      },
+      "evaluation_runtime": {
+        "git_commit": "c11578b720e1c2bbf64382f51580541dcb8c5328",
+        "source_has_local_changes": true,
+        "source_files_sha256": {
+          "__init__.py": "d7a23b7f0fb83a95fd6b5f2d5ee858c2a86b268cb4011df419b69524315b31a9",
+          "__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "cli.py": "f2c2c527d8e12a1f6559dd36ae4a2a05fc43755671a85f92b62357305ac98497",
+          "config.py": "d4b9f612cee52c305a7f862b9edb9284e0fa86aca7e4db7043b11a98b9d077d3",
+          "contracts.py": "e511c5c2a33fb3656d9573fe85e0dbf2ff3c0ceea361c04da5cdb65fb5275046",
+          "dataset.py": "696ee025910d4bf627d0764476202fa0f36c0e62f34bf0074fb148b751cfb180",
+          "environment.py": "bcab737f73d849e24366d159eaf1964cee28bfcfd68a46220e2f7287c706d03c",
+          "evaluate.py": "ecca431273930cb0d4d00b10e7ec64e4817040a615cf17477a018f4ed503e7b3",
+          "iql.py": "e098151aff9e3cdb21fc1b3bc5e60370e75fe38cbb03f413b236627eda7e3238",
+          "networks.py": "9030c50ccbcb5157c5a9e015144c20706c4ca5d3134fcd1355483c7a0c44241c",
+          "reporting.py": "a29b5d97e7b8a70f57eea44a640d1138877f3753ab93efd495856c4517133e8b",
+          "train.py": "2cb963e684554e776ed33f56641c1eac28ed7e625316328871c6dc3005e8d742"
+        },
+        "python_version": "3.11.16",
+        "package_versions": {
+          "numpy": "2.2.6",
+          "torch": "2.7.1",
+          "gymnasium": "1.2.2",
+          "mujoco": "3.2.3",
+          "minari": "0.5.3",
+          "moviepy": "2.2.1"
+        },
+        "hardware": {
+          "platform": "macOS-26.6.2-arm64-arm-64bit",
+          "machine": "arm64",
+          "processor": "arm",
+          "device": "cpu",
+          "torch_threads": 1
+        },
+        "elapsed_seconds": 7.224108124850318
+      },
+      "failed_evaluations": [],
+      "video_metadata": {
+        "duration_seconds": 50.0,
+        "fps": 20.0,
+        "width": 480,
+        "height": 480,
+        "decodes": true
+      },
+      "artifacts": [
+        {
+          "role": "training_log",
+          "path": "results/person4_100k_seed_2/training.jsonl",
+          "sha256": "79846381b32edfdbde6e02312aa08ef478d3988fdc4cd51187ff4683bc7260c6"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_100000.pt",
+          "sha256": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_25000.pt",
+          "sha256": "7a4ba966c9a9ba6737059a0d412f558422ec0f6b37c8e8a85b6f7fc6f92b160d"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_50000.pt",
+          "sha256": "1e687633da686abe4bf13c1b8479a2d3ab11069b04c91bbd22b3d344f628cc0d"
+        },
+        {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_75000.pt",
+          "sha256": "615c4494ca180010390b336d8941d30956759e103568afce528f95d7a9fa16a3"
+        },
+        {
+          "role": "evaluation_csv",
+          "path": "results/person4_100k_seed_2/evaluation.csv",
+          "sha256": "af515263539dac42ce479445fa5caf9ce72534b864370b8f58503fade365abe5",
+          "bytes": 3333
+        },
+        {
+          "role": "summary",
+          "path": "results/person4_100k_seed_2/summary.json",
+          "sha256": "0bbeea9207bdbb3e6c45c6d9c01d7cb2f00a97034a5f4a2d1f319c5de3c99998",
+          "bytes": 2832
+        },
+        {
+          "role": "plot",
+          "path": "results/person4_100k_seed_2/plots/training_losses.png",
+          "sha256": "dd0ab4fb06ae5bc465d52ab0b545b29830af16b84da49988eff39cf65fc26916",
+          "bytes": 126897
+        },
+        {
+          "role": "plot",
+          "path": "results/person4_100k_seed_2/plots/evaluation_returns.png",
+          "sha256": "c16c72857779f536d59d34632da2a76381b6bb3525a2ede69fa87441bf248cca",
+          "bytes": 45045
+        },
+        {
+          "role": "video",
+          "path": "videos/person4_100k_seed_2/demo_seed_10000.mp4",
+          "sha256": "75cf798fbbd2d774dea53dc42598e504819b5c660043eb3530bfb0107007682c",
+          "bytes": 2186335,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_demo_seed_10000.mp4"
+        },
+        {
+          "role": "video_visible_floor",
+          "path": "videos/person4_100k_seed_2_visible_floor/demo_seed_10000.mp4",
+          "sha256": "d4c080a30e5ced91d70b14f28e0ad08faa630343b6c6d62d0a8f074f36518abb",
+          "bytes": 3737908,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4"
+        }
+      ],
+      "checkpoint_provenance": {
+        "25000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_25000.pt",
+          "sha256": "7a4ba966c9a9ba6737059a0d412f558422ec0f6b37c8e8a85b6f7fc6f92b160d",
+          "bytes": 4090120
+        },
+        "50000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_50000.pt",
+          "sha256": "1e687633da686abe4bf13c1b8479a2d3ab11069b04c91bbd22b3d344f628cc0d",
+          "bytes": 4090120
+        },
+        "75000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_75000.pt",
+          "sha256": "615c4494ca180010390b336d8941d30956759e103568afce528f95d7a9fa16a3",
+          "bytes": 4090120
+        },
+        "100000": {
+          "role": "checkpoint",
+          "path": "checkpoints/person4_100k_seed_2/step_100000.pt",
+          "sha256": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+          "bytes": 4090245
+        }
+      },
+      "published_video": {
+        "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4",
+        "video": {
+          "width": 480,
+          "height": 480,
+          "fps": 20.0,
+          "duration_seconds": 50.0,
+          "first_and_last_frame_decoded": true
+        },
+        "checkpoint_step": 100000,
+        "evaluation_seed": 10000,
+        "episode_return": 970.5398297863957,
+        "episode_length": 1000,
+        "matches_original_evaluation": true,
+        "rendering": {
+          "plane_xy_half_size": [
+            0,
+            0
+          ],
+          "collision_physics_unchanged": true
+        },
+        "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+        "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+        "recording_source_has_local_changes": true
+      }
+    }
+  ],
+  "summary": {
+    "schema_version": 1,
+    "raw_rewards": true,
+    "minimum_seed_episode_protocol_met": true,
+    "within_run": [
+      {
+        "run_id": "person4_100k_seed_0",
+        "training_seed": 0,
+        "checkpoint_step": 0,
+        "policy_name": "random",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": -287.399828474637,
+        "return_std_population": 56.67802611728339,
+        "return_min": -366.0916291746756,
+        "return_max": -186.12732957408303,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_0",
+        "training_seed": 0,
+        "checkpoint_step": 25000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 1427.9638545750188,
+        "return_std_population": 1117.1140563183817,
+        "return_min": -72.51313939654412,
+        "return_max": 3448.6871479440356,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_0",
+        "training_seed": 0,
+        "checkpoint_step": 50000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 3598.9035467004323,
+        "return_std_population": 1218.7290953930785,
+        "return_min": 1326.2233253588813,
+        "return_max": 5317.632867185005,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_0",
+        "training_seed": 0,
+        "checkpoint_step": 75000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 3392.4447557163126,
+        "return_std_population": 2060.7695435388528,
+        "return_min": 138.0409701327336,
+        "return_max": 7328.211201808855,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_0",
+        "training_seed": 0,
+        "checkpoint_step": 100000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 1964.2847367921283,
+        "return_std_population": 2164.3499183678546,
+        "return_min": -281.57272372159616,
+        "return_max": 5742.627185897753,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_1",
+        "training_seed": 1,
+        "checkpoint_step": 0,
+        "policy_name": "random",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": -287.399828474637,
+        "return_std_population": 56.67802611728339,
+        "return_min": -366.0916291746756,
+        "return_max": -186.12732957408303,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_1",
+        "training_seed": 1,
+        "checkpoint_step": 25000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 1590.5892572346343,
+        "return_std_population": 657.4276217409652,
+        "return_min": 940.2540689461748,
+        "return_max": 2909.3711230848844,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_1",
+        "training_seed": 1,
+        "checkpoint_step": 50000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 987.2401136062975,
+        "return_std_population": 964.0329966779433,
+        "return_min": -401.57932196097596,
+        "return_max": 2353.792194177229,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_1",
+        "training_seed": 1,
+        "checkpoint_step": 75000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 1301.9387032661189,
+        "return_std_population": 917.8045578354449,
+        "return_min": -425.01802079579056,
+        "return_max": 3093.6748967655312,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_1",
+        "training_seed": 1,
+        "checkpoint_step": 100000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 3475.734523602196,
+        "return_std_population": 2548.3227621791857,
+        "return_min": -164.788503033016,
+        "return_max": 6980.989383220709,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_2",
+        "training_seed": 2,
+        "checkpoint_step": 0,
+        "policy_name": "random",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": -287.399828474637,
+        "return_std_population": 56.67802611728339,
+        "return_min": -366.0916291746756,
+        "return_max": -186.12732957408303,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_2",
+        "training_seed": 2,
+        "checkpoint_step": 25000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 763.375597646944,
+        "return_std_population": 629.2099665276637,
+        "return_min": -294.47094573147854,
+        "return_max": 2120.7802716896454,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_2",
+        "training_seed": 2,
+        "checkpoint_step": 50000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 1796.7260162800035,
+        "return_std_population": 1650.9969664079242,
+        "return_min": -571.2204259806701,
+        "return_max": 5690.316141832995,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_2",
+        "training_seed": 2,
+        "checkpoint_step": 75000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 2896.661436634686,
+        "return_std_population": 2422.0148709399286,
+        "return_min": 417.2087312496784,
+        "return_max": 9367.145316098826,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "person4_100k_seed_2",
+        "training_seed": 2,
+        "checkpoint_step": 100000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 3099.2027463048607,
+        "return_std_population": 2128.0089919787993,
+        "return_min": 262.4400849960861,
+        "return_max": 7261.298672859706,
+        "episode_length_mean": 1000.0
+      }
+    ],
+    "across_runs": [
+      {
+        "checkpoint_step": 25000,
+        "training_seeds": [
+          0,
+          1,
+          2
+        ],
+        "runs": 3,
+        "all_runs_present": true,
+        "mean_of_run_means": 1260.642903152199,
+        "std_sample_of_run_means": 438.25544519251895
+      },
+      {
+        "checkpoint_step": 50000,
+        "training_seeds": [
+          0,
+          1,
+          2
+        ],
+        "runs": 3,
+        "all_runs_present": true,
+        "mean_of_run_means": 2127.623225528911,
+        "std_sample_of_run_means": 1336.9054544943697
+      },
+      {
+        "checkpoint_step": 75000,
+        "training_seeds": [
+          0,
+          1,
+          2
+        ],
+        "runs": 3,
+        "all_runs_present": true,
+        "mean_of_run_means": 2530.3482985390388,
+        "std_sample_of_run_means": 1092.3336830789542
+      },
+      {
+        "checkpoint_step": 100000,
+        "training_seeds": [
+          0,
+          1,
+          2
+        ],
+        "runs": 3,
+        "all_runs_present": true,
+        "mean_of_run_means": 2846.407335566395,
+        "std_sample_of_run_means": 786.7968316407178
+      }
+    ],
+    "final_checkpoint_steps": {
+      "person4_100k_seed_0": 100000,
+      "person4_100k_seed_1": 100000,
+      "person4_100k_seed_2": 100000
+    }
+  },
+  "limitations": [
+    "100000 updates per seed; default 500000-update schedule was not run",
+    "Only three training seeds and ten fixed evaluation seeds",
+    "Raw returns only; no D4RL normalized-score assumption",
+    "Artifacts are published in GitHub Releases; PR/lead review and clean Colab acceptance remain pending",
+    "All three fixed-seed demo episodes show a fall or stall; robust running is not demonstrated"
+  ],
+  "publication_manifest": "publication.json",
+  "demo_diagnostics": "demo_diagnostics.json",
+  "post_experiment_validation": {
+    "purpose": "Public artifact links, infinite-floor rendering and explicit demo failure assessment",
+    "source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+    "source_has_local_changes": true,
+    "files_sha256": {
+      "src/iql_project/evaluate.py": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+      "tests/test_evaluate.py": "9974f5aa9b3c097c369059b2fbf3adc26d6337134e451c81f19c57eec239bd53",
+      "notebooks/iql_halfcheetah.ipynb": "024015deb8f461bb4ce2b6c007c82af0ebc9f06314d15ae44c17cb9cdda3a140"
+    },
+    "checks": {
+      "tests_passed": 87,
+      "real_data_test_enabled": true,
+      "ruff_check": true,
+      "ruff_format_check": true,
+      "environment_reset_and_ten_steps": true,
+      "notebook_schema_and_empty_outputs": true,
+      "notebook_demo_local_and_remote_url_paths": true,
+      "anonymous_release_download_sha256_and_video_decode": true,
+      "recorded_episode_returns_and_lengths_match_original_csv": true,
+      "infinite_floor_physics_parity_steps": 1000,
+      "report_publication_diagnostics_consistency": true
+    }
+  }
+}

@@ -84,20 +84,20 @@ def test_scaffold_cli_reports_ownership_and_contract():
         check=False,
     )
     assert result.returncode == 0, result.stderr
-    assert "scaffold" in result.stdout.lower()
+    assert "configuration valid" in result.stdout.lower()
+    assert "performance requires measured artifacts" in result.stdout.lower()
     assert "HalfCheetah-v5" in result.stdout
     assert "Person 3" in result.stdout
 
 
-@pytest.mark.parametrize("command", ["train", "evaluate"])
-def test_unimplemented_commands_fail_without_artifacts(command, tmp_path):
+def test_evaluate_command_fails_without_artifacts(tmp_path):
     result = subprocess.run(
-        [sys.executable, "-m", "iql_project", command],
+        [sys.executable, "-m", "iql_project", "evaluate"],
         cwd=tmp_path,
         capture_output=True,
         text=True,
         check=False,
     )
     assert result.returncode == 2
-    assert "not implemented" in result.stderr.lower()
+    assert "requires --checkpoint" in result.stderr.lower()
     assert not list(tmp_path.iterdir())

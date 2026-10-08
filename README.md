@@ -2,15 +2,27 @@
 
 Five-person offline reinforcement learning course project led by **MedvAx-AI**.
 
-**Status: Person 2 environment/data implemented.** The install, configuration,
-interfaces, validated Minari loader and environment recovery are ready.
-IQL, training, evaluation and video recording deliberately raise `NotImplementedError`.
-No trained agent, measured agent return or completed course demo is supplied at this stage.
+**Status: IQL training and Person 4 evaluation/video implemented.** The install,
+configuration, Minari loader, learner, checkpoint/resume, seeded evaluation,
+random baseline, raw metrics, plots and MP4 recording are in place. Learning
+performance is assessed from measured artifacts; installation and loss checks
+alone do not demonstrate a strong policy.
+
+**Demo assessment:** the current 100k-update policies fall or stall in the fixed-seed
+videos; robust running has not been demonstrated. Watch the actual episodes:
+[seed 0](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4),
+[seed 1](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4),
+[seed 2](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4).
+[Release artifacts and checkpoints](https://github.com/MedvAx-AI/iql-halfcheetah/releases/tag/person4-evaluation-100k)
+include checksums and the original experiment snapshot.
 
 ## Start here
 
 - [Project plan, role deliverables and roadmap](IQL_5_Person_Project_Plan.md)
 - [Person 2 environment, preprocessing and measured dataset statistics](docs/ENVIRONMENT_DATASET.md)
+- [Person 3 IQL losses, likelihood, training and checkpoints](docs/IQL.md)
+- [Person 4 evaluation protocol, experiment commands and artifact formats](docs/EVALUATION.md)
+- [Person 4 measured three-seed results and verification evidence](docs/evidence/person-4/README.md)
 - [Shared interfaces and artifact formats](docs/INTERFACES.md)
 - [Contribution / Git workflow](CONTRIBUTING.md)
 - [Team tasks](https://github.com/MedvAx-AI/iql-halfcheetah/issues)
@@ -87,14 +99,15 @@ configs/halfcheetah.toml       shared starting hyperparameters
 src/iql_project/
   config.py, contracts.py     Person 1: shared config and interface contracts
   dataset.py, environment.py  Person 2: validated loader, sampler and environment recovery
-  networks.py, iql.py         Person 3: explicit implementation stubs
-  train.py                   Person 3: training orchestration stub
-  evaluate.py                Person 4: evaluation and recording stubs
-  cli.py                     scaffold check; train/evaluate fail clearly
+  networks.py, iql.py         Person 3: twin Q, expectile V, squashed Gaussian, checkpoints
+  train.py                   Person 3: offline loop, JSONL, manifest, resume
+  evaluate.py, reporting.py  Person 4: rollouts, baseline, recording and seed summaries
+  cli.py                     check, train, evaluate and summarize
 notebooks/                   Person 5: valid, unexecuted narrative outline
 tests/                       scaffold contract tests; role PRs add behavioral tests
 scripts/                     dependency/environment/notebook checks
   check_dataset.py           Person 2: explicit download, statistics and recovery check
+  run_experiments.py         Person 4: three-seed training/evaluation and optional videos
 data/                        local Minari cache guidance; data excluded from Git
 results/, videos/, checkpoints/   artifact conventions; generated files excluded
 docs/                        design, interfaces, verification, presentation outline
