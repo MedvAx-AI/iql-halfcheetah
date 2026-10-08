@@ -29,8 +29,17 @@ include checksums and the original experiment snapshot.
 - [Created branches, issues and milestones](docs/TEAM_HANDOFF.md)
 - [Notebook outline](notebooks/iql_halfcheetah.ipynb)
 - [Verification evidence](docs/VERIFICATION.md)
+- [One-click Colab execution and acceptance](docs/COLAB_ACCEPTANCE.md)
+- [Platform-scoped reproducibility](docs/REPRODUCIBILITY.md)
 
 ## Chosen stack
+
+[Open in Google Colab](https://colab.research.google.com/github/MedvAx-AI/iql-halfcheetah/blob/main/notebooks/iql_halfcheetah.ipynb)
+and select **Run all** on CPU. Setup installs the frozen Python 3.11 project kernel;
+Colab's host may use newer Python and different preloaded libraries. The notebook
+downloads the dataset, trains 1,000 smoke updates, replays the published checkpoints
+twice, records a video and runs the full tests. Allow several minutes. It displays
+current-platform measurements separately from the original Apple M3 Pro results.
 
 Python **3.11**; PyTorch **2.7.1**; Gymnasium **1.2.2**; MuJoCo **3.2.3**;
 Minari **0.5.3**. Exact direct pins live in `pyproject.toml`, complete dependency
