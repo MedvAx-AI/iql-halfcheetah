@@ -208,7 +208,8 @@
           "role": "video",
           "path": "videos/person4_100k_seed_0/demo_seed_10000.mp4",
           "sha256": "373715bb9b125f3b13451b12c640e3370dd51aac741adcb34d6cc376aae0a6a4",
-          "bytes": 474583
+          "bytes": 474583,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_demo_seed_10000.mp4"
         },
         {
           "role": "evaluation_csv",
@@ -233,6 +234,13 @@
           "path": "results/person4_100k_seed_0/plots/evaluation_returns.png",
           "sha256": "1098f0a56ed9c9abd139a178bcc0f577991f7670412273e1a4c297b2fe827946",
           "bytes": 50917
+        },
+        {
+          "role": "video_visible_floor",
+          "path": "videos/person4_100k_seed_0_visible_floor/demo_seed_10000.mp4",
+          "sha256": "42a63d4fe617edb1cd446d9bf40701f94e4e03a027b179b9321278b8476064fe",
+          "bytes": 636631,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4"
         }
       ],
       "checkpoint_provenance": {
@@ -260,6 +268,31 @@
           "sha256": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
           "bytes": 4090181
         }
+      },
+      "published_video": {
+        "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4",
+        "video": {
+          "width": 480,
+          "height": 480,
+          "fps": 20.0,
+          "duration_seconds": 50.0,
+          "first_and_last_frame_decoded": true
+        },
+        "checkpoint_step": 100000,
+        "evaluation_seed": 10000,
+        "episode_return": 1294.247826173916,
+        "episode_length": 1000,
+        "matches_original_evaluation": true,
+        "rendering": {
+          "plane_xy_half_size": [
+            0,
+            0
+          ],
+          "collision_physics_unchanged": true
+        },
+        "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+        "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+        "recording_source_has_local_changes": true
       }
     },
     {
@@ -386,7 +419,15 @@
           "role": "video",
           "path": "videos/person4_100k_seed_1/demo_seed_10000.mp4",
           "sha256": "0357798bffe76dc1f93e3fd7252edb4a1e4d34be4287c5ceeb751fa1389161b4",
-          "bytes": 560329
+          "bytes": 560329,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_demo_seed_10000.mp4"
+        },
+        {
+          "role": "video_visible_floor",
+          "path": "videos/person4_100k_seed_1_visible_floor/demo_seed_10000.mp4",
+          "sha256": "f34883f3411e02ffac3e44d2389636bc8719d6ef01812dab37d1f4d51bac63c0",
+          "bytes": 862196,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4"
         }
       ],
       "checkpoint_provenance": {
@@ -414,6 +455,31 @@
           "sha256": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
           "bytes": 4090245
         }
+      },
+      "published_video": {
+        "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4",
+        "video": {
+          "width": 480,
+          "height": 480,
+          "fps": 20.0,
+          "duration_seconds": 50.0,
+          "first_and_last_frame_decoded": true
+        },
+        "checkpoint_step": 100000,
+        "evaluation_seed": 10000,
+        "episode_return": 1480.4735290344838,
+        "episode_length": 1000,
+        "matches_original_evaluation": true,
+        "rendering": {
+          "plane_xy_half_size": [
+            0,
+            0
+          ],
+          "collision_physics_unchanged": true
+        },
+        "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+        "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+        "recording_source_has_local_changes": true
       }
     },
     {
@@ -540,7 +606,15 @@
           "role": "video",
           "path": "videos/person4_100k_seed_2/demo_seed_10000.mp4",
           "sha256": "75cf798fbbd2d774dea53dc42598e504819b5c660043eb3530bfb0107007682c",
-          "bytes": 2186335
+          "bytes": 2186335,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_demo_seed_10000.mp4"
+        },
+        {
+          "role": "video_visible_floor",
+          "path": "videos/person4_100k_seed_2_visible_floor/demo_seed_10000.mp4",
+          "sha256": "d4c080a30e5ced91d70b14f28e0ad08faa630343b6c6d62d0a8f074f36518abb",
+          "bytes": 3737908,
+          "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4"
         }
       ],
       "checkpoint_provenance": {
@@ -568,6 +642,31 @@
           "sha256": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
           "bytes": 4090245
         }
+      },
+      "published_video": {
+        "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4",
+        "video": {
+          "width": 480,
+          "height": 480,
+          "fps": 20.0,
+          "duration_seconds": 50.0,
+          "first_and_last_frame_decoded": true
+        },
+        "checkpoint_step": 100000,
+        "evaluation_seed": 10000,
+        "episode_return": 970.5398297863957,
+        "episode_length": 1000,
+        "matches_original_evaluation": true,
+        "rendering": {
+          "plane_xy_half_size": [
+            0,
+            0
+          ],
+          "collision_physics_unchanged": true
+        },
+        "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+        "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+        "recording_source_has_local_changes": true
       }
     }
   ],
@@ -997,6 +1096,32 @@
     "100000 updates per seed; default 500000-update schedule was not run",
     "Only three training seeds and ten fixed evaluation seeds",
     "Raw returns only; no D4RL normalized-score assumption",
-    "Local artifacts are prepared; no public storage URL or PR is claimed"
-  ]
+    "Artifacts are published in GitHub Releases; PR/lead review and clean Colab acceptance remain pending",
+    "All three fixed-seed demo episodes show a fall or stall; robust running is not demonstrated"
+  ],
+  "publication_manifest": "publication.json",
+  "demo_diagnostics": "demo_diagnostics.json",
+  "post_experiment_validation": {
+    "purpose": "Public artifact links, infinite-floor rendering and explicit demo failure assessment",
+    "source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+    "source_has_local_changes": true,
+    "files_sha256": {
+      "src/iql_project/evaluate.py": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+      "tests/test_evaluate.py": "9974f5aa9b3c097c369059b2fbf3adc26d6337134e451c81f19c57eec239bd53",
+      "notebooks/iql_halfcheetah.ipynb": "024015deb8f461bb4ce2b6c007c82af0ebc9f06314d15ae44c17cb9cdda3a140"
+    },
+    "checks": {
+      "tests_passed": 87,
+      "real_data_test_enabled": true,
+      "ruff_check": true,
+      "ruff_format_check": true,
+      "environment_reset_and_ten_steps": true,
+      "notebook_schema_and_empty_outputs": true,
+      "notebook_demo_local_and_remote_url_paths": true,
+      "anonymous_release_download_sha256_and_video_decode": true,
+      "recorded_episode_returns_and_lengths_match_original_csv": true,
+      "infinite_floor_physics_parity_steps": 1000,
+      "report_publication_diagnostics_consistency": true
+    }
+  }
 }

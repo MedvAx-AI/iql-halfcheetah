@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "release_url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/tag/person4-evaluation-100k",
+  "tag": "person4-evaluation-100k",
+  "implementation_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+  "assets": [
+    {
+      "name": "person4_100k_seed_0_demo_seed_10000.mp4",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_demo_seed_10000.mp4",
+      "sha256": "373715bb9b125f3b13451b12c640e3370dd51aac741adcb34d6cc376aae0a6a4",
+      "bytes": 474583,
+      "content_type": "video/mp4",
+      "asset_id": 619701337,
+      "anonymous_download_verified": true,
+      "video": {
+        "width": 480,
+        "height": 480,
+        "fps": 20.0,
+        "duration_seconds": 50.0,
+        "first_and_last_frame_decoded": true
+      }
+    },
+    {
+      "name": "person4_100k_seed_1_demo_seed_10000.mp4",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_demo_seed_10000.mp4",
+      "sha256": "0357798bffe76dc1f93e3fd7252edb4a1e4d34be4287c5ceeb751fa1389161b4",
+      "bytes": 560329,
+      "content_type": "video/mp4",
+      "asset_id": 619701387,
+      "anonymous_download_verified": true,
+      "video": {
+        "width": 480,
+        "height": 480,
+        "fps": 20.0,
+        "duration_seconds": 50.0,
+        "first_and_last_frame_decoded": true
+      }
+    },
+    {
+      "name": "person4_100k_seed_2_demo_seed_10000.mp4",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_demo_seed_10000.mp4",
+      "sha256": "75cf798fbbd2d774dea53dc42598e504819b5c660043eb3530bfb0107007682c",
+      "bytes": 2186335,
+      "content_type": "video/mp4",
+      "asset_id": 619701419,
+      "anonymous_download_verified": true,
+      "video": {
+        "width": 480,
+        "height": 480,
+        "fps": 20.0,
+        "duration_seconds": 50.0,
+        "first_and_last_frame_decoded": true
+      }
+    },
+    {
+      "name": "person4_artifacts.tar.gz",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_artifacts.tar.gz",
+      "sha256": "bbd914bb2c4f10ac0b1d759498b7010caa2ba6fadd90e0b7b8eee211cefa89bf",
+      "bytes": 63568506,
+      "content_type": "application/gzip",
+      "asset_id": 619701500,
+      "anonymous_download_verified": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/SHA256SUMS.txt",
+      "sha256": "333a523fb7c04ef2d8f56ffbeeaa4b4097f952a96011364a0730adc5c5d84d23",
+      "bytes": 409,
+      "content_type": "text/plain",
+      "asset_id": 619702637,
+      "anonymous_download_verified": true
+    },
+    {
+      "name": "person4_100k_seed_0_visible_floor_demo_seed_10000.mp4",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4",
+      "sha256": "42a63d4fe617edb1cd446d9bf40701f94e4e03a027b179b9321278b8476064fe",
+      "bytes": 636631,
+      "content_type": "video/mp4",
+      "asset_id": 619727385,
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "evaluation_seed": 10000,
+      "checkpoint_step": 100000,
+      "checkpoint_sha256": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+      "path": "videos/person4_100k_seed_0_visible_floor/demo_seed_10000.mp4",
+      "video": {
+        "width": 480,
+        "height": 480,
+        "fps": 20.0,
+        "duration_seconds": 50.0,
+        "first_and_last_frame_decoded": true
+      },
+      "episode_return": 1294.247826173916,
+      "episode_length": 1000,
+      "matches_original_evaluation": true,
+      "rendering": {
+        "plane_xy_half_size": [
+          0,
+          0
+        ],
+        "collision_physics_unchanged": true
+      },
+      "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+      "variant": "visible_floor",
+      "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+      "recording_source_has_local_changes": true,
+      "anonymous_download_verified": true
+    },
+    {
+      "name": "person4_100k_seed_1_visible_floor_demo_seed_10000.mp4",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4",
+      "sha256": "f34883f3411e02ffac3e44d2389636bc8719d6ef01812dab37d1f4d51bac63c0",
+      "bytes": 862196,
+      "content_type": "video/mp4",
+      "asset_id": 619727424,
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "evaluation_seed": 10000,
+      "checkpoint_step": 100000,
+      "checkpoint_sha256": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+      "path": "videos/person4_100k_seed_1_visible_floor/demo_seed_10000.mp4",
+      "video": {
+        "width": 480,
+        "height": 480,
+        "fps": 20.0,
+        "duration_seconds": 50.0,
+        "first_and_last_frame_decoded": true
+      },
+      "episode_return": 1480.4735290344838,
+      "episode_length": 1000,
+      "matches_original_evaluation": true,
+      "rendering": {
+        "plane_xy_half_size": [
+          0,
+          0
+        ],
+        "collision_physics_unchanged": true
+      },
+      "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+      "variant": "visible_floor",
+      "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+      "recording_source_has_local_changes": true,
+      "anonymous_download_verified": true
+    },
+    {
+      "name": "person4_100k_seed_2_visible_floor_demo_seed_10000.mp4",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4",
+      "sha256": "d4c080a30e5ced91d70b14f28e0ad08faa630343b6c6d62d0a8f074f36518abb",
+      "bytes": 3737908,
+      "content_type": "video/mp4",
+      "asset_id": 619727517,
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "evaluation_seed": 10000,
+      "checkpoint_step": 100000,
+      "checkpoint_sha256": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+      "path": "videos/person4_100k_seed_2_visible_floor/demo_seed_10000.mp4",
+      "video": {
+        "width": 480,
+        "height": 480,
+        "fps": 20.0,
+        "duration_seconds": 50.0,
+        "first_and_last_frame_decoded": true
+      },
+      "episode_return": 970.5398297863957,
+      "episode_length": 1000,
+      "matches_original_evaluation": true,
+      "rendering": {
+        "plane_xy_half_size": [
+          0,
+          0
+        ],
+        "collision_physics_unchanged": true
+      },
+      "recording_source_sha256": "4b655e23b3de22f46f9139a65c4adcb3ff7679bd8c918ad3659eddaca46f802f",
+      "variant": "visible_floor",
+      "recording_source_base_commit": "8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2",
+      "recording_source_has_local_changes": true,
+      "anonymous_download_verified": true
+    },
+    {
+      "name": "SHA256SUMS-visible-floor.txt",
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/SHA256SUMS-visible-floor.txt",
+      "sha256": "5ee2f39ca7cb7c76e72bb0573f271f523ca536fe716f0ed9456f138cfbd3689a",
+      "bytes": 360,
+      "content_type": "text/plain",
+      "asset_id": 619727613,
+      "anonymous_download_verified": true
+    }
+  ],
+  "verified_at_utc": "2026-10-07T20:28:48.873632+00:00",
+  "policy_assessment": "All three fixed-seed demos show a fall or stall; robust running is not demonstrated."
+}

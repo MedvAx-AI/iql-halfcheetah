@@ -4,6 +4,8 @@ Implements the local deliverables for [issue #3](https://github.com/MedvAx-AI/iq
 Source baseline: `c11578b720e1c2bbf64382f51580541dcb8c5328` plus the local implementation changes
 fingerprinted in [experiment_report.json](experiment_report.json). The report explicitly
 records the dirty working tree; it does not represent these edits as already merged.
+The implementation was subsequently pushed in commit
+[`8a8c1d4`](https://github.com/MedvAx-AI/iql-halfcheetah/commit/8a8c1d41f5a62ba1f8ab7dfe926b8758b57c29c2).
 
 ## Measured result
 
@@ -34,6 +36,14 @@ was fixed in advance. We did not select the best checkpoint or the best episode.
 These are 100k-update results; the default 500k-update schedule was not run.
 No D4RL normalized score, confidence interval, or performance threshold is claimed.
 
+**Video assessment: robust running has not been demonstrated.** All three fixed-seed
+demo episodes show a fall or stall. Seed 0 is stationary for the last **40.7 seconds**;
+seed 1 for **35.9 seconds**. Seed 2 has an inverted torso during **93.1%** of sampled
+steps. These are descriptive diagnostics for seed 10000, not a standard benchmark
+score or a claim about all evaluation episodes. Definitions and measurements are in
+[demo_diagnostics.json](demo_diagnostics.json). Positive average return above a random
+baseline is insufficient evidence of stable locomotion.
+
 ![Per-training-seed evaluation curves](evaluation_returns.png)
 
 Training loss plots: [seed 0](training_seed_0.png), [seed 1](training_seed_1.png),
@@ -52,6 +62,31 @@ plotting; the complete update-indexed JSONL files are retained in the local arti
 All three MP4s decode at the start and end: 480×480, 20 fps, 50 seconds. The selected
 video episode's corresponding evaluation return is retained in the CSV, including
 when it is lower than the run mean. No video or checkpoint bytes are committed.
+
+Published videos with the ground visible throughout:
+[seed 0](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4),
+[seed 1](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4),
+[seed 2](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4).
+URLs and SHA-256 are in [publication.json](publication.json) and the
+[video index](../../../videos/README.md). Each asset was downloaded without credentials,
+matched byte-for-byte by SHA-256 and decoded at its first and last frames.
+
+The default XML floor has an infinite collision plane but a finite ±40 m drawing.
+Beyond that rectangle, a grounded agent appears suspended over a grey background.
+Recording now sets the plane's drawing extents to zero (infinite). Every repeated
+episode return and length matches the original CSV exactly; a 1,000-step physics
+comparison beyond the visible rectangle also matches exactly. The camera and
+physical task are unchanged. This repair does not improve the policy. See
+[MuJoCo's plane definition](https://mujoco.readthedocs.io/en/3.2.3/XMLreference.html#body-geom).
+HalfCheetah does not terminate on a fall, so all 1,000 steps remain visible, per the
+[environment definition](https://gymnasium.farama.org/environments/mujoco/half_cheetah/#episode-end).
+
+[Download the original experiment archive](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_artifacts.tar.gz)
+with all twelve checkpoints, logs, CSVs, plots, manifests and original MP4s.
+[bundle_manifest.json](bundle_manifest.json) records its SHA-256 and contents.
+The archive preserves the experiment snapshot before these publication/rendering
+updates; use the branch for the current source and the linked assets for corrected
+renderings.
 
 Hardware: **Apple M3 Pro, 36 GiB RAM**, macOS/arm64, CPU PyTorch 2.7.1, one PyTorch thread.
 Python 3.11.16; NumPy 2.2.6; Gymnasium 1.2.2; MuJoCo 3.2.3; Minari 0.5.3; MoviePy 2.2.1.
@@ -86,17 +121,26 @@ Use a fresh run prefix to protect existing runs. The actual local invocations us
 the locked `.venv/bin/python`; the commands above use the same locked environment.
 `UV_OFFLINE=1` assumes build dependencies have already been cached.
 
-Local results: **86 tests passed**, including the optional real-data training test;
+At the original experiment export, **86 tests passed**, including the optional real-data training test;
 lint, format, environment reset/ten steps, notebook schema/empty-output check,
 dependency/export parity and isolated wheel/sdist build passed. Seed 0 was evaluated
 again with the final evaluator: all 40 IQL returns/lengths and ten baseline episodes
 matched exactly. Manifest artifact checksums, every finite training metric, consecutive
 updates and start/end video decoding were checked before exporting the evidence.
 
-The final notebook is checked in with no outputs. All nine code cells executed in a
-fresh local Python 3.11.16 kernel, including measured curves and embedded MP4; the
+The notebook is checked in with no outputs. All nine code cells at implementation
+commit `8a8c1d4` executed in a fresh local Python 3.11.16 kernel, including measured curves and embedded MP4; the
 executed copy is ignored under `results/person4_notebook_execution.ipynb`.
 This is a local check, and clean Colab acceptance remains with the lead/Person 5.
+
+After publication and the floor-rendering repair, **87 tests passed**, including
+the real-data test and the added 1,000-step physics comparison. Lint/format,
+environment and notebook checks passed. The updated demo cell was executed for
+both the local embedded MP4 and the public URL fallback. Downloads/checksums,
+video decoding and report/publication/diagnostic consistency were also verified.
+These later checks and current source hashes are recorded separately under
+`post_experiment_validation` in the report; the original experiment hashes remain
+the historical source fingerprint.
 
 ## Failed attempts and recovery
 
@@ -117,9 +161,9 @@ training runs.
 
 ## Remaining integration gates
 
-The code and reviewed evidence are local on `feature/evaluation`. Remote CI, a PR
-with lead review, public/team-storage artifact URLs and final clean Colab acceptance
-have not been completed by this local handoff. Generated artifacts are prepared
-for transfer; upload them and record URLs/checksums before marking the remote
-publication requirement complete. The implementation preserves shared signatures
-and updates the notebook's affected evaluation/demo cells.
+The code and evidence are pushed on `feature/evaluation`, and the artifact release
+is published with verified download URLs and checksums. A PR with lead review,
+remote CI acceptance and final clean Colab acceptance remain integration gates.
+The implementation preserves shared signatures and updates the notebook's affected
+evaluation/demo cells. Policy performance still needs improvement and a fresh
+evaluation; the present demos must not be presented as successful stable running.

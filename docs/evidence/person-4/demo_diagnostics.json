@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "episode_duration_seconds": 50,
+  "diagnostic_definitions": {
+    "stationary_tail": "All remaining sampled steps have abs(root x velocity) <= 0.01 m/s; not a task success criterion.",
+    "torso_inverted_fraction": "Fraction of steps with cos(root hinge angle) < 0; a descriptive posture diagnostic, not a standard benchmark score.",
+    "final_torso_height_m": "Root z slide coordinate + the XML torso base height of 0.7 m."
+  },
+  "assessment": "All three fixed-seed demos show a fall or stall. These 100k experiments do not establish robust running.",
+  "rendering_observation": "The default floor plane has a finite +/-40 m visual rectangle but infinite collision geometry. The agent remains grounded after leaving that rectangle.",
+  "runs": [
+    {
+      "run_id": "person4_100k_seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 100000,
+      "evaluation_seed": 10000,
+      "episode_length": 1000,
+      "episode_return": 1294.247826173916,
+      "final_x_m": 68.18101031413218,
+      "final_torso_height_m": 0.12271397347732094,
+      "final_forward_velocity_m_per_s": 5.326001325546284e-15,
+      "stationary_tail_starts_at_seconds": 9.3,
+      "stationary_tail_seconds": 40.7,
+      "torso_inverted_fraction": 0.862,
+      "checkpoint_sha256": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371"
+    },
+    {
+      "run_id": "person4_100k_seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 100000,
+      "evaluation_seed": 10000,
+      "episode_length": 1000,
+      "episode_return": 1480.4735290344838,
+      "final_x_m": 78.17691263167048,
+      "final_torso_height_m": 0.5469749711792053,
+      "final_forward_velocity_m_per_s": -3.5804599081611e-08,
+      "stationary_tail_starts_at_seconds": 14.100000000000001,
+      "stationary_tail_seconds": 35.9,
+      "torso_inverted_fraction": 0.024,
+      "checkpoint_sha256": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0"
+    },
+    {
+      "run_id": "person4_100k_seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 100000,
+      "evaluation_seed": 10000,
+      "episode_length": 1000,
+      "episode_return": 970.5398297863957,
+      "final_x_m": 58.30722744258402,
+      "final_torso_height_m": 0.19075300408636497,
+      "final_forward_velocity_m_per_s": 0.08644872297146783,
+      "stationary_tail_starts_at_seconds": null,
+      "stationary_tail_seconds": null,
+      "torso_inverted_fraction": 0.931,
+      "checkpoint_sha256": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491"
+    }
+  ]
+}

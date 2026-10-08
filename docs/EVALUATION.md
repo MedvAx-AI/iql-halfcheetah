@@ -115,6 +115,17 @@ under `docs/evidence/person-4/`; full checkpoints/logs/videos remain in ignored 
 directories. Large artifacts should be uploaded to team storage or a release and
 their URLs/checksums added before claiming the remote-publication acceptance gate.
 
+The measured 100k-update artifacts are available in the
+[Person 4 release](https://github.com/MedvAx-AI/iql-halfcheetah/releases/tag/person4-evaluation-100k).
+See the [report](evidence/person-4/README.md), [video links](../videos/README.md)
+and [publication manifest](evidence/person-4/publication.json). The fixed-seed demos
+fall or stall; these runs do not establish robust locomotion.
+
+MP4 recording draws the MuJoCo floor plane as infinite, matching its infinite
+collision geometry. This avoids an apparent edge at the default ±40 m visual
+rectangle. Only drawing extents change; observations, actions, rewards and episode
+boundaries are preserved. Falls remain in the full episode video.
+
 ## Verification and limits
 
 `tests/test_evaluate.py` checks saved preprocessing, raw reward sums, both ending
