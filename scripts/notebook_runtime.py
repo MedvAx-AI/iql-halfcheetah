@@ -55,7 +55,12 @@ class ProjectKernel:
             if kind == "update_display_data" and display_id:
                 update_display(content["data"], raw=True, display_id=display_id)
             else:
-                display(content["data"], raw=True, metadata=content.get("metadata", {}))
+                display(
+                    content["data"],
+                    raw=True,
+                    metadata=content.get("metadata", {}),
+                    display_id=display_id,
+                )
         elif kind == "clear_output":
             clear_output(wait=content.get("wait", False))
 

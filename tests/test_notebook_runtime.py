@@ -41,3 +41,21 @@ def test_project_rich_output_reaches_notebook_display(runtime, monkeypatch):
     monkeypatch.setattr(IPython.display, "display", lambda bundle, **kwargs: bundles.append(bundle))
     runtime.execute("from IPython.display import display, HTML\ndisplay(HTML('<b>result</b>'))")
     assert any(bundle.get("text/html") == "<b>result</b>" for bundle in bundles)
+
+
+def test_project_display_updates_keep_the_initial_display_id(runtime, monkeypatch):
+    import IPython.display
+
+    initial, updates = [], []
+    monkeypatch.setattr(IPython.display, "display", lambda data, **kw: initial.append((data, kw)))
+    monkeypatch.setattr(
+        IPython.display, "update_display", lambda data, **kw: updates.append((data, kw))
+    )
+    runtime.execute(
+        "from IPython.display import display, HTML\n"
+        "handle = display(HTML('<b>initial</b>'), display_id='progress')\n"
+        "handle.update(HTML('<b>done</b>'))"
+    )
+    assert initial[0][1].get("display_id") == "progress"
+    assert updates[0][1]["display_id"] == "progress"
+    assert updates[0][0]["text/html"] == "<b>done</b>"
