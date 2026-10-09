@@ -12,6 +12,13 @@ raw episode records. It is not a simulated or manually computed acceptance resul
 `2026-10-09-run-all.jpg` shows the actual 92-test success and final acceptance
 message in Colab. The narrow screenshot reflects the app's browser pane.
 
+`2026-10-09-final-checkpoint-returns.png` re-renders the same 30 IQL episode
+records from `2026-10-09-e710dcb.json` with separate training-seed positions,
+individual episode dots and mean ± population episode standard deviation. This
+is a presentation correction of the retained Colab data, not a new evaluation
+or evidence of policy improvement. The random reference mean uses the same
+evaluation seed set.
+
 The source notebook was opened in a new Colab tab/session, and **Run all** was
 selected. Only Colab's standard GitHub-notebook Run anyway confirmation was used;
 no source-cell modifications or manual preparation were needed.
