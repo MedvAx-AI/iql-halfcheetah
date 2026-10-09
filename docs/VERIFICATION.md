@@ -43,7 +43,7 @@ Administrator enforcement is disabled so the lead retains an explicit maintenanc
 bypass; contributors follow the protected PR path. See the live branch settings
 for any future changes to enforcement.
 
-## Final team checks still required
+## Final team checks required at scaffold delivery (historical)
 
 Dataset metadata and episode-boundary validation (Person 2); IQL numerical correctness,
 real-data updates, checkpoint/resume and GPU profile if used (Person 3); actual
@@ -52,3 +52,16 @@ seeded returns and headless video (Person 4); completed narrative/manual example
 
 Participant usernames were not provided. Role issues are intentionally unassigned;
 the lead assigns them and grants access when those usernames are available.
+
+## Final integration acceptance — 9 October 2026
+
+The subsequent role implementations are merged. A fresh Google Colab CPU
+**Run all** at `e710dcb33621861c9c1d1e14735a3fd7a0beb8dd` completed all 11 code
+cells, 1,000 real-data training updates, exact repeatability of 60 checkpoint
+evaluation records, new video decoding and all 92 tests. The default Python 3.13
+Colab host automatically used the frozen Python 3.11 project kernel.
+
+Full evidence and limitations: [Colab acceptance](COLAB_ACCEPTANCE.md).
+The earlier scaffold checklist and skipped Windows smoke are historical records,
+not the basis for this acceptance. Cross-platform policy returns are separately
+labeled; robust running and the default 500k schedule are not claimed.
