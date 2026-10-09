@@ -1,0 +1,378 @@
+{
+  "source_commit": "9100f5468259d10671d78c2e97d87311625a61bb",
+  "notebook_host": {
+    "frontend": "local Jupyter",
+    "python": "3.11.17",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39"
+  },
+  "python": "3.11.17",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "versions": {
+    "python": "3.11.17",
+    "iql_project": "0.1.0",
+    "torch": "2.7.1+cpu",
+    "numpy": "2.2.6"
+  },
+  "dataset_transitions": 1000000,
+  "dataset_sha256": "db46045497395bc621f2b409089e495f0e51a1182e6257f2f319f7d6654f66c5",
+  "smoke_training_updates": 1000,
+  "smoke_checkpoint_sha256": "4348a4a0edb9b7ceecce0e76ea65ff3149d26b8fd404548e2fb4271a6e6c3795",
+  "smoke_training_log_sha256": "19a76a340403660ed5c9c42a4a8ea469d36e7911c20230f781788c7f9926d432",
+  "same_platform_exact_repeat": true,
+  "episode_records_compared": 60,
+  "pytest_passed": true,
+  "pytest_output": "\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m [ 73%]\n\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[32m.\u001b[0m\u001b[33m                                               [100%]\u001b[0m\n\u001b[33m=============================== warnings summary ===============================\u001b[0m\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\n  /home/runner/work/iql-halfcheetah/iql-halfcheetah/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'\n    prop = Group((name + Suppress(\"=\") + comma_separated(value)) | oneOf(_CONSTANTS))\n\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\n  /home/runner/work/iql-halfcheetah/iql-halfcheetah/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'\n    parse = parser.parseString(pattern)\n\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\n  /home/runner/work/iql-halfcheetah/iql-halfcheetah/.venv/lib/python3.11/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'\n    parser.resetCache()\n\ntests/test_evaluate.py::test_checkpoint_evaluation_upserts_preserves_training_manifest_and_rng\n  /home/runner/work/iql-halfcheetah/iql-halfcheetah/.venv/lib/python3.11/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'\n    ParserElement.enablePackrat()\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n\u001b[33m\u001b[32m98 passed\u001b[0m, \u001b[33m\u001b[1m14 warnings\u001b[0m\u001b[33m in 23.76s\u001b[0m\u001b[0m",
+  "video_decoded": true,
+  "continuation": {
+    "checkpoint": {
+      "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_0_step_200000.pt",
+      "sha256": "5ad57c88233362eafc63858cfe19edfe5f575e782850ca63f40e4cc8f32b46db",
+      "training_seed": 0,
+      "updates": 200000,
+      "training_platform": "macOS original 100k; Windows CPU continuation"
+    },
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "same_platform_exact_repeat": true,
+    "episode_records_compared": 20,
+    "validation": {
+      "schema_version": 1,
+      "raw_rewards": true,
+      "within_run": [
+        {
+          "run_id": "validation",
+          "training_seed": 0,
+          "checkpoint_step": 0,
+          "policy_name": "random",
+          "episodes": 10,
+          "evaluation_seeds": [
+            10000,
+            10001,
+            10002,
+            10003,
+            10004,
+            10005,
+            10006,
+            10007,
+            10008,
+            10009
+          ],
+          "return_mean": -302.7840656863576,
+          "return_std_population": 100.75452661928692,
+          "return_min": -510.39313513815125,
+          "return_max": -140.92390926344154,
+          "episode_length_mean": 1000.0
+        },
+        {
+          "run_id": "validation",
+          "training_seed": 0,
+          "checkpoint_step": 200000,
+          "policy_name": "iql",
+          "episodes": 10,
+          "evaluation_seeds": [
+            10000,
+            10001,
+            10002,
+            10003,
+            10004,
+            10005,
+            10006,
+            10007,
+            10008,
+            10009
+          ],
+          "return_mean": 5403.117819218703,
+          "return_std_population": 3662.011922429833,
+          "return_min": -282.22245620245593,
+          "return_max": 13622.198927868465,
+          "episode_length_mean": 1000.0
+        }
+      ]
+    },
+    "additional": {
+      "schema_version": 1,
+      "raw_rewards": true,
+      "within_run": [
+        {
+          "run_id": "additional",
+          "training_seed": 0,
+          "checkpoint_step": 0,
+          "policy_name": "random",
+          "episodes": 10,
+          "evaluation_seeds": [
+            20000,
+            20001,
+            20002,
+            20003,
+            20004,
+            20005,
+            20006,
+            20007,
+            20008,
+            20009
+          ],
+          "return_mean": -270.7402294645504,
+          "return_std_population": 76.98568181715608,
+          "return_min": -386.3813772679924,
+          "return_max": -142.28208368097486,
+          "episode_length_mean": 1000.0
+        },
+        {
+          "run_id": "additional",
+          "training_seed": 0,
+          "checkpoint_step": 200000,
+          "policy_name": "iql",
+          "episodes": 10,
+          "evaluation_seeds": [
+            20000,
+            20001,
+            20002,
+            20003,
+            20004,
+            20005,
+            20006,
+            20007,
+            20008,
+            20009
+          ],
+          "return_mean": 7922.806912304371,
+          "return_std_population": 4016.2016101940803,
+          "return_min": 2863.881540869644,
+          "return_max": 13098.709681473872,
+          "episode_length_mean": 1000.0
+        }
+      ]
+    },
+    "validation_csv": "run_id,checkpoint_step,training_seed,evaluation_seed,episode_index,episode_return,episode_length,policy_name\nvalidation,200000,0,10000,0,4988.279466261973,1000,iql\nvalidation,200000,0,10001,1,-282.22245620245593,1000,iql\nvalidation,200000,0,10002,2,13622.198927868465,1000,iql\nvalidation,200000,0,10003,3,2546.279296106548,1000,iql\nvalidation,200000,0,10004,4,4651.374112709494,1000,iql\nvalidation,200000,0,10005,5,2622.984716374324,1000,iql\nvalidation,200000,0,10006,6,5718.062839748204,1000,iql\nvalidation,200000,0,10007,7,4796.726843242416,1000,iql\nvalidation,200000,0,10008,8,9518.087386343363,1000,iql\nvalidation,200000,0,10009,9,5849.407059734691,1000,iql\nvalidation,0,0,10000,0,-324.35397169022946,1000,random\nvalidation,0,0,10001,1,-395.4528466878174,1000,random\nvalidation,0,0,10002,2,-140.92390926344154,1000,random\nvalidation,0,0,10003,3,-292.402234904873,1000,random\nvalidation,0,0,10004,4,-510.39313513815125,1000,random\nvalidation,0,0,10005,5,-314.0554133495419,1000,random\nvalidation,0,0,10006,6,-193.66471127912376,1000,random\nvalidation,0,0,10007,7,-364.61423586912764,1000,random\nvalidation,0,0,10008,8,-265.30082438403235,1000,random\nvalidation,0,0,10009,9,-226.67937429723807,1000,random\n",
+    "additional_csv": "run_id,checkpoint_step,training_seed,evaluation_seed,episode_index,episode_return,episode_length,policy_name\nadditional,200000,0,20000,0,12253.36755528106,1000,iql\nadditional,200000,0,20001,1,4570.872346618933,1000,iql\nadditional,200000,0,20002,2,2863.881540869644,1000,iql\nadditional,200000,0,20003,3,5693.038223789317,1000,iql\nadditional,200000,0,20004,4,13007.594844003173,1000,iql\nadditional,200000,0,20005,5,13098.709681473872,1000,iql\nadditional,200000,0,20006,6,4871.913292465283,1000,iql\nadditional,200000,0,20007,7,12681.001276538116,1000,iql\nadditional,200000,0,20008,8,4824.135729833199,1000,iql\nadditional,200000,0,20009,9,5363.554632171097,1000,iql\nadditional,0,0,20000,0,-151.15428224462966,1000,random\nadditional,0,0,20001,1,-308.21932720592275,1000,random\nadditional,0,0,20002,2,-142.28208368097486,1000,random\nadditional,0,0,20003,3,-340.6362241186435,1000,random\nadditional,0,0,20004,4,-386.3813772679924,1000,random\nadditional,0,0,20005,5,-343.46964009925784,1000,random\nadditional,0,0,20006,6,-279.64728286710056,1000,random\nadditional,0,0,20007,7,-221.20582330693682,1000,random\nadditional,0,0,20008,8,-245.35057784577262,1000,random\nadditional,0,0,20009,9,-289.0556760082731,1000,random\n"
+  },
+  "replay": {
+    "schema_version": 1,
+    "source_commit": "9100f5468259d10671d78c2e97d87311625a61bb",
+    "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "python_version": "3.11.17",
+    "package_versions": {
+      "python": "3.11.17",
+      "iql_project": "0.1.0",
+      "torch": "2.7.1+cpu",
+      "numpy": "2.2.6"
+    },
+    "archive_sha256": "bbd914bb2c4f10ac0b1d759498b7010caa2ba6fadd90e0b7b8eee211cefa89bf",
+    "checkpoint_sha256": {
+      "0": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+      "1": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+      "2": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491"
+    },
+    "evaluation_seeds": [
+      10000,
+      10001,
+      10002,
+      10003,
+      10004,
+      10005,
+      10006,
+      10007,
+      10008,
+      10009
+    ],
+    "same_platform_exact_repeat": true,
+    "episode_records_compared": 60,
+    "published_platform": "Apple M3 Pro / macOS arm64 / CPU",
+    "published_final": {
+      "checkpoint_step": 100000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "runs": 3,
+      "all_runs_present": true,
+      "mean_of_run_means": 2846.407335566395,
+      "std_sample_of_run_means": 786.7968316407178
+    },
+    "this_platform_final": {
+      "checkpoint_step": 100000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "runs": 3,
+      "all_runs_present": true,
+      "mean_of_run_means": 1928.2795186656222,
+      "std_sample_of_run_means": 642.1785925607232
+    },
+    "scope": "Exact same-platform replay; cross-platform returns are separately reported"
+  },
+  "summary": {
+    "schema_version": 1,
+    "raw_rewards": true,
+    "minimum_seed_episode_protocol_met": true,
+    "within_run": [
+      {
+        "run_id": "seed_0",
+        "training_seed": 0,
+        "checkpoint_step": 0,
+        "policy_name": "random",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": -302.7840656863576,
+        "return_std_population": 100.75452661928692,
+        "return_min": -510.39313513815125,
+        "return_max": -140.92390926344154,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "seed_0",
+        "training_seed": 0,
+        "checkpoint_step": 100000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 1613.0302549710004,
+        "return_std_population": 1358.6727673484493,
+        "return_min": -290.237930988374,
+        "return_max": 4579.3003318053425,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "seed_1",
+        "training_seed": 1,
+        "checkpoint_step": 0,
+        "policy_name": "random",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": -302.7840656863576,
+        "return_std_population": 100.75452661928692,
+        "return_min": -510.39313513815125,
+        "return_max": -140.92390926344154,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "seed_1",
+        "training_seed": 1,
+        "checkpoint_step": 100000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 1504.6496700585708,
+        "return_std_population": 1127.501494195775,
+        "return_min": -267.94236319988556,
+        "return_max": 3854.158538759396,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "seed_2",
+        "training_seed": 2,
+        "checkpoint_step": 0,
+        "policy_name": "random",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": -302.7840656863576,
+        "return_std_population": 100.75452661928692,
+        "return_min": -510.39313513815125,
+        "return_max": -140.92390926344154,
+        "episode_length_mean": 1000.0
+      },
+      {
+        "run_id": "seed_2",
+        "training_seed": 2,
+        "checkpoint_step": 100000,
+        "policy_name": "iql",
+        "episodes": 10,
+        "evaluation_seeds": [
+          10000,
+          10001,
+          10002,
+          10003,
+          10004,
+          10005,
+          10006,
+          10007,
+          10008,
+          10009
+        ],
+        "return_mean": 2667.1586309672953,
+        "return_std_population": 2270.1169910305093,
+        "return_min": 639.0143870007208,
+        "return_max": 8292.867408504862,
+        "episode_length_mean": 1000.0
+      }
+    ],
+    "across_runs": [
+      {
+        "checkpoint_step": 100000,
+        "training_seeds": [
+          0,
+          1,
+          2
+        ],
+        "runs": 3,
+        "all_runs_present": true,
+        "mean_of_run_means": 1928.2795186656222,
+        "std_sample_of_run_means": 642.1785925607232
+      }
+    ],
+    "final_checkpoint_steps": {
+      "seed_0": 100000,
+      "seed_1": 100000,
+      "seed_2": 100000
+    }
+  },
+  "evaluation_csv": "run_id,checkpoint_step,training_seed,evaluation_seed,episode_index,episode_return,episode_length,policy_name\nseed_0,100000,0,10000,0,1913.0193743767068,1000,iql\nseed_0,100000,0,10001,1,2654.756811415321,1000,iql\nseed_0,100000,0,10002,2,4579.3003318053425,1000,iql\nseed_0,100000,0,10003,3,2147.1332042411905,1000,iql\nseed_0,100000,0,10004,4,-290.237930988374,1000,iql\nseed_0,100000,0,10005,5,612.3451556197355,1000,iql\nseed_0,100000,0,10006,6,-182.4990099422208,1000,iql\nseed_0,100000,0,10007,7,1831.8490561180704,1000,iql\nseed_0,100000,0,10008,8,1778.571735269444,1000,iql\nseed_0,100000,0,10009,9,1086.0638217947865,1000,iql\nseed_0,0,0,10000,0,-324.35397169022946,1000,random\nseed_0,0,0,10001,1,-395.4528466878174,1000,random\nseed_0,0,0,10002,2,-140.92390926344154,1000,random\nseed_0,0,0,10003,3,-292.402234904873,1000,random\nseed_0,0,0,10004,4,-510.39313513815125,1000,random\nseed_0,0,0,10005,5,-314.0554133495419,1000,random\nseed_0,0,0,10006,6,-193.66471127912376,1000,random\nseed_0,0,0,10007,7,-364.61423586912764,1000,random\nseed_0,0,0,10008,8,-265.30082438403235,1000,random\nseed_0,0,0,10009,9,-226.67937429723807,1000,random\nseed_1,100000,1,10000,0,59.810862894111956,1000,iql\nseed_1,100000,1,10001,1,2340.240077424805,1000,iql\nseed_1,100000,1,10002,2,983.3766316189075,1000,iql\nseed_1,100000,1,10003,3,1009.7988487615493,1000,iql\nseed_1,100000,1,10004,4,3854.158538759396,1000,iql\nseed_1,100000,1,10005,5,1305.4547006414912,1000,iql\nseed_1,100000,1,10006,6,-267.94236319988556,1000,iql\nseed_1,100000,1,10007,7,1960.442645854022,1000,iql\nseed_1,100000,1,10008,8,2206.3588332685385,1000,iql\nseed_1,100000,1,10009,9,1594.797924562774,1000,iql\nseed_1,0,1,10000,0,-324.35397169022946,1000,random\nseed_1,0,1,10001,1,-395.4528466878174,1000,random\nseed_1,0,1,10002,2,-140.92390926344154,1000,random\nseed_1,0,1,10003,3,-292.402234904873,1000,random\nseed_1,0,1,10004,4,-510.39313513815125,1000,random\nseed_1,0,1,10005,5,-314.0554133495419,1000,random\nseed_1,0,1,10006,6,-193.66471127912376,1000,random\nseed_1,0,1,10007,7,-364.61423586912764,1000,random\nseed_1,0,1,10008,8,-265.30082438403235,1000,random\nseed_1,0,1,10009,9,-226.67937429723807,1000,random\nseed_2,100000,2,10000,0,3582.1342697012574,1000,iql\nseed_2,100000,2,10001,1,8292.867408504862,1000,iql\nseed_2,100000,2,10002,2,1065.6264473665758,1000,iql\nseed_2,100000,2,10003,3,1424.622056297745,1000,iql\nseed_2,100000,2,10004,4,936.5005289746239,1000,iql\nseed_2,100000,2,10005,5,2671.3398080567827,1000,iql\nseed_2,100000,2,10006,6,639.0143870007208,1000,iql\nseed_2,100000,2,10007,7,874.4174307224415,1000,iql\nseed_2,100000,2,10008,8,4797.648714903546,1000,iql\nseed_2,100000,2,10009,9,2387.415258144396,1000,iql\nseed_2,0,2,10000,0,-324.35397169022946,1000,random\nseed_2,0,2,10001,1,-395.4528466878174,1000,random\nseed_2,0,2,10002,2,-140.92390926344154,1000,random\nseed_2,0,2,10003,3,-292.402234904873,1000,random\nseed_2,0,2,10004,4,-510.39313513815125,1000,random\nseed_2,0,2,10005,5,-314.0554133495419,1000,random\nseed_2,0,2,10006,6,-193.66471127912376,1000,random\nseed_2,0,2,10007,7,-364.61423586912764,1000,random\nseed_2,0,2,10008,8,-265.30082438403235,1000,random\nseed_2,0,2,10009,9,-226.67937429723807,1000,random\n"
+}

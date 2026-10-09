@@ -1,0 +1,1976 @@
+{
+  "scope": "Windows CPU continuation; separate from Colab evaluations",
+  "runs": {
+    "seed_0": {
+      "sequential_new_updates": 400000,
+      "training_log_sha256": "6dc94d9e4eeddc539aee32dd7198695b9847786a33ca5331a61cddcafb6f9434",
+      "validation": {
+        "100000": {
+          "checkpoint_sha256": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+          "step": 100000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 2886.890675130276,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.2127440490302792,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.741
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 4930.649516575841,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 5.9067886449132945e-06,
+              "stationary_tail_seconds": 17.25,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 8410.61005617858,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 4.065837655880341,
+              "stationary_tail_seconds": 4.65,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 3167.458663981651,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -5.933553860338743e-10,
+              "stationary_tail_seconds": 30.200000000000003,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": -290.2376003591132,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -2.6687989634449567e-09,
+              "stationary_tail_seconds": 46.800000000000004,
+              "low_torso_fraction": 0.937
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 2763.1459487519046,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 3.820418178413591e-10,
+              "stationary_tail_seconds": 29.900000000000002,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": -182.5735191205033,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 8.165769450819868e-10,
+              "stationary_tail_seconds": 44.900000000000006,
+              "low_torso_fraction": 0.894
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 3797.244252516616,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.9998612435191356,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.67
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 2573.2955312568247,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -3.1258408546609286e-09,
+              "stationary_tail_seconds": 34.25,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 1040.7476891319823,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.9811642491349852,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.935
+            }
+          ],
+          "return_mean": 2909.7231214044064,
+          "late_forward_velocity_mean": 0.725961309916401,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "150000": {
+          "checkpoint_sha256": "a26f1f1efbd9a40f6459e17dd060ff694c21415a33c5327843b3d94b25be0f16",
+          "step": 150000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 11394.53892437289,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 9.623792335247892,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 6738.828877396287,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.6095270202770284e-10,
+              "stationary_tail_seconds": 19.0,
+              "low_torso_fraction": 0.411
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 6483.114106586245,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.814951168294276e-16,
+              "stationary_tail_seconds": 18.900000000000002,
+              "low_torso_fraction": 0.406
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 10791.581951259752,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 3.4267870872934627,
+              "stationary_tail_seconds": 4.65,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 2839.122839304787,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.7671098188244516e-10,
+              "stationary_tail_seconds": 33.35,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": -386.5813095974198,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -8.033130692624379e-10,
+              "stationary_tail_seconds": 47.6,
+              "low_torso_fraction": 0.967
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 8156.941893054664,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -6.21491793717003e-06,
+              "stationary_tail_seconds": 15.600000000000001,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 4175.427843536122,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.0520843044456569e-10,
+              "stationary_tail_seconds": 29.400000000000002,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": -289.3482267871709,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -2.1586402614379566e-10,
+              "stationary_tail_seconds": 47.0,
+              "low_torso_fraction": 0.949
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 6128.607308928684,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -5.3809152361106554e-08,
+              "stationary_tail_seconds": 20.0,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 5603.223420805484,
+          "late_forward_velocity_mean": 1.3050573152674119,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "200000": {
+          "checkpoint_sha256": "5ad57c88233362eafc63858cfe19edfe5f575e782850ca63f40e4cc8f32b46db",
+          "step": 200000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 4252.965981916974,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.078143786824027e-15,
+              "stationary_tail_seconds": 30.1,
+              "low_torso_fraction": 0.629
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": -282.2253891920359,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 8.489200897262129e-10,
+              "stationary_tail_seconds": 45.7,
+              "low_torso_fraction": 0.931
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 6209.628597510806,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.4524928116755604,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.534
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 7076.777960292902,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.940902597676387e-05,
+              "stationary_tail_seconds": 18.85,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 1908.5812815189588,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 7.521561638777714e-16,
+              "stationary_tail_seconds": 37.6,
+              "low_torso_fraction": 0.775
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 13990.005969878572,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 14.983076804349096,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 4611.582886059605,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -9.503316648949483e-08,
+              "stationary_tail_seconds": 26.8,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 12130.797970680214,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 9.83178301899332,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.065
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 2162.3772598913774,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 7.415734065639492e-16,
+              "stationary_tail_seconds": 36.95,
+              "low_torso_fraction": 0.766
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 12433.726629206769,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 14.046711875262435,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.002
+            }
+          ],
+          "return_mean": 6449.421914776414,
+          "late_forward_velocity_mean": 4.031404500707019,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "300000": {
+          "checkpoint_sha256": "2e91eaf6f07d009972ebec410fc0488e3af10bf4ab77a7d97711cf994721cf0b",
+          "step": 300000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 9043.322588505123,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.0009421956505481035,
+              "stationary_tail_seconds": 10.65,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": -359.8989000235232,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -0.04741397504266185,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.335
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 13374.426842082481,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.456456119473573,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 5208.355471162646,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -3.036164583003604e-10,
+              "stationary_tail_seconds": 27.35,
+              "low_torso_fraction": 0.001
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 13083.532712526074,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 13.534443793032942,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 13541.599482875892,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.166011701550644,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": -444.1036937578146,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -0.054113497549792576,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.331
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 6723.485460535204,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 5.727907644909511e-08,
+              "stationary_tail_seconds": 20.900000000000002,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 7627.507819691895,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.3346866594806053e-06,
+              "stationary_tail_seconds": 17.6,
+              "low_torso_fraction": 0.002
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 2321.3297819691616,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.5236878005347473e-09,
+              "stationary_tail_seconds": 35.800000000000004,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 7011.955756556714,
+          "late_forward_velocity_mean": 4.405632506092775,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "500000": {
+          "checkpoint_sha256": "00c6657fdcc2d61fce992bb240df4a15f160c05f39ea189916d8f87e9e463bab",
+          "step": 500000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 13415.578037732444,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 14.763984337142437,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 9366.440669610909,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.0010783214114046804,
+              "stationary_tail_seconds": 11.350000000000001,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 14101.52745507266,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.382680001691954,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 5431.855125093605,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.001962904639847289,
+              "stationary_tail_seconds": 7.550000000000001,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": -474.0233311201191,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -8.51804494122113e-15,
+              "stationary_tail_seconds": 47.400000000000006,
+              "low_torso_fraction": 0.962
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 842.4720157084911,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.755406543398586,
+              "stationary_tail_seconds": 0.05,
+              "low_torso_fraction": 0.919
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 14577.258730375339,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.200734815630286,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 14931.04572359308,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.09831667678366,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 14831.090584609106,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.828699677604565,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 2325.5126165641095,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 2.8636440088857756e-05,
+              "stationary_tail_seconds": 18.95,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 8934.875762723963,
+          "late_forward_velocity_mean": 7.903289191474282,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        }
+      },
+      "additional_baseline": {
+        "checkpoint_sha256": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+        "step": 100000,
+        "python": "3.11.15",
+        "platform": "Windows-10-10.0.26300-SP0",
+        "torch": "2.7.1+cpu",
+        "mujoco": "3.2.3",
+        "episodes": [
+          {
+            "evaluation_seed": 20000,
+            "episode_return": 3659.1425525101704,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 9.863392096731091e-10,
+            "stationary_tail_seconds": 30.5,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20001,
+            "episode_return": 1867.5816754942261,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.3077852662744944,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.805
+          },
+          {
+            "evaluation_seed": 20002,
+            "episode_return": -336.29703181488566,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 2.1254960017776154e-09,
+            "stationary_tail_seconds": 46.25,
+            "low_torso_fraction": 0.931
+          },
+          {
+            "evaluation_seed": 20003,
+            "episode_return": 1040.0293888117924,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.1517532833112245,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.934
+          },
+          {
+            "evaluation_seed": 20004,
+            "episode_return": -269.66751876361036,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -5.872847466861813e-11,
+            "stationary_tail_seconds": 46.0,
+            "low_torso_fraction": 0.922
+          },
+          {
+            "evaluation_seed": 20005,
+            "episode_return": -317.95988315106456,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 3.786020732121081e-10,
+            "stationary_tail_seconds": 46.85,
+            "low_torso_fraction": 0.942
+          },
+          {
+            "evaluation_seed": 20006,
+            "episode_return": 1090.2428490590355,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -2.0010095739425805e-09,
+            "stationary_tail_seconds": 39.6,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20007,
+            "episode_return": 1202.2922691918595,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.2339506510084106,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.889
+          },
+          {
+            "evaluation_seed": 20008,
+            "episode_return": -186.30573979588806,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 3.8928377263576e-10,
+            "stationary_tail_seconds": 45.0,
+            "low_torso_fraction": 0.902
+          },
+          {
+            "evaluation_seed": 20009,
+            "episode_return": 1049.201500909899,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.3155200767836284,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.932
+          }
+        ],
+        "return_mean": 879.8260062451534,
+        "late_forward_velocity_mean": 0.5009009279197741,
+        "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+      },
+      "additional_500000": {
+        "checkpoint_sha256": "00c6657fdcc2d61fce992bb240df4a15f160c05f39ea189916d8f87e9e463bab",
+        "step": 500000,
+        "python": "3.11.15",
+        "platform": "Windows-10-10.0.26300-SP0",
+        "torch": "2.7.1+cpu",
+        "mujoco": "3.2.3",
+        "episodes": [
+          {
+            "evaluation_seed": 20000,
+            "episode_return": 14299.868922295951,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 14.556836545490079,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20001,
+            "episode_return": 14313.801067029774,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.39465783921553,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20002,
+            "episode_return": 14030.885272632495,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.743999468565836,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20003,
+            "episode_return": 834.2763752693245,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 0.7510745368298868,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.903
+          },
+          {
+            "evaluation_seed": 20004,
+            "episode_return": 14204.577970140534,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.697684683222874,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20005,
+            "episode_return": 6993.874856122955,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 0.0031125336503805916,
+            "stationary_tail_seconds": 3.8000000000000003,
+            "low_torso_fraction": 0.001
+          },
+          {
+            "evaluation_seed": 20006,
+            "episode_return": 4413.192439742154,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.420780636413637e-09,
+            "stationary_tail_seconds": 30.150000000000002,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20007,
+            "episode_return": 14143.901312995018,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 13.44651370965699,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20008,
+            "episode_return": 9588.348253256485,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 0.017037662266016006,
+            "stationary_tail_seconds": 0.2,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20009,
+            "episode_return": 2806.622668111768,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.6385824259056425e-06,
+            "stationary_tail_seconds": 21.6,
+            "low_torso_fraction": 0.0
+          }
+        ],
+        "return_mean": 9562.934913759645,
+        "late_forward_velocity_mean": 7.661091861890081,
+        "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+      }
+    },
+    "seed_1": {
+      "sequential_new_updates": 400000,
+      "training_log_sha256": "bc82500c636802cc72e7a22b169722cd4402027d0b496852f3c9784f82c8e4be",
+      "validation": {
+        "100000": {
+          "checkpoint_sha256": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+          "step": 100000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 8437.668253332742,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.339645512321358,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.178
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 1442.2674550242564,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 9.307812632118088e-10,
+              "stationary_tail_seconds": 38.6,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 988.905616033659,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.4274377620332332e-09,
+              "stationary_tail_seconds": 40.75,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 1010.5510134084483,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.0290263831866333,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.916
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 3530.8841559661505,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.1648815570018027,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.677
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 2155.917342046546,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 3.1341925825116825e-09,
+              "stationary_tail_seconds": 34.35,
+              "low_torso_fraction": 0.001
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": -267.94237617952086,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.3013203585238919e-10,
+              "stationary_tail_seconds": 46.35,
+              "low_torso_fraction": 0.937
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 1321.5979609565238,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 4.688161242022117e-10,
+              "stationary_tail_seconds": 39.550000000000004,
+              "low_torso_fraction": 0.003
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 4184.51015637415,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -2.6646108191571347e-10,
+              "stationary_tail_seconds": 28.75,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 2085.010150025836,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.1948780774881194,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.752
+            }
+          ],
+          "return_mean": 2488.936972698879,
+          "late_forward_velocity_mean": 0.4728431532707673,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "150000": {
+          "checkpoint_sha256": "bba72a1518b8f9a0069ba60f5723ef0476b17377af6eda7965ffa01baedfc78e",
+          "step": 150000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 7127.976255646459,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.911411926160464e-10,
+              "stationary_tail_seconds": 19.75,
+              "low_torso_fraction": 0.409
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 2479.2139759105353,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 6.167760187496205e-11,
+              "stationary_tail_seconds": 36.45,
+              "low_torso_fraction": 0.742
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 7418.693455972424,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.1113211679561354,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.375
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 2867.985531236846,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 2.1989419042952094e-09,
+              "stationary_tail_seconds": 34.75,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 3035.855957015308,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.2257633536395855e-08,
+              "stationary_tail_seconds": 34.1,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 7592.676911529124,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.0940736066626444,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.356
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 5037.534926230081,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 2.8136023508757057e-09,
+              "stationary_tail_seconds": 26.5,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 4405.787309666575,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 5.911370848802553e-10,
+              "stationary_tail_seconds": 30.35,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 2798.902501897928,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 2.769935296337044e-10,
+              "stationary_tail_seconds": 36.1,
+              "low_torso_fraction": 0.74
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 5803.174008163898,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -5.003057355815915e-16,
+              "stationary_tail_seconds": 24.55,
+              "low_torso_fraction": 0.522
+            }
+          ],
+          "return_mean": 4856.780083326918,
+          "late_forward_velocity_mean": 0.22053947926276246,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "200000": {
+          "checkpoint_sha256": "01635a81e81ecbbac1ddcc51fd2c9b0377bc9dba58bb3378f6e90b0612f9c67f",
+          "step": 200000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": -448.423460818699,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 8.938269866062806e-10,
+              "stationary_tail_seconds": 48.6,
+              "low_torso_fraction": 0.98
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 8229.154620396192,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -9.474749031058156e-08,
+              "stationary_tail_seconds": 15.600000000000001,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 2404.378753666159,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -4.5199533976179697e-10,
+              "stationary_tail_seconds": 36.45,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 1413.2568143386152,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -4.098676275857548e-10,
+              "stationary_tail_seconds": 39.5,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 1058.155539500713,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -9.80770325139168e-10,
+              "stationary_tail_seconds": 41.45,
+              "low_torso_fraction": 0.001
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 3497.147895617585,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.4262385876605433e-09,
+              "stationary_tail_seconds": 32.5,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 4458.572966907528,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.4309642416400883e-09,
+              "stationary_tail_seconds": 27.950000000000003,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": -440.62351093255603,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -2.8548304038715245e-10,
+              "stationary_tail_seconds": 48.300000000000004,
+              "low_torso_fraction": 0.973
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 5349.28048430792,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 5.6488244403699914e-08,
+              "stationary_tail_seconds": 17.400000000000002,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 12931.341963982473,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 13.609369092732175,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 3845.2242066965932,
+          "late_forward_velocity_mean": 1.3609369053233915,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "300000": {
+          "checkpoint_sha256": "87cac795cf45415fa19fc2f3fa1f08f785fbc3e4d711cc80845880316130b65a",
+          "step": 300000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 6280.52971641007,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.8874281177371267,
+              "stationary_tail_seconds": 0.05,
+              "low_torso_fraction": 0.536
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 7528.434575724756,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -5.3248939590896644e-11,
+              "stationary_tail_seconds": 19.05,
+              "low_torso_fraction": 0.388
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 9164.196515156527,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.1496051824161813e-05,
+              "stationary_tail_seconds": 11.700000000000001,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 9435.167132307131,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 3.3557702217724606e-05,
+              "stationary_tail_seconds": 14.05,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 9963.144769078583,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 3.494825993006664e-08,
+              "stationary_tail_seconds": 12.4,
+              "low_torso_fraction": 0.275
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 9901.999262855254,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.0003628553275614494,
+              "stationary_tail_seconds": 11.15,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 5463.20004410055,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 4.242690397752639e-16,
+              "stationary_tail_seconds": 26.85,
+              "low_torso_fraction": 0.547
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 5446.822658450194,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.4868494002555619e-06,
+              "stationary_tail_seconds": 23.150000000000002,
+              "low_torso_fraction": 0.002
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 7691.795184919036,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -2.2468768993417774e-05,
+              "stationary_tail_seconds": 16.25,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": -395.39061209376814,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 4.1761148824827856e-11,
+              "stationary_tail_seconds": 47.050000000000004,
+              "low_torso_fraction": 0.944
+            }
+          ],
+          "return_mean": 7047.989924690834,
+          "late_forward_velocity_mean": 0.08878150798359094,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "500000": {
+          "checkpoint_sha256": "4ac332368acf15c3f9741a786e5837a68348e770dfc4f0fa2cc65e20fb8d294a",
+          "step": 500000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 15314.714673082048,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.649978027992393,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 15254.117961910313,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.655653393542824,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 15378.331152613628,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.64342018448813,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 14773.692608445719,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.639301812713096,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 15265.437661103946,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.649978028268652,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 15315.976062859696,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.64195528221834,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 15293.583793311118,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.647573313704946,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 15355.419282447143,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.635155835627778,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 15261.626125661638,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.649978149928128,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 15250.016534062768,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.64997813533825,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 15246.291585549803,
+          "late_forward_velocity_mean": 16.646297216382255,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        }
+      },
+      "additional_baseline": {
+        "checkpoint_sha256": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+        "step": 100000,
+        "python": "3.11.15",
+        "platform": "Windows-10-10.0.26300-SP0",
+        "torch": "2.7.1+cpu",
+        "mujoco": "3.2.3",
+        "episodes": [
+          {
+            "evaluation_seed": 20000,
+            "episode_return": -251.50796061841805,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 6.292194834628438e-10,
+            "stationary_tail_seconds": 46.25,
+            "low_torso_fraction": 0.93
+          },
+          {
+            "evaluation_seed": 20001,
+            "episode_return": 1999.4085118704816,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 4.461809337766105e-17,
+            "stationary_tail_seconds": 35.15,
+            "low_torso_fraction": 0.731
+          },
+          {
+            "evaluation_seed": 20002,
+            "episode_return": -343.75462272263155,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -2.6315539243562596e-10,
+            "stationary_tail_seconds": 47.0,
+            "low_torso_fraction": 0.951
+          },
+          {
+            "evaluation_seed": 20003,
+            "episode_return": 2961.3160040606735,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.0231360668167411e-09,
+            "stationary_tail_seconds": 32.95,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20004,
+            "episode_return": -425.42839755517906,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 2.685854490040483e-10,
+            "stationary_tail_seconds": 48.550000000000004,
+            "low_torso_fraction": 0.974
+          },
+          {
+            "evaluation_seed": 20005,
+            "episode_return": 6358.376839363985,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -4.042220978109333e-08,
+            "stationary_tail_seconds": 18.650000000000002,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20006,
+            "episode_return": -439.01988606929984,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -9.734511640373293e-11,
+            "stationary_tail_seconds": 48.95,
+            "low_torso_fraction": 0.983
+          },
+          {
+            "evaluation_seed": 20007,
+            "episode_return": 631.1335420637374,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 1.1624813776751256e-09,
+            "stationary_tail_seconds": 40.800000000000004,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20008,
+            "episode_return": 5990.138482539041,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 0.42572039629002734,
+            "stationary_tail_seconds": 7.800000000000001,
+            "low_torso_fraction": 0.001
+          },
+          {
+            "evaluation_seed": 20009,
+            "episode_return": 1913.6661339301024,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 7.828845122332804e-11,
+            "stationary_tail_seconds": 37.15,
+            "low_torso_fraction": 0.757
+          }
+        ],
+        "return_mean": 1839.4328646862493,
+        "late_forward_velocity_mean": 0.042572035866902794,
+        "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+      },
+      "additional_500000": {
+        "checkpoint_sha256": "4ac332368acf15c3f9741a786e5837a68348e770dfc4f0fa2cc65e20fb8d294a",
+        "step": 500000,
+        "python": "3.11.15",
+        "platform": "Windows-10-10.0.26300-SP0",
+        "torch": "2.7.1+cpu",
+        "mujoco": "3.2.3",
+        "episodes": [
+          {
+            "evaluation_seed": 20000,
+            "episode_return": 15357.6289535572,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.649978006543225,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20001,
+            "episode_return": 15126.165230766544,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.63930023650032,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20002,
+            "episode_return": 15279.49064458102,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.64997799732532,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20003,
+            "episode_return": 15320.125649474152,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.65565348873779,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20004,
+            "episode_return": 15316.744678926236,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.643706213910853,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20005,
+            "episode_return": 14902.742802102619,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.649977949862173,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20006,
+            "episode_return": 15302.19131798379,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.643419862251232,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20007,
+            "episode_return": 15312.070187229205,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.639300917358238,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20008,
+            "episode_return": 15227.330325846366,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.647508808088304,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20009,
+            "episode_return": 15318.742130511446,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 16.633201707701303,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          }
+        ],
+        "return_mean": 15246.323192097854,
+        "late_forward_velocity_mean": 16.645202518827876,
+        "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+      }
+    },
+    "seed_2": {
+      "sequential_new_updates": 400000,
+      "training_log_sha256": "b737e400c4d4a93ba1be3fb8dd5d100254c7021c11ff5fde3a2074120cb87c05",
+      "validation": {
+        "100000": {
+          "checkpoint_sha256": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+          "step": 100000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 9529.141565628941,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 4.015322789139813,
+              "stationary_tail_seconds": 5.050000000000001,
+              "low_torso_fraction": 0.117
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 1062.6773652303732,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 3.26882912116007e-10,
+              "stationary_tail_seconds": 40.95,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 1092.4362937564981,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.058874196520769,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.928
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 8458.302207417322,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.931872180664936,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.256
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 2964.43165135632,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -8.462081241839536e-11,
+              "stationary_tail_seconds": 30.900000000000002,
+              "low_torso_fraction": 0.001
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 1739.0706038866015,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 2.2280125446097593e-10,
+              "stationary_tail_seconds": 37.300000000000004,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 1292.4533358889375,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.9422048886681711,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.866
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 2645.0408990838314,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 5.306654613023533e-10,
+              "stationary_tail_seconds": 35.050000000000004,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 2746.1062767033227,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.1841760326682143,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.697
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 3373.4799442993617,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.3463613495014025e-09,
+              "stationary_tail_seconds": 28.35,
+              "low_torso_fraction": 0.007
+            }
+          ],
+          "return_mean": 3490.314014325151,
+          "late_forward_velocity_mean": 0.8132450087311269,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "150000": {
+          "checkpoint_sha256": "1ce5a9e277b280f52548e81f4acc54a3e942f220100864c0611eeae73ad83eb7",
+          "step": 150000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 9976.266611563362,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -0.0009374589930520429,
+              "stationary_tail_seconds": 10.3,
+              "low_torso_fraction": 0.002
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": -224.91812012737614,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -7.841563712004388e-10,
+              "stationary_tail_seconds": 45.85,
+              "low_torso_fraction": 0.002
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 5865.489603318744,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 2.8531860677583016e-10,
+              "stationary_tail_seconds": 23.1,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 12724.338108794756,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 14.373119695362112,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 13326.098910839015,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.852975134472524,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 10677.196239420513,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.0024750375706514127,
+              "stationary_tail_seconds": 8.85,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 1083.4519279845983,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 7.869271787326501e-10,
+              "stationary_tail_seconds": 41.2,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 5081.5777354476095,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.9671517807030984,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.576
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 12735.438903198916,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 14.382860101916043,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 3880.014229474895,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.5245940582250053e-09,
+              "stationary_tail_seconds": 31.700000000000003,
+              "low_torso_fraction": 0.001
+            }
+          ],
+          "return_mean": 7512.495414991502,
+          "late_forward_velocity_mean": 4.557764428979487,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "200000": {
+          "checkpoint_sha256": "d9dab2aae77944b13077856f294ea0a551067907dda769b9e57fc86e22930a53",
+          "step": 200000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 8240.759055599374,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.0785889850295476e-10,
+              "stationary_tail_seconds": 18.150000000000002,
+              "low_torso_fraction": 0.389
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 15430.193523871692,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.89839003414406,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 14275.682369534612,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.239374111704922,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 3908.217711712159,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 8.17799366905424e-10,
+              "stationary_tail_seconds": 31.8,
+              "low_torso_fraction": 0.002
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 14929.472919307585,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.900058434690063,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 15129.42571907526,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.89984130221889,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 12891.16523288733,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 9.41666556091688,
+              "stationary_tail_seconds": 1.2000000000000002,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": -392.0671179867657,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 3.539357854280996e-11,
+              "stationary_tail_seconds": 49.050000000000004,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 14961.81908890953,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.898881675359505,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 14802.985692275068,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.90064548689056,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 11417.765419518584,
+          "late_forward_velocity_mean": 11.015385660688594,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "300000": {
+          "checkpoint_sha256": "3eb76c7d85dc7db3984e873b3c8233a78b2a35064f31e88ca75975b5a0d5463c",
+          "step": 300000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 757.6961650087464,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.818229349811505,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.919
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 7680.830912326707,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.09896113484395005,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 14563.536262860851,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.788547324289059,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 755.7775812053577,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.7986739563034803,
+              "stationary_tail_seconds": 0.05,
+              "low_torso_fraction": 0.945
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 14369.508326556908,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.733419757180812,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 14882.234007582887,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.175018481830676,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": 2304.3437609683933,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.436057767093681e-09,
+              "stationary_tail_seconds": 36.0,
+              "low_torso_fraction": 0.731
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": 679.7063249016201,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.8637912697470693,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.91
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": -256.76347778609664,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.4254148614370285e-09,
+              "stationary_tail_seconds": 47.1,
+              "low_torso_fraction": 0.947
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 7523.921465339924,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 4.9565327786640045e-09,
+              "stationary_tail_seconds": 21.150000000000002,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 6326.07913289653,
+          "late_forward_velocity_mean": 5.127664128182455,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        },
+        "500000": {
+          "checkpoint_sha256": "1d32e4d8eb3ebbb798246bfba32509ecbc2ec33c739baaa1f3151bd89f4c0ccc",
+          "step": 500000,
+          "python": "3.11.15",
+          "platform": "Windows-10-10.0.26300-SP0",
+          "torch": "2.7.1+cpu",
+          "mujoco": "3.2.3",
+          "episodes": [
+            {
+              "evaluation_seed": 10000,
+              "episode_return": 2924.144210747626,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.708586646613332e-09,
+              "stationary_tail_seconds": 34.45,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10001,
+              "episode_return": 13546.580709706253,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 13.298834698137497,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10002,
+              "episode_return": 14221.221986273018,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.055852802009483,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10003,
+              "episode_return": 14157.31630058002,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.567274649512042,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10004,
+              "episode_return": 14277.244938734315,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.03929435167481,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10005,
+              "episode_return": 14287.066151613202,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 15.816817237198428,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            },
+            {
+              "evaluation_seed": 10006,
+              "episode_return": -197.23806262789859,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": -1.0454335793335875e-09,
+              "stationary_tail_seconds": 45.400000000000006,
+              "low_torso_fraction": 0.92
+            },
+            {
+              "evaluation_seed": 10007,
+              "episode_return": -229.10816629877758,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 1.235734421768666e-10,
+              "stationary_tail_seconds": 45.85,
+              "low_torso_fraction": 0.93
+            },
+            {
+              "evaluation_seed": 10008,
+              "episode_return": 7478.169780604526,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 0.00017112602532965047,
+              "stationary_tail_seconds": 12.4,
+              "low_torso_fraction": 0.003
+            },
+            {
+              "evaluation_seed": 10009,
+              "episode_return": 14539.949476590982,
+              "episode_length": 1000,
+              "last_10s_mean_forward_velocity": 16.547555502574347,
+              "stationary_tail_seconds": 0.0,
+              "low_torso_fraction": 0.0
+            }
+          ],
+          "return_mean": 9500.534732592325,
+          "late_forward_velocity_mean": 9.23258003645015,
+          "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+        }
+      },
+      "additional_baseline": {
+        "checkpoint_sha256": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+        "step": 100000,
+        "python": "3.11.15",
+        "platform": "Windows-10-10.0.26300-SP0",
+        "torch": "2.7.1+cpu",
+        "mujoco": "3.2.3",
+        "episodes": [
+          {
+            "evaluation_seed": 20000,
+            "episode_return": 2459.2533255089647,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 3.609347448617505e-11,
+            "stationary_tail_seconds": 36.2,
+            "low_torso_fraction": 0.001
+          },
+          {
+            "evaluation_seed": 20001,
+            "episode_return": 11257.75093509176,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 9.671261763898393,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20002,
+            "episode_return": -433.1358298272929,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 2.0431373604258412e-11,
+            "stationary_tail_seconds": 47.300000000000004,
+            "low_torso_fraction": 0.003
+          },
+          {
+            "evaluation_seed": 20003,
+            "episode_return": 949.723291425385,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -2.5527308452955677e-10,
+            "stationary_tail_seconds": 37.65,
+            "low_torso_fraction": 0.005
+          },
+          {
+            "evaluation_seed": 20004,
+            "episode_return": 6765.595609890786,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 0.9432475521719593,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.241
+          },
+          {
+            "evaluation_seed": 20005,
+            "episode_return": 3522.4190874851483,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 2.2718080788440876e-10,
+            "stationary_tail_seconds": 32.800000000000004,
+            "low_torso_fraction": 0.003
+          },
+          {
+            "evaluation_seed": 20006,
+            "episode_return": 4553.694207885247,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -2.6483797074353894e-10,
+            "stationary_tail_seconds": 26.150000000000002,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20007,
+            "episode_return": 1047.9785373863833,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 6.389996045280996e-10,
+            "stationary_tail_seconds": 40.25,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20008,
+            "episode_return": 2036.3484370297808,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -1.1045607904186862e-10,
+            "stationary_tail_seconds": 37.7,
+            "low_torso_fraction": 0.77
+          },
+          {
+            "evaluation_seed": 20009,
+            "episode_return": 4403.100874475146,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -9.508317770420503e-10,
+            "stationary_tail_seconds": 26.200000000000003,
+            "low_torso_fraction": 0.0
+          }
+        ],
+        "return_mean": 3656.272847635131,
+        "late_forward_velocity_mean": 1.061450931541166,
+        "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+      },
+      "additional_500000": {
+        "checkpoint_sha256": "1d32e4d8eb3ebbb798246bfba32509ecbc2ec33c739baaa1f3151bd89f4c0ccc",
+        "step": 500000,
+        "python": "3.11.15",
+        "platform": "Windows-10-10.0.26300-SP0",
+        "torch": "2.7.1+cpu",
+        "mujoco": "3.2.3",
+        "episodes": [
+          {
+            "evaluation_seed": 20000,
+            "episode_return": 14588.96922463058,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.867584444482622,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20001,
+            "episode_return": 14696.745769433193,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.775964560028157,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20002,
+            "episode_return": 5015.988144531935,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -3.223178756690993e-11,
+            "stationary_tail_seconds": 26.400000000000002,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20003,
+            "episode_return": 14468.33447680412,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.512508917070168,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20004,
+            "episode_return": 14422.922557511987,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.332817263584309,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20005,
+            "episode_return": 14212.106727955648,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.324942448376264,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20006,
+            "episode_return": 13933.9341546086,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.392800337468566,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20007,
+            "episode_return": 14298.642086228985,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 15.270390023485074,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20008,
+            "episode_return": 2905.208259883917,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": -1.0211319782315775e-09,
+            "stationary_tail_seconds": 29.150000000000002,
+            "low_torso_fraction": 0.0
+          },
+          {
+            "evaluation_seed": 20009,
+            "episode_return": 14013.785586063315,
+            "episode_length": 1000,
+            "last_10s_mean_forward_velocity": 14.94190795646753,
+            "stationary_tail_seconds": 0.0,
+            "low_torso_fraction": 0.0
+          }
+        ],
+        "return_mean": 12255.663698765227,
+        "late_forward_velocity_mean": 12.341891594990932,
+        "diagnostic_scope": "Descriptive movement/posture diagnostics, not the benchmark reward or a standard success criterion"
+      }
+    }
+  }
+}

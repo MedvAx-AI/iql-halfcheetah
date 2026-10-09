@@ -1,0 +1,486 @@
+{
+  "source": "Observed Colab audits; reused evaluation sets",
+  "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+  "mujoco": "3.2.3",
+  "torch": "2.7.1+cpu",
+  "input_audits": [
+    {
+      "file": "colab-all-seeds-150k.json",
+      "sha256": "31d6f36694cc2c7bedd789e0d67e2d72c38483fdd1e2e952bd391d1a208daf91",
+      "source_commit": "f1ba5f1fda010165f9715a4a7e746f143ac36657",
+      "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+      "mujoco": "3.2.3",
+      "torch": "2.7.1+cpu",
+      "checkpoints_sha256": {
+        "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+        "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+        "seed_2_baseline_100k": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+        "seed_0_candidate_150k": "a26f1f1efbd9a40f6459e17dd060ff694c21415a33c5327843b3d94b25be0f16",
+        "seed_1_candidate_150k": "bba72a1518b8f9a0069ba60f5723ef0476b17377af6eda7965ffa01baedfc78e",
+        "seed_2_candidate_150k": "1ce5a9e277b280f52548e81f4acc54a3e942f220100864c0611eeae73ad83eb7"
+      }
+    },
+    {
+      "file": "colab-all-seeds-200k.json",
+      "sha256": "3af8d9a2671a0e22e299f98171d5efb9e227d3e9fad6442f0aa95af61b41c075",
+      "source_commit": "f1ba5f1fda010165f9715a4a7e746f143ac36657",
+      "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+      "mujoco": "3.2.3",
+      "torch": "2.7.1+cpu",
+      "checkpoints_sha256": {
+        "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+        "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+        "seed_2_baseline_100k": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+        "seed_0_candidate_200k": "5ad57c88233362eafc63858cfe19edfe5f575e782850ca63f40e4cc8f32b46db",
+        "seed_1_candidate_200k": "01635a81e81ecbbac1ddcc51fd2c9b0377bc9dba58bb3378f6e90b0612f9c67f",
+        "seed_2_candidate_200k": "d9dab2aae77944b13077856f294ea0a551067907dda769b9e57fc86e22930a53"
+      }
+    },
+    {
+      "file": "colab-all-seeds-300k.json",
+      "sha256": "dc374be20fc9fc2007bfef6cced11ed69f10d4668e55df5931f42484b8a5a6e1",
+      "source_commit": "f1ba5f1fda010165f9715a4a7e746f143ac36657",
+      "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+      "mujoco": "3.2.3",
+      "torch": "2.7.1+cpu",
+      "checkpoints_sha256": {
+        "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+        "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+        "seed_2_baseline_100k": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+        "seed_0_candidate_300k": "2e91eaf6f07d009972ebec410fc0488e3af10bf4ab77a7d97711cf994721cf0b",
+        "seed_1_candidate_300k": "87cac795cf45415fa19fc2f3fa1f08f785fbc3e4d711cc80845880316130b65a",
+        "seed_2_candidate_300k": "3eb76c7d85dc7db3984e873b3c8233a78b2a35064f31e88ca75975b5a0d5463c"
+      }
+    },
+    {
+      "file": "colab-all-seeds-500k.json",
+      "sha256": "9351edf2a0fa06626925c7c394870158687b702a9e726cd91b7e5299d1abe083",
+      "source_commit": "f1ba5f1fda010165f9715a4a7e746f143ac36657",
+      "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
+      "mujoco": "3.2.3",
+      "torch": "2.7.1+cpu",
+      "checkpoints_sha256": {
+        "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
+        "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
+        "seed_2_baseline_100k": "380483dd5b843edc6bac0dd9c40a10cf74cce5d24df6cb04a872fd39380c8491",
+        "seed_0_candidate_500k": "00c6657fdcc2d61fce992bb240df4a15f160c05f39ea189916d8f87e9e463bab",
+        "seed_1_candidate_500k": "4ac332368acf15c3f9741a786e5837a68348e770dfc4f0fa2cc65e20fb8d294a",
+        "seed_2_candidate_500k": "1d32e4d8eb3ebbb798246bfba32509ecbc2ec33c739baaa1f3151bd89f4c0ccc"
+      }
+    }
+  ],
+  "within_run": [
+    {
+      "run_id": "seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 100000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 1160.4270172920474,
+      "return_std_population": 1849.832199781313,
+      "return_min": -336.7018578927811,
+      "return_max": 6149.801269045743,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 150000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 6032.311467665999,
+      "return_std_population": 2885.255800375421,
+      "return_min": -360.986541297156,
+      "return_max": 10552.395565546323,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 200000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 7922.806912304371,
+      "return_std_population": 4016.2016101940803,
+      "return_min": 2863.881540869644,
+      "return_max": 13098.709681473872,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 300000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 3623.4550866452037,
+      "return_std_population": 2897.0881097911806,
+      "return_min": -422.2690820062288,
+      "return_max": 8186.442745981529,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_0",
+      "training_seed": 0,
+      "checkpoint_step": 500000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 10065.532126666987,
+      "return_std_population": 5477.184757460843,
+      "return_min": 798.1164306156204,
+      "return_max": 15248.11994823783,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 100000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 1974.627988355409,
+      "return_std_population": 3196.9429492423574,
+      "return_min": -439.0198860691879,
+      "return_max": 10366.815039211047,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 150000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 2595.2462363358127,
+      "return_std_population": 1788.158152024947,
+      "return_min": 201.0865205958381,
+      "return_max": 5303.068668960011,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 200000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 3682.6321832480353,
+      "return_std_population": 3808.4118703329736,
+      "return_min": -453.04633194517567,
+      "return_max": 11524.205743747052,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 300000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 10079.34190945295,
+      "return_std_population": 5008.771066948737,
+      "return_min": 957.4295143305317,
+      "return_max": 14530.41445327525,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_1",
+      "training_seed": 1,
+      "checkpoint_step": 500000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 15262.331938591655,
+      "return_std_population": 124.63294322300351,
+      "return_min": 14903.673108236531,
+      "return_max": 15357.090651454046,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 100000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 2957.7935095745474,
+      "return_std_population": 2417.771068285399,
+      "return_min": -433.13582721769023,
+      "return_max": 8749.051162443504,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 150000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 4146.981526737642,
+      "return_std_population": 4191.70751236563,
+      "return_min": -422.75943079338384,
+      "return_max": 12145.76997328483,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 200000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 6657.365048942163,
+      "return_std_population": 6698.022691256164,
+      "return_min": -388.91665644922824,
+      "return_max": 15192.90839049097,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 300000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 9388.499165563906,
+      "return_std_population": 4313.791643464406,
+      "return_min": 2992.933870616751,
+      "return_max": 14559.226671538505,
+      "episode_length_mean": 1000.0
+    },
+    {
+      "run_id": "seed_2",
+      "training_seed": 2,
+      "checkpoint_step": 500000,
+      "policy_name": "iql",
+      "episodes": 10,
+      "evaluation_seeds": [
+        20000,
+        20001,
+        20002,
+        20003,
+        20004,
+        20005,
+        20006,
+        20007,
+        20008,
+        20009
+      ],
+      "return_mean": 12110.871313864898,
+      "return_std_population": 3248.2741880720487,
+      "return_min": 6301.0267195904935,
+      "return_max": 14455.321130742317,
+      "episode_length_mean": 1000.0
+    }
+  ],
+  "across_runs": [
+    {
+      "checkpoint_step": 100000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "mean_of_run_means": 2030.9495050740013,
+      "std_sample_of_run_means": 900.0059232188901
+    },
+    {
+      "checkpoint_step": 150000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "mean_of_run_means": 4258.179743579817,
+      "std_sample_of_run_means": 1721.2286697810857
+    },
+    {
+      "checkpoint_step": 200000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "mean_of_run_means": 6087.60138149819,
+      "std_sample_of_run_means": 2176.750654251974
+    },
+    {
+      "checkpoint_step": 300000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "mean_of_run_means": 7697.09872055402,
+      "std_sample_of_run_means": 3544.748970838472
+    },
+    {
+      "checkpoint_step": 500000,
+      "training_seeds": [
+        0,
+        1,
+        2
+      ],
+      "mean_of_run_means": 12479.578459707845,
+      "std_sample_of_run_means": 2617.9459106046875
+    }
+  ]
+}

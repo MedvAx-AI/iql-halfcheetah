@@ -2,8 +2,8 @@
 
 Five-person offline reinforcement learning course project led by **MedvAx-AI**.
 
-**Status: integrated course implementation accepted in fresh Colab.** All 11
-notebook code cells and 92 real-data tests passed on 9 October 2026. Setup,
+**Status: original integrated course implementation accepted in fresh Colab.** All 11
+original notebook code cells and 94 real-data tests passed on 9 October 2026. Setup,
 training smoke, checkpoint replay, plots and video run through **Run all**.
 See [tested commit/runtime and evidence](docs/COLAB_ACCEPTANCE.md) and
 [platform-specific reproducibility](docs/REPRODUCIBILITY.md).
@@ -14,8 +14,15 @@ random baseline, raw metrics, plots and MP4 recording are in place. Learning
 performance is assessed from measured artifacts; installation and loss checks
 alone do not demonstrate a strong policy.
 
-**Demo assessment:** the current 100k-update policies fall or stall in the fixed-seed
-videos; robust running has not been demonstrated. Watch the actual episodes:
+**Demo assessment:** continuation of all three published runs to 500k is complete.
+The notebook now selects training seed 1 at 500k, using the same fixed demo seed
+10000 and full 50-second episode. Its measured Colab validation mean is 15,232.53
+versus the paired 100k baseline 1,504.65; all 20 validation/additional episodes
+have zero low-torso/inverted samples and zero stationary tails of at least five
+seconds. This is a finite-sample result; other training seeds still fail on some
+episodes. See [raw results, learning curves and limits](docs/POLICY_CONTINUATION.md).
+
+The original 100k-update policies fall or stall. Their actual episodes are retained:
 [seed 0](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4),
 [seed 1](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4),
 [seed 2](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4).
