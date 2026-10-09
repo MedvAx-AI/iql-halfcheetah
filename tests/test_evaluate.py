@@ -317,6 +317,60 @@ def test_summary_uses_run_means_and_separates_episode_variation(tmp_path):
     assert not result["minimum_seed_episode_protocol_met"]
 
 
+def test_single_checkpoint_plot_separates_seeds_and_shows_actual_episode_returns(
+    tmp_path, monkeypatch
+):
+    from matplotlib.figure import Figure
+
+    captured = []
+    savefig = Figure.savefig
+
+    def inspect_figure(figure, *args, **kwargs):
+        captured.append(figure.axes[0])
+        return savefig(figure, *args, **kwargs)
+
+    monkeypatch.setattr(Figure, "savefig", inspect_figure)
+    runs = [make_run(tmp_path, 0, [1, 3]), make_run(tmp_path, 1, [10, 14])]
+    reporting.summarize_runs(runs, output_dir=tmp_path / "aggregate")
+    axis = captured[-1]
+    # A single evaluated step does not establish that training has ended.
+    assert "final" not in axis.get_title().lower()
+    means = [line for line in axis.lines if line.get_marker() == "o"]
+    assert [float(line.get_ydata()[0]) for line in means] == [2, 12]
+    assert means[0].get_xdata()[0] != means[1].get_xdata()[0]
+    observed = [
+        float(point[1])
+        for collection in axis.collections
+        if hasattr(collection, "get_offsets") and type(collection).__name__ == "PathCollection"
+        for point in collection.get_offsets()
+    ]
+    assert sorted(observed) == [1, 3, 10, 14]
+
+
+def test_multi_checkpoint_plot_orders_real_update_steps(tmp_path, monkeypatch):
+    from matplotlib.figure import Figure
+
+    captured = []
+    savefig = Figure.savefig
+
+    def inspect_figure(figure, *args, **kwargs):
+        captured.append(figure.axes[0])
+        return savefig(figure, *args, **kwargs)
+
+    monkeypatch.setattr(Figure, "savefig", inspect_figure)
+    run = make_run(tmp_path, 0, [10, 14], step=200)
+    rows = reporting.read_evaluation(run / "evaluation.csv")
+    early = [
+        dict(row, checkpoint_step=100, episode_return=1 + 2 * row["episode_index"])
+        for row in rows
+        if row["policy_name"] == "iql"
+    ]
+    reporting._plot(tmp_path, rows + early, None)
+    mean_line = next(line for line in captured[-1].lines if line.get_marker() == "o")
+    assert list(mean_line.get_xdata()) == [100, 200]
+    assert list(mean_line.get_ydata()) == [2, 12]
+
+
 def test_three_seeds_ten_episodes_meet_protocol(tmp_path):
     runs = [make_run(tmp_path, seed, [seed] * 10) for seed in range(3)]
     output = reporting.summarize_runs(runs, output_dir=tmp_path / "aggregate")
