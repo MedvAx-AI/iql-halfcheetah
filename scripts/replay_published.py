@@ -5,11 +5,34 @@ import hashlib
 import json
 import platform
 import tarfile
+import tempfile
 import urllib.request
 from pathlib import Path
 
 from iql_project.iql import runtime_versions, source_commit
 from iql_project.reporting import evaluate_checkpoint, read_evaluation, summarize_runs
+
+
+def download_checkpoint(url: str, sha256: str, target: Path) -> Path:
+    """Verify downloaded or cached bytes before any checkpoint deserialization."""
+    target.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    if not target.exists():
+        with tempfile.NamedTemporaryFile(dir=target.parent, delete=False) as stream:
+            temporary = Path(stream.name)
+    downloaded = temporary if temporary is not None else target
+    try:
+        if temporary is not None:
+            urllib.request.urlretrieve(url, temporary)
+        with downloaded.open("rb") as stream:
+            if hashlib.file_digest(stream, "sha256").hexdigest() != sha256:
+                raise ValueError("Continuation checkpoint checksum mismatch")
+        if temporary is not None:
+            temporary.replace(target)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+    return target
 
 
 def verify_repeat(first: list[dict], repeated: list[dict]) -> None:

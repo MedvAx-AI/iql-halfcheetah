@@ -1,5 +1,14 @@
 # Fresh Colab frontend evidence
 
+The plot correction was independently rerun in a fresh Colab session at merged
+commit `f1ba5f1fda010165f9715a4a7e746f143ac36657`. All 11 original code cells
+completed with **94 tests passing in 41.90 seconds**, real data, fresh 1,000-update
+training, all 60 exact-repeat records and a decoded video.
+[`2026-10-09-f1ba5f1.json`](2026-10-09-f1ba5f1.json) retains that actual visible
+acceptance output. Temporary experimental audit cells were added only after
+this unchanged notebook run completed; their outputs are retained separately
+in [continuation evidence](../continuation/).
+
 Recorded 9 October 2026 at merged source commit
 `e710dcb33621861c9c1d1e14735a3fd7a0beb8dd`.
 

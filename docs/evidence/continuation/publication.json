@@ -1,0 +1,13 @@
+{
+  "checkpoint": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_0_step_200000.pt",
+    "sha256": "5ad57c88233362eafc63858cfe19edfe5f575e782850ca63f40e4cc8f32b46db",
+    "training_seed": 0,
+    "updates": 200000,
+    "training_platform": "macOS original 100k; Windows CPU continuation"
+  },
+  "video_seed": 10000,
+  "validation_seeds": [10000, 10001, 10002, 10003, 10004, 10005, 10006, 10007, 10008, 10009],
+  "additional_seeds": [20000, 20001, 20002, 20003, 20004, 20005, 20006, 20007, 20008, 20009],
+  "scope": "Improved fixed-seed Colab demo and separately measured policy; robust running across all seeds/platforms is not established."
+}

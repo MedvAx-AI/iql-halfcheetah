@@ -37,6 +37,7 @@ include checksums and the original experiment snapshot.
 - [Verification evidence](docs/VERIFICATION.md)
 - [One-click Colab execution and acceptance](docs/COLAB_ACCEPTANCE.md)
 - [Platform-scoped reproducibility](docs/REPRODUCIBILITY.md)
+- [Continued training, separately measured demo and performance limits](docs/POLICY_CONTINUATION.md)
 
 ## Chosen stack
 
