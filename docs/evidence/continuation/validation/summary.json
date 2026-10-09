@@ -3,6 +3,7 @@
   "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
   "mujoco": "3.2.3",
   "torch": "2.7.1+cpu",
+  "audit_session": "bca3bfe398054827ae43d7831f29ac29",
   "input_audits": [
     {
       "file": "colab-all-seeds-150k.json",
@@ -11,6 +12,7 @@
       "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
       "mujoco": "3.2.3",
       "torch": "2.7.1+cpu",
+      "audit_session": "bca3bfe398054827ae43d7831f29ac29",
       "checkpoints_sha256": {
         "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
         "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
@@ -27,6 +29,7 @@
       "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
       "mujoco": "3.2.3",
       "torch": "2.7.1+cpu",
+      "audit_session": "bca3bfe398054827ae43d7831f29ac29",
       "checkpoints_sha256": {
         "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
         "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
@@ -43,6 +46,7 @@
       "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
       "mujoco": "3.2.3",
       "torch": "2.7.1+cpu",
+      "audit_session": "bca3bfe398054827ae43d7831f29ac29",
       "checkpoints_sha256": {
         "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
         "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",
@@ -59,6 +63,7 @@
       "platform": "Linux-6.6.122+-x86_64-with-glibc2.39",
       "mujoco": "3.2.3",
       "torch": "2.7.1+cpu",
+      "audit_session": "bca3bfe398054827ae43d7831f29ac29",
       "checkpoints_sha256": {
         "seed_0_baseline_100k": "0b4af80f81808db5a79122231c33f0dd4f53099f55932577a22d93be9ba45371",
         "seed_1_baseline_100k": "71c355d6ef2492074126c64362cf7ef8a60e1117bd65f3611a3211b5a0b7d6d0",

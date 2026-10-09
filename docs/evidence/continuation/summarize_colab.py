@@ -28,12 +28,14 @@ def main():
                 "platform": audit["platform"],
                 "mujoco": audit["mujoco"],
                 "torch": audit["torch"],
+                "audit_session": audit["audit_session"],
                 "checkpoints_sha256": {
                     name: record["checkpoint_sha256"] for name, record in audit["runs"].items()
                 },
             }
         )
     for audit in audits.values():
+        assert audit["audit_session"] == reference["audit_session"], "Audit sessions differ"
         assert (audit["platform"], audit["mujoco"], audit["torch"]) == (
             reference["platform"],
             reference["mujoco"],
@@ -113,6 +115,7 @@ def main():
                     "platform": reference["platform"],
                     "mujoco": reference["mujoco"],
                     "torch": reference["torch"],
+                    "audit_session": reference["audit_session"],
                     "input_audits": provenance,
                     "within_run": summaries,
                     "across_runs": across,
