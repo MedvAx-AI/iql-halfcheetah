@@ -75,6 +75,15 @@ consecutive blocks are averaged to at most roughly 1,000 plotted points; its tit
 states the block size. Evaluation error bars show the within-run episode standard
 deviation. The CSV/JSONL retain unsmoothed data.
 
+When only one IQL checkpoint step is available, the evaluation plot compares
+training seeds on separate categorical positions and displays every episode return
+alongside the mean and population standard deviation. Horizontal jitter separates
+overlapping episode dots; it does not represent updates or another measurement.
+This plot is a single-checkpoint comparison, not a learning curve. When several
+checkpoint steps are present, the x-axis shows their actual offline update counts.
+Episode standard deviation describes variability, not a confidence interval;
+across-training-seed variability is reported separately in `summary.json`.
+
 Video uses Gymnasium `RecordVideo`, `rgb_array`, the recovered render FPS, and the
 same observation preprocessing/action policy as evaluation. The selected seed is
 fixed in advance, rather than selecting the best rollout. The encoder writes into

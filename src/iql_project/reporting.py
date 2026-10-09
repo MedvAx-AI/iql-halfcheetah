@@ -203,18 +203,42 @@ def _plot(run_dir: Path, rows: list[dict], training_log: Path | None) -> list[Pa
             paths.append(path)
     summaries = within_run(rows)
     fig, ax = plt.subplots(figsize=(8, 4))
-    for run_id in sorted({row["run_id"] for row in summaries}):
+    steps = {row["checkpoint_step"] for row in summaries if row["policy_name"] == "iql"}
+    single_checkpoint = len(steps) == 1
+    run_ids = sorted({row["run_id"] for row in summaries if row["policy_name"] == "iql"})
+    colors = ("#245b87", "#aa6b14", "#a34e36")
+    markers = ("o", "s", "^")
+    for index, run_id in enumerate(run_ids):
         points = [
             row for row in summaries if row["run_id"] == run_id and row["policy_name"] == "iql"
         ]
+        points.sort(key=lambda row: row["checkpoint_step"])
         if points:
+            color = colors[index % len(colors)]
+            if single_checkpoint:
+                episodes = [
+                    row["episode_return"]
+                    for row in rows
+                    if row["run_id"] == run_id and row["policy_name"] == "iql"
+                ]
+                ax.scatter(
+                    index + np.linspace(-0.12, 0.12, len(episodes)),
+                    episodes,
+                    color=colors[0],
+                    alpha=0.65,
+                    s=18,
+                    label="Individual episode return" if index == 0 else None,
+                )
             ax.errorbar(
-                [row["checkpoint_step"] for row in points],
+                [index] if single_checkpoint else [row["checkpoint_step"] for row in points],
                 [row["return_mean"] for row in points],
                 yerr=[row["return_std_population"] for row in points],
-                marker="o",
+                color="#252525" if single_checkpoint else color,
+                marker="o" if single_checkpoint else markers[index % len(markers)],
                 capsize=3,
-                label=f"{run_id}: IQL mean ± episode std",
+                label=("Mean ± episode SD" if index == 0 else None)
+                if single_checkpoint
+                else f"{run_id}: mean ± episode SD",
             )
     baselines = [row for row in summaries if row["policy_name"] == "random"]
     if baselines:
@@ -224,8 +248,24 @@ def _plot(run_dir: Path, rows: list[dict], training_log: Path | None) -> list[Pa
             linestyle="--",
             label="Uniform random mean (same evaluation seeds)",
         )
-    ax.set(xlabel="Offline updates", ylabel="Raw episodic return")
-    ax.grid(alpha=0.25)
+    if single_checkpoint:
+        ax.set_xticks(
+            range(len(run_ids)),
+            [
+                f"Seed {point['training_seed']}\nn={point['episodes']} episodes"
+                for run_id in run_ids
+                for point in summaries
+                if point["run_id"] == run_id and point["policy_name"] == "iql"
+            ],
+        )
+        ax.set_xlim(-0.5, len(run_ids) - 0.5)
+        ax.set_title(f"Checkpoint evaluation ({next(iter(steps)):,} updates)")
+        ax.set_xlabel("Training seed")
+    else:
+        ax.set_title("Checkpoint evaluations")
+        ax.set_xlabel("Offline updates")
+    ax.set_ylabel("Raw episodic return")
+    ax.grid(axis="y", alpha=0.25)
     ax.legend(fontsize=8)
     fig.tight_layout()
     path = plot_dir / "evaluation_returns.png"
