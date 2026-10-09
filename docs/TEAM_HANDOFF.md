@@ -25,7 +25,7 @@ require collaborator access granted by the lead.
 No dates are invented. Participants can start independently with small fixtures,
 evaluation protocols and narrative; integrated acceptance follows the milestone gates.
 
-## Lead's next integration gates
+## Lead's integration gates at M0 (historical)
 
 1. Review Person 2's real dataset/environment PR and freeze preprocessing metadata.
 2. Merge tested IQL/training; verify one real-data update and checkpoint parity.
@@ -35,3 +35,15 @@ evaluation protocols and narrative; integrated acceptance follows the milestone 
 
 The M0 team-lead setup is complete; these subsequent gates depend on the team
 implementations. No training or final-demo work was substituted for Persons 2–5.
+
+## Final delivery — 9 October 2026
+
+All four integration gates above are complete. Persons 2–5 supplied their role
+implementations; PR #13 supplied automatic Colab setup and platform-scoped replay
+verification. The actual merged notebook passed a fresh default Colab **Run all**:
+11 code cells, 92 tests, real-data training, checkpoint replay, plot and video.
+
+The tested commit, raw results and scope are in [COLAB_ACCEPTANCE.md](COLAB_ACCEPTANCE.md).
+The final course snapshot is published under the `v0.1.0-course` release tag.
+Course delivery retains measured limitations; it does not claim robust locomotion,
+500k-update experiments or completion of the team's oral defense.
