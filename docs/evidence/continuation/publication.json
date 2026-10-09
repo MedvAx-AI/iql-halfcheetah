@@ -1,0 +1,35 @@
+{
+  "checkpoint": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_1_step_500000.pt",
+    "sha256": "4ac332368acf15c3f9741a786e5837a68348e770dfc4f0fa2cc65e20fb8d294a",
+    "training_seed": 1,
+    "updates": 500000,
+    "training_platform": "macOS original 100k; Windows CPU continuation"
+  },
+  "video_seed": 10000,
+  "validation_seeds": [
+    10000,
+    10001,
+    10002,
+    10003,
+    10004,
+    10005,
+    10006,
+    10007,
+    10008,
+    10009
+  ],
+  "additional_seeds": [
+    20000,
+    20001,
+    20002,
+    20003,
+    20004,
+    20005,
+    20006,
+    20007,
+    20008,
+    20009
+  ],
+  "scope": "Selected using validation mean and sustained upright motion in the predeclared demo; additional sets and independent final-test results are reported separately. Finite-sample success does not establish reliable running on every seed/platform."
+}

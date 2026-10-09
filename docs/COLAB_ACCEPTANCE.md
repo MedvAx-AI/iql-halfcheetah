@@ -19,9 +19,13 @@ Run all performs:
 4. Checksum-verified retrieval of three published 100k-update final checkpoints.
 5. Two replays per checkpoint, each using ten IQL and ten random episodes; all
    60 episode records must match their repeat exactly on this platform.
-6. A fresh 50-second MP4 with first/middle/end frame decoding, plus the evaluation plot.
-7. The full test suite with real-data training tests enabled and dataset checksum check.
-8. An acceptance JSON and an evidence ZIP under the printed `results/notebook-replay-*`
+6. Replay of a checksum-verified continued checkpoint, an exact repeat of its
+   20 IQL/random validation records, and ten additional IQL/random episodes.
+   Its scores are shown separately from the original 100k experiment.
+7. A fresh 50-second continued-policy MP4 with first/middle/end frame decoding,
+   plus its evaluation plot. The original replay also retains its own MP4.
+8. The full test suite with real-data training tests enabled and dataset checksum check.
+9. An acceptance JSON and an evidence ZIP under the printed `results/notebook-replay-*`
    directory. Runtime files are temporary; download the ZIP through Colab's Files pane
    before disconnecting if you need your own run's logs, raw CSVs, plots and video.
 
@@ -63,6 +67,13 @@ See [evidence provenance](evidence/colab/README.md) for the difference between
 frontend evidence and the separate CI artifact bundle.
 
 The original three 100k training runs were replayed, not retrained. The default
-500k schedule and robust locomotion remain explicitly outside this acceptance
-claim; the fixed-seed demos still show falling/stalling. The implementation and
+500k schedule and robust locomotion remain explicitly outside this historical acceptance
+claim; those original fixed-seed demos show falling/stalling. The implementation and
 documented course deliverables pass final integration acceptance within that scope.
+
+The plot correction at merged commit `f1ba5f1fda010165f9715a4a7e746f143ac36657`
+also completed all 11 original cells in a fresh Colab session: **94 tests passed
+in 41.90 seconds**, all 60 records repeated exactly and the video decoded.
+See its [raw acceptance JSON](evidence/colab/2026-10-09-f1ba5f1.json).
+The later continuation experiment and its separate performance limits are
+described in [POLICY_CONTINUATION.md](POLICY_CONTINUATION.md).

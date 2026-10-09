@@ -1,0 +1,50 @@
+{
+  "seed_0_step_300000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_0_step_300000.pt",
+    "sha256": "2e91eaf6f07d009972ebec410fc0488e3af10bf4ab77a7d97711cf994721cf0b"
+  },
+  "seed_0_step_200000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_0_step_200000.pt",
+    "sha256": "5ad57c88233362eafc63858cfe19edfe5f575e782850ca63f40e4cc8f32b46db"
+  },
+  "seed_1_step_300000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_1_step_300000.pt",
+    "sha256": "87cac795cf45415fa19fc2f3fa1f08f785fbc3e4d711cc80845880316130b65a"
+  },
+  "seed_1_step_200000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_1_step_200000.pt",
+    "sha256": "01635a81e81ecbbac1ddcc51fd2c9b0377bc9dba58bb3378f6e90b0612f9c67f"
+  },
+  "seed_2_step_300000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_2_step_300000.pt",
+    "sha256": "3eb76c7d85dc7db3984e873b3c8233a78b2a35064f31e88ca75975b5a0d5463c"
+  },
+  "seed_2_step_200000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_2_step_200000.pt",
+    "sha256": "d9dab2aae77944b13077856f294ea0a551067907dda769b9e57fc86e22930a53"
+  },
+  "seed_1_step_150000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_1_step_150000.pt",
+    "sha256": "bba72a1518b8f9a0069ba60f5723ef0476b17377af6eda7965ffa01baedfc78e"
+  },
+  "seed_0_step_150000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_0_step_150000.pt",
+    "sha256": "a26f1f1efbd9a40f6459e17dd060ff694c21415a33c5327843b3d94b25be0f16"
+  },
+  "seed_1_step_500000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_1_step_500000.pt",
+    "sha256": "4ac332368acf15c3f9741a786e5837a68348e770dfc4f0fa2cc65e20fb8d294a"
+  },
+  "seed_2_step_500000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_2_step_500000.pt",
+    "sha256": "1d32e4d8eb3ebbb798246bfba32509ecbc2ec33c739baaa1f3151bd89f4c0ccc"
+  },
+  "seed_2_step_150000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_2_step_150000.pt",
+    "sha256": "1ce5a9e277b280f52548e81f4acc54a3e942f220100864c0611eeae73ad83eb7"
+  },
+  "seed_0_step_500000.pt": {
+    "url": "https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/policy-continuation-experiment/seed_0_step_500000.pt",
+    "sha256": "00c6657fdcc2d61fce992bb240df4a15f160c05f39ea189916d8f87e9e463bab"
+  }
+}
