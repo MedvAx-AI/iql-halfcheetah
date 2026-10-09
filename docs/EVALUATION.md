@@ -138,3 +138,12 @@ A short run can verify the pipeline while performing poorly. Numerical losses ar
 not returns. Record the actual updates, hardware, wall time and all failed runs with
 measured results; never infer improvement from passing tests. Clean Colab acceptance
 and final slide integration remain the lead/Person 5's integration work.
+# Platform scope
+
+Seeded results reproduce on the same platform/locked stack. Do not assume exact
+returns across macOS, Linux and Windows; label these separately. The notebook now
+replays all three published final checkpoints twice and compares all 60 episode
+records, then displays the current-platform aggregate. See
+[reproducibility investigation](REPRODUCIBILITY.md) and
+[Colab execution](COLAB_ACCEPTANCE.md).
+

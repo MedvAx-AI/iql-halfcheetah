@@ -27,10 +27,19 @@ include checksums and the original experiment snapshot.
 - [Contribution / Git workflow](CONTRIBUTING.md)
 - [Team tasks](https://github.com/MedvAx-AI/iql-halfcheetah/issues)
 - [Created branches, issues and milestones](docs/TEAM_HANDOFF.md)
-- [Notebook outline](notebooks/iql_halfcheetah.ipynb)
+- [Executable project notebook](notebooks/iql_halfcheetah.ipynb)
 - [Verification evidence](docs/VERIFICATION.md)
+- [One-click Colab execution and acceptance](docs/COLAB_ACCEPTANCE.md)
+- [Platform-scoped reproducibility](docs/REPRODUCIBILITY.md)
 
 ## Chosen stack
+
+[Open in Google Colab](https://colab.research.google.com/github/MedvAx-AI/iql-halfcheetah/blob/main/notebooks/iql_halfcheetah.ipynb)
+and select **Run all** on CPU. Setup installs the frozen Python 3.11 project kernel;
+Colab's host may use newer Python and different preloaded libraries. The notebook
+downloads the dataset, trains 1,000 smoke updates, replays the published checkpoints
+twice, records a video and runs the full tests. Allow several minutes. It displays
+current-platform measurements separately from the original Apple M3 Pro results.
 
 Python **3.11**; PyTorch **2.7.1**; Gymnasium **1.2.2**; MuJoCo **3.2.3**;
 Minari **0.5.3**. Exact direct pins live in `pyproject.toml`, complete dependency
@@ -103,14 +112,16 @@ src/iql_project/
   train.py                   Person 3: offline loop, JSONL, manifest, resume
   evaluate.py, reporting.py  Person 4: rollouts, baseline, recording and seed summaries
   cli.py                     check, train, evaluate and summarize
-notebooks/                   Person 5: valid, unexecuted narrative outline
+notebooks/                   theory, real-data training smoke, replay, video and tests
 tests/                       scaffold contract tests; role PRs add behavioral tests
 scripts/                     dependency/environment/notebook checks
+  notebook_runtime.py        persistent locked kernel for Colab/Jupyter cells
+  replay_published.py         verified checkpoints and exact same-platform episode replay
   check_dataset.py           Person 2: explicit download, statistics and recovery check
   run_experiments.py         Person 4: three-seed training/evaluation and optional videos
 data/                        local Minari cache guidance; data excluded from Git
 results/, videos/, checkpoints/   artifact conventions; generated files excluded
-docs/                        design, interfaces, verification, presentation outline
+docs/                        interfaces, verification, experiment evidence and slide content
 .github/                     CI, CODEOWNERS, issue and pull request templates
 ```
 
@@ -124,16 +135,17 @@ docs/                        design, interfaces, verification, presentation outl
 | Person 5 | `feature/notebook-presentation` | manual example + notebook + slides |
 
 Changes enter `main` through pull requests reviewed by @MedvAx-AI.
-Follow [CONTRIBUTING.md](CONTRIBUTING.md); CI is a scaffold gate, not evidence that
-an agent learns. Integrate in the order data → IQL/train → evaluation → final Colab.
+Follow [CONTRIBUTING.md](CONTRIBUTING.md). CI now executes the complete notebook and
+preserves its output and artifacts. Policy quality is assessed from measured returns
+and videos; passing tests alone does not demonstrate robust locomotion.
 
 ## Final Colab acceptance
 
-Person 5 completes the notebook; Person 1 opens a fresh runtime at a recorded
-commit and verifies Run all after the implementation and artifacts arrive.
-The placeholder is not that final check. Colab's Python version can change:
-record it and either use the Python 3.11 reference environment or validate and
-commit a deliberate support update before claiming reproducibility.
+Run all creates the locked Python 3.11 project kernel, downloads real data and
+checkpoints, and executes the complete integration checks. The final report records
+both Colab's host version and the project version, source commit, raw evaluation
+results and exact-repeat checks. See [execution and evidence](docs/COLAB_ACCEPTANCE.md)
+and [platform scope](docs/REPRODUCIBILITY.md).
 
 ## Sources and reuse
 

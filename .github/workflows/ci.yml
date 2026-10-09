@@ -38,3 +38,21 @@ jobs:
           uv run --frozen python scripts/check_notebook.py
       - name: Build wheel and source distribution
         run: uv run --frozen python -m build
+      - name: Execute complete notebook on CPU
+        env:
+          MUJOCO_GL: egl
+          MINARI_DATASETS_PATH: ${{ github.workspace }}/data/minari
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libgl1-mesa-dri
+          uv run --frozen jupyter nbconvert --to notebook --execute notebooks/iql_halfcheetah.ipynb --ExecutePreprocessor.timeout=1800 --output=/tmp/notebook-ci-executed.ipynb
+      - name: Preserve notebook verification artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: notebook-cpu-acceptance
+          path: |
+            /tmp/notebook-ci-executed.ipynb
+            results/notebook-replay-*/acceptance-evidence.zip
+            results/notebook-replay-*/pytest.log
+          if-no-files-found: warn

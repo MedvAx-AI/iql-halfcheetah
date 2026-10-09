@@ -62,6 +62,13 @@ Offline RL on HalfCheetah: learn from a **fixed** Minari dataset only, then cont
 
 Learning is **not monotonic** (seed 0 was higher at 50k). Plot: `docs/evidence/person-4/evaluation_returns.png`.
 
+The table is the **original macOS / Apple M3 Pro experiment**. Replaying the same
+checkpoint bytes on Colab Linux x86_64 produced **2187.95 ± 480.18** and random
+baseline **−302.78**. Run all computes fresh platform-specific results and verifies
+every episode against a repeat on that platform. Cross-platform exact equality is
+outside MuJoCo's guarantee; simulator-only probes demonstrate divergence from
+identical initial states/actions. See `docs/REPRODUCIBILITY.md` and the Colab evidence.
+
 ---
 
 ## Slide 8 — Demo, limitations, references
@@ -69,5 +76,9 @@ Learning is **not monotonic** (seed 0 was higher at 50k). Plot: `docs/evidence/p
 **Demo:** [seed 0](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_0_visible_floor_demo_seed_10000.mp4) · [seed 1](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_1_visible_floor_demo_seed_10000.mp4) · [seed 2](https://github.com/MedvAx-AI/iql-halfcheetah/releases/download/person4-evaluation-100k/person4_100k_seed_2_visible_floor_demo_seed_10000.mp4)
 
 **Honest takeaway:** returns beat random, but all three fixed demos **fall/stall** — not robust running.
+
+**Reproducible demo:** the Colab notebook performs real data loading, 1,000 fresh
+training updates, checkpoint retrieval/replay, MP4 recording and the full tests
+without manual setup. This training smoke is separate from the 100k experiment.
 
 **References:** Kostrikov et al. ICLR 2022; Minari medium-v0; Gymnasium HalfCheetah; `docs/INTERFACES.md`, `docs/EVALUATION.md`.
