@@ -2,7 +2,13 @@
 
 Five-person offline reinforcement learning course project led by **MedvAx-AI**.
 
-**Status: IQL training and Person 4 evaluation/video implemented.** The install,
+**Status: integrated course implementation accepted in fresh Colab.** All 11
+notebook code cells and 92 real-data tests passed on 9 October 2026. Setup,
+training smoke, checkpoint replay, plots and video run through **Run all**.
+See [tested commit/runtime and evidence](docs/COLAB_ACCEPTANCE.md) and
+[platform-specific reproducibility](docs/REPRODUCIBILITY.md).
+
+The install,
 configuration, Minari loader, learner, checkpoint/resume, seeded evaluation,
 random baseline, raw metrics, plots and MP4 recording are in place. Learning
 performance is assessed from measured artifacts; installation and loss checks

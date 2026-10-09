@@ -35,5 +35,34 @@ runtime clones current main. Colab may ask you to confirm running a GitHub noteb
 review the source, then use the normal Run anyway control.
 
 See [reproducibility scope](REPRODUCIBILITY.md) for separately labeled platform
-returns and the simulator-only investigation. Fresh-run verification evidence will
-be appended here after the committed notebook has completed in Google Colab.
+returns and the simulator-only investigation.
+
+## Verified fresh Colab Run all — 9 October 2026
+
+The committed notebook completed through Colab's **Run all** control in a new,
+default CPU session, without changing cells, installing packages manually,
+setting a revision override, mounting Drive or downgrading the host runtime.
+
+- Actual checkout: `e710dcb33621861c9c1d1e14735a3fd7a0beb8dd` (merged PR #13).
+- Colab host: Python 3.13.16; project kernel: Python 3.11.13.
+- Platform: Linux 6.6.122+, x86_64, glibc 2.39; frozen CPU dependency stack.
+- All **11 code cells** completed. No environment/dataset skip fallbacks.
+- Fresh download: **1,000,000 transitions**; dataset SHA-256 matched the published data.
+- Fresh training: **1,000 sequential updates**, with a saved checkpoint and log hashes.
+- Three published 100k checkpoints: archive and individual checkpoint hashes matched;
+  all **60 individual IQL/random episode records** matched their second replay exactly.
+- Current-platform aggregate: **2187.95 ± 480.18**, separately labeled from the
+  original macOS **2846.41 ± 786.80** result.
+- New MP4 recorded and decoded: 480×480, 50 seconds, 20 fps, first/middle/end frames.
+- Full real-data test suite: **92 passed in 42.29 seconds**, no warnings in this run.
+- Final cell reported `RUN ALL ACCEPTANCE PASSED`.
+
+[Raw acceptance JSON and all 60 episode records](evidence/colab/2026-10-09-e710dcb.json)
+and [the visible Colab result](evidence/colab/2026-10-09-run-all.jpg) are retained.
+See [evidence provenance](evidence/colab/README.md) for the difference between
+frontend evidence and the separate CI artifact bundle.
+
+The original three 100k training runs were replayed, not retrained. The default
+500k schedule and robust locomotion remain explicitly outside this acceptance
+claim; the fixed-seed demos still show falling/stalling. The implementation and
+documented course deliverables pass final integration acceptance within that scope.
