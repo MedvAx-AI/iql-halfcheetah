@@ -4,17 +4,17 @@ Source: the two-page course handout `RL_Project_Proposal_Presentation.pdf` suppl
 
 | Requirement | Prepared material | Status |
 |---|---|---|
-| Approximately 5-7 minutes | Recording guide: target 6:30, 711 narration words plus visual pauses | Prepared; verify actual duration in rehearsal |
-| Algorithm overview, 1-2 minutes | Slides 2-3: 1:40 | Ready |
+| Approximately 5-7 minutes | Recording guide: target 5:00, 370-word prompts plus visual explanation | Prepared; verify actual duration in rehearsal |
+| Algorithm overview, 1-2 minutes | Slides 2-3: 1:20 | Ready |
 | Assigned algorithm and classification | Slide 2: IQL, offline model-free actor-critic | Ready |
 | Main idea and update mechanism | Slides 2-3: expectile value, twin critics, advantage-weighted actor | Ready |
-| Environment description, 2-3 minutes | Slides 4-6: 2:40 | Ready |
+| Environment description, 2-3 minutes | Slides 4-5: 2:00, plus slide 6 protocol: 0:20 | Ready |
 | Observation/state space | Slide 4: 17 observed values, absolute x excluded | Ready |
 | Action space | Slide 4: six continuous joint torques in [-1, 1] | Ready |
 | Reward and agent goal | Slide 5: forward velocity minus effort cost | Ready |
 | Episode termination conditions | Slide 5: no natural termination, 1,000-step truncation | Ready |
 | Expected learned behavior | Slide 5: coordinated gait and sustained forward motion | Ready |
-| Motivation, 1-2 minutes | Slides 7-8: 1:50, including optional feasibility evidence | Ready |
+| Motivation, 1-2 minutes | Slides 7-8: 1:10, including optional feasibility evidence | Ready |
 | Why this environment and algorithm | Slide 7: continuous control, available offline data, measurable behavior | Ready |
 | Advantages, challenges and interesting aspects | Slides 7-8: advantage weighting, coverage, seed failures, physics versions | Ready |
 | Compatible trainable/evaluable combination | Slide 6: Minari dataset and dataset-matched environment | Ready |
@@ -43,4 +43,4 @@ An environment rollout MP4 is not the required narrated presentation video. Do n
 - [Minari medium dataset](https://minari.farama.org/datasets/mujoco/halfcheetah/medium-v0/)
 - Project implementation and configuration at commit `c372ec0423b81839956ec00dd7338700db8d3737`.
 
-Technical source URLs and the environment image provenance are also embedded in the PowerPoint speaker notes.
+PowerPoint speaker notes cite numbered references. Full source URLs and environment image provenance are in `SLIDE_SOURCES.md`.
