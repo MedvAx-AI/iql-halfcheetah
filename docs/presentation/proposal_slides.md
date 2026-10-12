@@ -1,134 +1,67 @@
-# IQL proposal slide source
+# Visual proposal slide source
 
-This source matches the eight-slide PPTX/PDF. Full narration is in `RECORDING_GUIDE.md` and PowerPoint speaker notes.
+The PPTX contains editable diagrams and charts. This source records each slideâ€™s purpose and concise narration.
 
 ## Slide 1: Implicit Q-Learning on HalfCheetah
 
-Suggested speaker: Aleksandr Medvedev. Time: 20 seconds.
+Introduce the title and team. Point to the actual HalfCheetah rollout image; hold briefly before advancing.
 
-RL project proposal
+Narration (20 seconds including pauses):
 
-**Team:** Aleksandr Medvedev, Nikita Shankin, Leo Vesin Ruslan Nasibullin, Telman Nuruzov
+Our project uses Implicit Q-Learning, or IQL, to learn continuous locomotion from recorded data. We will explain how the algorithm works, what HalfCheetah requires, and why this combination is suitable. The final slide shows measured feasibility evidence from our existing project.
 
-Sources:
+## Slide 2: Offline data, learned values, continuous control
 
-- https://github.com/MedvAx-AI/iql-halfcheetah
+Follow the upper diagram from recorded transitions to learner to policy. Point to the separate simulator evaluation path. Pause so the audience can follow the distinction.
 
-## Slide 2: IQL: learning from a fixed dataset
+Narration (50 seconds including pauses):
 
-Suggested speaker: Leo Vesin. Time: 45 seconds.
+IQL is offline, model-free actor-critic reinforcement learning. Training starts with a fixed dataset of observations, actions, rewards and next observations. The diagram separates learning from evaluation. IQL estimates values using recorded actions, then trains the actor to imitate stronger actions more heavily. It avoids explicitly maximizing the value backup over unseen actions. The simulator is used to evaluate the policy after training, rather than collect new training data. The policy produces six bounded torque controls at each step.
 
-**Classification:** Offline, model-free actor-critic RL
+## Slide 3: Three updates inside IQL
 
-**Training data:** Recorded transitions: state, action, reward, next state
+Explain each update in order. Point to 0.7, 0.99 and the weight cap of 100. Read the equations in words and allow brief pauses.
 
-**Main idea:** Learn values from dataset actions, then give better actions more weight when fitting the policy
+Narration (50 seconds including pauses):
 
-**Interaction:** Simulator rollouts evaluate the policy after training
+The learner has three updates. First, the state-value network uses an upper expectile of zero point seven, emphasizing higher-valued recorded actions. Second, the twin Q networks fit reward plus discounted next-state value, with discount zero point nine nine. Third, the actor fits recorded actions using advantage weights: the exponential of three times advantage, capped at one hundred. Advantage is the minimum target-critic estimate minus the state value. Three is inverse temperature. A tanh-squashed Gaussian keeps the actor's outputs within the action bounds. The repeated updates improve the policy without changing the fixed dataset.
 
-Sources:
+## Slide 4: 17 observations, 6 joint controls
 
-- https://arxiv.org/abs/2110.06169
-- https://github.com/ikostrikov/implicit_q_learning
+Point to the actual robot, then trace the 8 plus 9 observation split. Explain the three joints on each of two legs and the action bound. Leave time for the audience to inspect the image.
 
-## Slide 3: The IQL update
+Narration (65 seconds including pauses):
 
-Suggested speaker: Leo Vesin. Time: 55 seconds.
+HalfCheetah version five is a two-dimensional locomotion task in Gymnasium and MuJoCo. The robot has front and back legs. Its seventeen-value observation combines eight position or angle values with nine velocities. These describe the robot's pose and motion. Absolute horizontal position is excluded from the default observation. The action has six continuous torque components: thigh, shin and foot on each leg. Every component lies between minus one and one. The policy must use the current observation to coordinate these joints into a useful gait. The image comes from a real project rollout, while the color split shows the observation structure.
 
-**State value V:** Upper expectile regression on dataset Q-values Expectile = 0.7
+## Slide 5: Forward motion earns reward
 
-**Twin critics Q1, Q2:** Target = reward + 0.99 × (1 - terminated) × V(next state)
+Follow the numerical reward example from speed through effort cost to net reward. Trace the 0-to-50-second episode line. Emphasize that a fall does not end the episode.
 
-**Policy:** Advantage = min(target Q1, target Q2) - V Weighted log-likelihood of recorded actions
+Narration (55 seconds including pauses):
 
-**Policy weight:** min(exp(3 × advantage), 100) Tanh-squashed Gaussian actions stay within [-1, 1]
+The default reward is forward velocity minus zero point one times squared control effort. The numerical example is illustrative: at five meters per second, six action components of zero point five produce a cost of zero point fifteen, so the reward is four point eight five. This encourages efficient forward motion. The agent should learn a gait that maintains speed throughout the episode. A fall does not terminate HalfCheetah. The time limit is one thousand steps, about fifty simulated seconds. A failed policy can remain on the ground until that limit. Time-limit truncation still preserves next-state value bootstrapping in our learning targets.
 
-Sources:
+## Slide 6: A reproducible training and evaluation plan
 
-- https://arxiv.org/abs/2110.06169
-- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/src/iql_project/iql.py
-- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/configs/halfcheetah.toml
+Point to the large dataset and budget numbers, then follow the training-to-selection-to-final-test timeline. Distinguish training seeds from evaluation episode seeds.
 
-## Slide 4: HalfCheetah-v5: observation and action
+Narration (40 seconds including pauses):
 
-Suggested speaker: Nikita Shankin. Time: 65 seconds.
+We use Minari's HalfCheetah medium dataset: one million transitions from one thousand episodes. Our protocol trains three seeds for five hundred thousand offline updates each, with batches of two hundred fifty-six. We evaluate checkpoints over ten episodes, compare raw return with a random baseline, then test the selected checkpoint on separate final episode seeds. We retain full videos and separate episode variation from training-seed variation. MuJoCo three point two point three matches the recorded dataset runtime.
 
-**Environment:** 2D locomotion in Gymnasium and MuJoCo
+## Slide 7: Why this algorithm fits this task
 
-**Observation: 17 values:** 8 position / angle values + 9 velocities Absolute horizontal position is excluded
+Follow the three algorithm-to-task matches. Explain the challenges along the bottom. Point to the team ownership line and name each personâ€™s contribution without reading all slide labels aloud.
 
-**Action: 6 values:** Continuous torques for front and back leg joints Each action component lies in [-1, 1]
+Narration (60 seconds including pauses):
 
-Sources:
+The match has three practical reasons. Continuous joint torques fit a continuous actor directly. Available offline locomotion data makes training feasible without a new data-collection stage. Finally, numerical returns and visible movement make evaluation understandable. IQL's advantage weighting can favor better recorded actions, but improvement is something to test, not assume. The main challenges are limited coverage, policy variation and simulator differences. We address them with multiple training seeds, pinned dependencies and full-episode evaluation. Aleksandr owns integration, Nikita the environment and data, Leo IQL, Ruslan evaluation, and Telman the notebook and presentation. Our shared outputs are a reproducible Colab, checkpoints, plots and complete rollouts.
 
-- https://gymnasium.farama.org/environments/mujoco/half_cheetah/
-- Image: project rollout, seed 1, 500k checkpoint, evaluation seed 10000, frame at 10 seconds. https://github.com/MedvAx-AI/iql-halfcheetah/releases/tag/policy-continuation-experiment
+## Slide 8: Learning progress and final test
 
-## Slide 5: Reward, goal and episode ending
+Trace all three measured curves. Point to the separate final-test return and stationary-tail counts. Say the other-seed limitation clearly, then pause on the closing slide.
 
-Suggested speaker: Nikita Shankin. Time: 55 seconds.
+Narration (50 seconds including pauses):
 
-**Reward:** Forward velocity - 0.1 × sum(action²)
-
-**Agent goal:** Sustained forward motion with efficient torque use
-
-**Episode ending:** No natural termination, including after a fall Time limit: 1,000 steps, about 50 simulated seconds
-
-**Learning target:** A coordinated gait that maintains speed Time-limit truncation preserves value bootstrapping
-
-Sources:
-
-- https://gymnasium.farama.org/environments/mujoco/half_cheetah/
-- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/src/iql_project/iql.py
-
-## Slide 6: Offline data and evaluation protocol
-
-Suggested speaker: Ruslan Nasibullin. Time: 40 seconds.
-
-**Dataset:** Minari mujoco/halfcheetah/medium-v0 1,000 episodes and 1,000,000 transitions
-
-**Training budget:** 500,000 offline updates per training seed Seeds 0, 1 and 2, batch size 256
-
-**Evaluation:** Intermediate checkpoints, 10 episodes per run Raw return, uniform random baseline and full rollouts
-
-**Reproducibility:** Dataset-matched environment, MuJoCo 3.2.3 Separate checkpoint selection and final test episodes
-
-Sources:
-
-- https://minari.farama.org/datasets/mujoco/halfcheetah/medium-v0/
-- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/docs/POLICY_CONTINUATION.md
-
-## Slide 7: Why IQL and HalfCheetah fit
-
-Suggested speaker: Telman Nuruzov. Time: 50 seconds.
-
-**Continuous control:** The policy learns bounded joint torques directly
-
-**Available offline data:** A fixed locomotion dataset supports IQL training without collecting new training rollouts
-
-**Learning opportunity:** Advantage weights emphasize better recorded actions Improvement over the behavior policy is a hypothesis
-
-**Practical environment:** Standard benchmark with measurable returns and visible locomotion behavior
-
-Sources:
-
-- https://arxiv.org/abs/2110.06169
-- https://minari.farama.org/datasets/mujoco/halfcheetah/medium-v0/
-- https://gymnasium.farama.org/environments/mujoco/half_cheetah/
-
-## Slide 8: Challenges and final-project plan
-
-Suggested speaker: Aleksandr Medvedev. Time: 50 seconds.
-
-**Coverage and stability:** Limited data coverage and seed-dependent failures Multiple seeds, separate final tests and full videos
-
-**Reliable comparisons:** Physics versions and checkpoint selection affect results Pinned dependencies and documented evaluation seeds
-
-**Team ownership:** Aleksandr: integration and reproducibility Nikita: environment and dataset; Leo: IQL Ruslan: evaluation; Telman: notebook and presentation
-
-**Final deliverables:** Reproducible Colab, checkpoints, evaluation plots and a complete policy demonstration
-
-Sources:
-
-- https://github.com/MedvAx-AI/iql-halfcheetah
-- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/docs/POLICY_CONTINUATION.md
+This chart shows recorded Colab validation means for all three training seeds at five measured checkpoints. Each point averages ten episodes. Performance varies across seeds, and the lines do not claim values between measurements. The selected seed-one policy reached a raw return of about fifteen thousand two hundred sixty on ten separate final-test episodes, compared with about two thousand twenty-six at one hundred thousand updates. Long stationary tails decreased from ten out of ten episodes to zero out of ten. Those tails mean at least five seconds of very slow movement at the end. Other training seeds still fail, and these samples do not guarantee success everywhere. The evidence supports feasibility while preserving the limits. Thank you.
