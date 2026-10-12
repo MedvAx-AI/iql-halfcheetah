@@ -2,10 +2,11 @@
 
 | File | Purpose |
 |---|---|
-| [`IQL_RL_Proposal.pptx`](IQL_RL_Proposal.pptx) | Visual eight-slide proposal with editable diagrams, two editable charts, concise narration and source URLs |
+| [`IQL_RL_Proposal.pptx`](IQL_RL_Proposal.pptx) | Visual eight-slide proposal with editable diagrams, two editable charts, concise speaker notes and numbered references |
 | [`IQL_RL_Proposal.pdf`](IQL_RL_Proposal.pdf) | PDF version of the same slides |
 | [`RECORDING_GUIDE.md`](RECORDING_GUIDE.md) | Timed narration and step-by-step instructions for recording and submitting |
 | [`RECORDING_SCRIPT.txt`](RECORDING_SCRIPT.txt) | Plain text narration for reading during rehearsal |
+| [`SLIDE_SOURCES.md`](SLIDE_SOURCES.md) | Full references and measurement definitions |
 | [`REQUIREMENTS_CHECKLIST.md`](REQUIREMENTS_CHECKLIST.md) | Coverage of the supplied course proposal requirements |
 | [`make_submission_zip.ps1`](make_submission_zip.ps1) | Packages one slide file with your finished narrated recording |
 | [`proposal_slides.md`](proposal_slides.md) | Text source of the eight-slide proposal |
