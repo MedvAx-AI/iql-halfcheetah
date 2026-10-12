@@ -16,6 +16,7 @@ Suggested speakers reflect the project roles. One person can deliver all slides.
 
 
 
+
 ## Timing and what to show
 
 | Slide | Time | Speaker | Visual |
@@ -140,5 +141,3 @@ The materials archive contains preparation files only. Do not submit it unchange
 - [Project repository](https://github.com/MedvAx-AI/iql-halfcheetah)
 - [Colab notebook](https://colab.research.google.com/github/MedvAx-AI/iql-halfcheetah/blob/main/notebooks/iql_halfcheetah.ipynb)
 - [Requirements coverage](REQUIREMENTS_CHECKLIST.md)
-
-
