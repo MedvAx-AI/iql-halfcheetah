@@ -44,3 +44,5 @@ An environment rollout MP4 is not the required narrated presentation video. Do n
 - Project implementation and configuration at commit `c372ec0423b81839956ec00dd7338700db8d3737`.
 
 PowerPoint speaker notes cite numbered references. Full source URLs and environment image provenance are in `SLIDE_SOURCES.md`.
+
+The quality revision retains all eight slides, both editable charts and the same measured values. The PDF includes native text, vector graphics and embedded fonts. Environment images are fresh local 1920 x 1080 simulator renders; their provenance appears in `SLIDE_SOURCES.md`.

@@ -3,7 +3,7 @@
 | File | Purpose |
 |---|---|
 | [`IQL_RL_Proposal.pptx`](IQL_RL_Proposal.pptx) | Visual eight-slide proposal with editable diagrams, two editable charts, concise speaker notes and numbered references |
-| [`IQL_RL_Proposal.pdf`](IQL_RL_Proposal.pdf) | PDF version of the same slides |
+| [`IQL_RL_Proposal.pdf`](IQL_RL_Proposal.pdf) | Vector PDF of the same slides with embedded fonts and selectable text |
 | [`RECORDING_GUIDE.md`](RECORDING_GUIDE.md) | Timed narration and step-by-step instructions for recording and submitting |
 | [`RECORDING_SCRIPT.txt`](RECORDING_SCRIPT.txt) | Plain text narration for reading during rehearsal |
 | [`SLIDE_SOURCES.md`](SLIDE_SOURCES.md) | Full references and measurement definitions |
@@ -23,3 +23,5 @@ Telman Nuruzov owns the presentation and notebook narrative. Aleksandr Medvedev 
 The supplied handout accepts a PPTX or PDF and requires a narrated screen recording in the same ZIP. Record the presentation yourself using the guide, then create the final ZIP and upload it to Moodle. A robot rollout video alone does not meet that recording requirement.
 
 `final_slides.md` is a separate historical 100k final-project outline. It is not the new proposal submission deck and its original measurements should not be confused with the later continuation experiments documented in `docs/POLICY_CONTINUATION.md`.
+
+The quality revision uses larger text and chart labels, native vector diagrams and charts, and fresh 1920 x 1080 simulator images. The PDF retains text and vector graphics instead of flattening whole slides into screenshots. The 370-word narration and five-minute schedule remain unchanged. Image provenance is retained in `assets/provenance.json`.

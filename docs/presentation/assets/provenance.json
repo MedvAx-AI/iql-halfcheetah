@@ -1,0 +1,16 @@
+{
+  "checkpoint_sha256": "4ac332368acf15c3f9741a786e5837a68348e770dfc4f0fa2cc65e20fb8d294a",
+  "checkpoint_step": 500000,
+  "training_seed": 1,
+  "evaluation_seed": 10000,
+  "frames_at_steps": [
+    0,
+    400
+  ],
+  "image_size": [
+    1920,
+    1080
+  ],
+  "mujoco": "3.2.3",
+  "source": "Fresh local simulator render; not a captured Colab video frame. Render dimensions/camera only were changed."
+}
