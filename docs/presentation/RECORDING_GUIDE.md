@@ -1,143 +1,107 @@
-# Recording guide: visual IQL proposal
+# Five-minute recording guide
 
-Target: **6:30**. The shortened narration has **711 words**, down from 930. Use a natural pace and the suggested pauses to let the audience read the diagrams. At about 130 words per minute, narration takes roughly 5:28; pauses and slide changes bring it near 6:30. Rehearse once and keep the actual video within 5-7 minutes.
+**Target: 5:00.** The short narration is 370 words, down from 711. Use the notes as prompts: explain and point to the visuals within each slide’s allotted time. Reading the text alone may finish early. Rehearse with a timer and follow the slide-change schedule rather than rushing. The schedule includes visual explanation and transitions.
 
-Show the full-screen slides and speak the text under **Say**. Instructions under **Show** are actions, not narration. The charts are recorded project evidence, not measurements from a fresh notebook run. Numerical reward values on slide 5 are explicitly an illustrative example.
-
-Suggested speakers reflect the project roles. One person can deliver all slides. Speaker changes count toward the total time.
+Sections: introduction 0:10; algorithm 1:20; environment and protocol 2:20; motivation and feasibility 1:10. The environment description itself has two full minutes on slides 4-5.
 
 ## Before recording
 
-1. Open the deck and review all eight slides. Use the speaker notes or this guide on a second screen, on paper, or in presenter view.
-2. Open Zoom or your screen recorder. Select the slide-show window or presentation screen and enable microphone audio. The handout requires slides and verbal explanation; it does not specify a webcam requirement.
-3. Make a short audio-and-screen test. Play it back and check that the narration is audible and the slide text is readable. Share the slide-show screen rather than presenter notes.
-4. Rehearse once with a timer. Start on slide 1. Advance through the slides at the times below. Do not run training or notebook installation during this recording.
-5. Start the actual recording, enter full-screen slide-show mode, and speak the narration below. Keep the cursor still except when pointing to an item.
+1. Open the PPTX in slide-show mode and keep this guide or presenter notes beside you.
+2. Select the slide-show window in your recorder and enable microphone audio. Make a short test and check playback.
+3. Rehearse once. One presenter can deliver all slides; any speaker changes must fit within five minutes.
+4. Record the slides and spoken explanation. You do not need to run Colab or training during the presentation.
 
+## Slide schedule
 
+| Slide | Time | Suggested speaker |
+|---|---|---|
+| 1 | 0:00-0:10 | Aleksandr Medvedev |
+| 2 | 0:10-0:45 | Leo Vesin |
+| 3 | 0:45-1:30 | Leo Vesin |
+| 4 | 1:30-2:30 | Nikita Shankin |
+| 5 | 2:30-3:30 | Nikita Shankin |
+| 6 | 3:30-3:50 | Ruslan Nasibullin |
+| 7 | 3:50-4:30 | Telman Nuruzov |
+| 8 | 4:30-5:00 | Aleksandr Medvedev |
 
+## Short narration and what to show
 
-## Timing and what to show
+### Slide 1: Implicit Q-Learning on HalfCheetah (0:00-0:10)
 
-| Slide | Time | Speaker | Visual |
-|---|---|---|---|
-| 1 | 0:00-0:20 | Aleksandr Medvedev | Implicit Q-Learning on HalfCheetah |
-| 2 | 0:20-1:10 | Leo Vesin | Offline data, learned values, continuous control |
-| 3 | 1:10-2:00 | Leo Vesin | Three updates inside IQL |
-| 4 | 2:00-3:05 | Nikita Shankin | 17 observations, 6 joint controls |
-| 5 | 3:05-4:00 | Nikita Shankin | Forward motion earns reward |
-| 6 | 4:00-4:40 | Ruslan Nasibullin | A reproducible training and evaluation plan |
-| 7 | 4:40-5:40 | Telman Nuruzov | Why this algorithm fits this task |
-| 8 | 5:40-6:30 | Aleksandr Medvedev | Learning progress and final test |
-
-Section totals: introduction 0:20; algorithm slides 2-3 1:40; environment and protocol slides 4-6 2:40; motivation and feasibility slides 7-8 1:50.
-
-Final training results are optional in the proposal. Slide 8 adds already-measured feasibility evidence because this revision includes metrics and graphs. It does not replace any required proposal topic.
-
-## Step-by-step narration
-
-### Slide 1: Implicit Q-Learning on HalfCheetah (0:00-0:20)
-
-**Show:** Introduce the title and team. Point to the actual HalfCheetah rollout image; hold briefly before advancing.
+**Show:** Introduce the title and team. Advance at 0:10.
 
 **Say:**
 
-Our project uses Implicit Q-Learning, or IQL, to learn continuous locomotion from recorded data. We will explain how the algorithm works, what HalfCheetah requires, and why this combination is suitable. The final slide shows measured feasibility evidence from our existing project.
+Our project uses Implicit Q-Learning to teach HalfCheetah efficient locomotion from recorded data.
 
-**Timing:** Allow approximately 1 seconds for pointing, pauses and changing slides. Advance near 0:20.
+### Slide 2: Offline data, learned values, continuous control (0:10-0:45)
 
-### Slide 2: Offline data, learned values, continuous control (0:20-1:10)
-
-**Show:** Follow the upper diagram from recorded transitions to learner to policy. Point to the separate simulator evaluation path. Pause so the audience can follow the distinction.
+**Show:** Trace data, learner, policy, then the separate evaluation path.
 
 **Say:**
 
-IQL is offline, model-free actor-critic reinforcement learning. Training starts with a fixed dataset of observations, actions, rewards and next observations. The diagram separates learning from evaluation. IQL estimates values using recorded actions, then trains the actor to imitate stronger actions more heavily. It avoids explicitly maximizing the value backup over unseen actions. The simulator is used to evaluate the policy after training, rather than collect new training data. The policy produces six bounded torque controls at each step.
+IQL is offline, model-free actor-critic learning. It trains on fixed transitions, then gives better recorded actions more weight when fitting the policy. The actor outputs six continuous torques. Simulator rollouts evaluate the learned policy, without collecting new training data.
 
-**Timing:** Allow approximately 14 seconds for pointing, pauses and changing slides. Advance near 1:10.
+### Slide 3: Three updates inside IQL (0:45-1:30)
 
-### Slide 3: Three updates inside IQL (1:10-2:00)
-
-**Show:** Explain each update in order. Point to 0.7, 0.99 and the weight cap of 100. Read the equations in words and allow brief pauses.
+**Show:** Point to each update and its highlighted parameter. Explain the formulas in words.
 
 **Say:**
 
-The learner has three updates. First, the state-value network uses an upper expectile of zero point seven, emphasizing higher-valued recorded actions. Second, the twin Q networks fit reward plus discounted next-state value, with discount zero point nine nine. Third, the actor fits recorded actions using advantage weights: the exponential of three times advantage, capped at one hundred. Advantage is the minimum target-critic estimate minus the state value. Three is inverse temperature. A tanh-squashed Gaussian keeps the actor's outputs within the action bounds. The repeated updates improve the policy without changing the fixed dataset.
+IQL updates three components. The value network uses expectile 0.7 to favor stronger recorded actions. Twin critics fit reward plus discounted next-state value, with discount 0.99. The actor imitates actions using advantage weights, capped at 100. Advantage is minimum target Q minus V. The weight uses inverse temperature 3. A tanh-squashed Gaussian keeps actions bounded.
 
-**Timing:** Allow approximately 7 seconds for pointing, pauses and changing slides. Advance near 2:00.
+### Slide 4: 17 observations, 6 joint controls (1:30-2:30)
 
-### Slide 4: 17 observations, 6 joint controls (2:00-3:05)
-
-**Show:** Point to the actual robot, then trace the 8 plus 9 observation split. Explain the three joints on each of two legs and the action bound. Leave time for the audience to inspect the image.
+**Show:** Point to pose versus velocity, then identify each leg and its three joints. Use the image to explain the observation-action relationship.
 
 **Say:**
 
-HalfCheetah version five is a two-dimensional locomotion task in Gymnasium and MuJoCo. The robot has front and back legs. Its seventeen-value observation combines eight position or angle values with nine velocities. These describe the robot's pose and motion. Absolute horizontal position is excluded from the default observation. The action has six continuous torque components: thigh, shin and foot on each leg. Every component lies between minus one and one. The policy must use the current observation to coordinate these joints into a useful gait. The image comes from a real project rollout, while the color split shows the observation structure.
+HalfCheetah-v5 is a two-dimensional locomotion task in Gymnasium and MuJoCo. Its 17 observations contain eight pose values and nine velocities. Absolute horizontal position is excluded. Six actions control the thigh, shin and foot on both legs. Each torque lies between minus one and one. The agent must coordinate these joints into a sustained forward gait.
 
-**Timing:** Allow approximately 19 seconds for pointing, pauses and changing slides. Advance near 3:05.
+### Slide 5: Forward motion earns reward (2:30-3:30)
 
-### Slide 5: Forward motion earns reward (3:05-4:00)
-
-**Show:** Follow the numerical reward example from speed through effort cost to net reward. Trace the 0-to-50-second episode line. Emphasize that a fall does not end the episode.
+**Show:** Explain the example, point to speed and effort, then trace the full episode line. Emphasize the difference between a fall and the time limit.
 
 **Say:**
 
-The default reward is forward velocity minus zero point one times squared control effort. The numerical example is illustrative: at five meters per second, six action components of zero point five produce a cost of zero point fifteen, so the reward is four point eight five. This encourages efficient forward motion. The agent should learn a gait that maintains speed throughout the episode. A fall does not terminate HalfCheetah. The time limit is one thousand steps, about fifty simulated seconds. A failed policy can remain on the ground until that limit. Time-limit truncation still preserves next-state value bootstrapping in our learning targets.
+Reward is forward velocity minus 0.1 times squared action effort. In this example, speed contributes 5 and control costs 0.15, giving 4.85 reward. The goal is efficient, sustained forward motion. A fall does not end HalfCheetah: the episode lasts 1,000 steps, about 50 simulated seconds. Time-limit truncation preserves next-state value bootstrapping. We inspect complete episodes to detect falls and stalls.
 
-**Timing:** Allow approximately 8 seconds for pointing, pauses and changing slides. Advance near 4:00.
+### Slide 6: A reproducible training and evaluation plan (3:30-3:50)
 
-### Slide 6: A reproducible training and evaluation plan (4:00-4:40)
-
-**Show:** Point to the large dataset and budget numbers, then follow the training-to-selection-to-final-test timeline. Distinguish training seeds from evaluation episode seeds.
+**Show:** Point to the three large numbers and trace train, select, final test.
 
 **Say:**
 
-We use Minari's HalfCheetah medium dataset: one million transitions from one thousand episodes. Our protocol trains three seeds for five hundred thousand offline updates each, with batches of two hundred fifty-six. We evaluate checkpoints over ten episodes, compare raw return with a random baseline, then test the selected checkpoint on separate final episode seeds. We retain full videos and separate episode variation from training-seed variation. MuJoCo three point two point three matches the recorded dataset runtime.
+We use one million Minari transitions. Three training seeds receive 500k updates each. Checkpoints use ten evaluation episodes and a random baseline. The selected policy then uses separate final-test seeds. We retain full videos and pin MuJoCo 3.2.3 for reproducibility.
 
-**Timing:** Allow approximately 5 seconds for pointing, pauses and changing slides. Advance near 4:40.
+### Slide 7: Why this algorithm fits this task (3:50-4:30)
 
-### Slide 7: Why this algorithm fits this task (4:40-5:40)
-
-**Show:** Follow the three algorithm-to-task matches. Explain the challenges along the bottom. Point to the team ownership line and name each personâ€™s contribution without reading all slide labels aloud.
+**Show:** Connect each environment property to IQL. Point to the risks and team ownership line.
 
 **Say:**
 
-The match has three practical reasons. Continuous joint torques fit a continuous actor directly. Available offline locomotion data makes training feasible without a new data-collection stage. Finally, numerical returns and visible movement make evaluation understandable. IQL's advantage weighting can favor better recorded actions, but improvement is something to test, not assume. The main challenges are limited coverage, policy variation and simulator differences. We address them with multiple training seeds, pinned dependencies and full-episode evaluation. Aleksandr owns integration, Nikita the environment and data, Leo IQL, Ruslan evaluation, and Telman the notebook and presentation. Our shared outputs are a reproducible Colab, checkpoints, plots and complete rollouts.
+HalfCheetah fits IQL because it has continuous controls, available offline data, and measurable locomotion. Advantage weighting can favor better actions, but improvement must be tested. Main challenges are data coverage, seed failures and physics differences. We address them with multiple seeds, pinned dependencies and full-episode evaluation. Team responsibilities and deliverables appear here.
 
-**Timing:** Allow approximately 12 seconds for pointing, pauses and changing slides. Advance near 5:40.
+### Slide 8: Learning progress and final test (4:30-5:00)
 
-### Slide 8: Learning progress and final test (5:40-6:30)
-
-**Show:** Trace all three measured curves. Point to the separate final-test return and stationary-tail counts. Say the other-seed limitation clearly, then pause on the closing slide.
+**Show:** Trace the measured curves, point to the independent test metrics, and state the limitation.
 
 **Say:**
 
-This chart shows recorded Colab validation means for all three training seeds at five measured checkpoints. Each point averages ten episodes. Performance varies across seeds, and the lines do not claim values between measurements. The selected seed-one policy reached a raw return of about fifteen thousand two hundred sixty on ten separate final-test episodes, compared with about two thousand twenty-six at one hundred thousand updates. Long stationary tails decreased from ten out of ten episodes to zero out of ten. Those tails mean at least five seconds of very slow movement at the end. Other training seeds still fail, and these samples do not guarantee success everywhere. The evidence supports feasibility while preserving the limits. Thank you.
-
-**Finish:** Let the audience inspect the graph, state the limitation, then stop recording.
+The curves show measured means for all three training seeds, with ten episodes per point. On ten separate final-test episodes, selected seed 1 achieved about 15,260 return versus 2,026 at 100k. Long stationary tails decreased from ten episodes to zero. Other training seeds still fail, so these results demonstrate feasibility rather than guaranteed success. Thank you.
 
 ## After recording
 
-1. Save/export the recording as `IQL_Proposal_Recording.mp4` if possible.
-2. Play the whole recording. Check that all eight slides and the spoken explanation appear, the sound is clear, and the duration is 5-7 minutes.
-3. Create a folder named with your assigned group name, for example `YourGroup_RL_Proposal`. Put **one** presentation file (`IQL_RL_Proposal.pptx` or `.pdf`) and your actual narrated recording inside it.
-4. Compress those two files into `YourGroup_RL_Proposal.zip`. If your group has no assigned label, `IQL_HalfCheetah_RL_Proposal.zip` is a descriptive default. The handout gives a suggested naming pattern, not an assigned group number.
-5. Open the ZIP and confirm both files are present. Upload the ZIP to the correct Moodle assignment and check its submission confirmation.
+1. Play the recording and confirm that all slides and clear narration appear. Aim for five minutes and avoid finishing under the handout’s five-minute minimum.
+2. Put the PPTX or PDF and your actual narrated recording into one ZIP. The preparation materials ZIP is not the final submission.
+3. Upload the final ZIP to Moodle and check the confirmation.
 
-### Optional Windows ZIP helper
-
-Keep `make_submission_zip.ps1` beside the PPTX and PDF. Open PowerShell in that folder and run:
+Optional Windows helper (keep it beside the slide files):
 
 ```powershell
 .\make_submission_zip.ps1 -RecordingPath "C:\path\IQL_Proposal_Recording.mp4" -GroupName "YourGroup"
 ```
 
-Replace the example recording path and group name with yours. Add `-PresentationFormat pdf` if you choose the PDF. The helper refuses to overwrite an existing ZIP. It checks that a non-empty video file exists; you must still check its content and duration.
+Replace the example path and group name. Add `-PresentationFormat pdf` to use PDF. The helper does not check narration or duration, so check the video yourself.
 
-The materials archive contains preparation files only. Do not submit it unchanged. A standalone HalfCheetah rollout video does not replace the required narrated presentation recording.
-
-## Useful links
-
-- [Project repository](https://github.com/MedvAx-AI/iql-halfcheetah)
-- [Colab notebook](https://colab.research.google.com/github/MedvAx-AI/iql-halfcheetah/blob/main/notebooks/iql_halfcheetah.ipynb)
-- [Requirements coverage](REQUIREMENTS_CHECKLIST.md)
+Technical references and measurement definitions: [SLIDE_SOURCES.md](SLIDE_SOURCES.md). Sources are not part of the spoken script.

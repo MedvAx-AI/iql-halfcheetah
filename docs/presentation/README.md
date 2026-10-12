@@ -2,16 +2,19 @@
 
 | File | Purpose |
 |---|---|
-| [`IQL_RL_Proposal.pptx`](IQL_RL_Proposal.pptx) | Visual eight-slide proposal with editable diagrams, two editable charts, concise narration and source URLs |
+| [`IQL_RL_Proposal.pptx`](IQL_RL_Proposal.pptx) | Visual eight-slide proposal with editable diagrams, two editable charts, concise speaker notes and numbered references |
 | [`IQL_RL_Proposal.pdf`](IQL_RL_Proposal.pdf) | PDF version of the same slides |
 | [`RECORDING_GUIDE.md`](RECORDING_GUIDE.md) | Timed narration and step-by-step instructions for recording and submitting |
 | [`RECORDING_SCRIPT.txt`](RECORDING_SCRIPT.txt) | Plain text narration for reading during rehearsal |
+| [`SLIDE_SOURCES.md`](SLIDE_SOURCES.md) | Full references and measurement definitions |
 | [`REQUIREMENTS_CHECKLIST.md`](REQUIREMENTS_CHECKLIST.md) | Coverage of the supplied course proposal requirements |
 | [`make_submission_zip.ps1`](make_submission_zip.ps1) | Packages one slide file with your finished narrated recording |
 | [`proposal_slides.md`](proposal_slides.md) | Text source of the eight-slide proposal |
 | [`final_slides.md`](final_slides.md) | Final deck with measured 100k results, video links and limitations |
 
-The proposal targets 6 minutes 30 seconds, including time to inspect the diagrams. It covers algorithm overview (1:40), environment and protocol (2:40), and motivation with measured feasibility evidence (1:50), plus a 20-second introduction. Narration is 711 words, approximately 24% shorter than the first version. Rehearse once and keep the actual recording within 5-7 minutes.
+The proposal now targets **5 minutes**, including explanations of the visuals. It covers algorithm overview (1:20), environment and protocol (2:20), and motivation with feasibility evidence (1:10), plus a 10-second introduction. Short narration is **370 words**, approximately 48% shorter than the previous 711-word version. Notes are prompts, not a guarantee of duration: rehearse with a timer and follow the slide schedule, explaining the visuals rather than reading the text alone. The environment description itself receives two minutes on slides 4-5.
+
+Detailed citations are in [`SLIDE_SOURCES.md`](SLIDE_SOURCES.md), with short numbered references in the PowerPoint notes. Sources are not spoken narration.
 
 The visual revision includes a learning-flow diagram, an editable 8/9 observation breakdown, an illustrative reward calculation, a training/selection/final-test timeline, and measured curves for all three training seeds. Slide 8 separates the reused validation curves from the independent final-test mean and stationary-tail counts. Means have no confidence bands; other training seeds still fail. Numerical reward values on slide 5 are an example, not an observed episode. Metrics are recorded evidence rather than a fresh replay.
 
