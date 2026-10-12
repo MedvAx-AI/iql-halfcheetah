@@ -26,7 +26,7 @@ Sections: introduction 0:10; algorithm 1:20; environment and protocol 2:20; moti
 
 ## Short narration and what to show
 
-### Slide 1: Implicit Q-Learning on HalfCheetah (0:00-0:10)
+### Slide 1: Implicit Q-Learning (0:00-0:10)
 
 **Show:** Introduce the title and team. Advance at 0:10.
 
@@ -34,7 +34,7 @@ Sections: introduction 0:10; algorithm 1:20; environment and protocol 2:20; moti
 
 Our project uses Implicit Q-Learning to teach HalfCheetah efficient locomotion from recorded data.
 
-### Slide 2: Offline data, learned values, continuous control (0:10-0:45)
+### Slide 2: How IQL learns from recorded data (0:10-0:45)
 
 **Show:** Trace data, learner, policy, then the separate evaluation path.
 
@@ -42,7 +42,7 @@ Our project uses Implicit Q-Learning to teach HalfCheetah efficient locomotion f
 
 IQL is offline, model-free actor-critic learning. It trains on fixed transitions, then gives better recorded actions more weight when fitting the policy. The actor outputs six continuous torques. Simulator rollouts evaluate the learned policy, without collecting new training data.
 
-### Slide 3: Three updates inside IQL (0:45-1:30)
+### Slide 3: The three IQL updates (0:45-1:30)
 
 **Show:** Point to each update and its highlighted parameter. Explain the formulas in words.
 
@@ -50,7 +50,7 @@ IQL is offline, model-free actor-critic learning. It trains on fixed transitions
 
 IQL updates three components. The value network uses expectile 0.7 to favor stronger recorded actions. Twin critics fit reward plus discounted next-state value, with discount 0.99. The actor imitates actions using advantage weights, capped at 100. Advantage is minimum target Q minus V. The weight uses inverse temperature 3. A tanh-squashed Gaussian keeps actions bounded.
 
-### Slide 4: 17 observations, 6 joint controls (1:30-2:30)
+### Slide 4: HalfCheetah observations and controls (1:30-2:30)
 
 **Show:** Point to pose versus velocity, then identify each leg and its three joints. Use the image to explain the observation-action relationship.
 
@@ -58,7 +58,7 @@ IQL updates three components. The value network uses expectile 0.7 to favor stro
 
 HalfCheetah-v5 is a two-dimensional locomotion task in Gymnasium and MuJoCo. Its 17 observations contain eight pose values and nine velocities. Absolute horizontal position is excluded. Six actions control the thigh, shin and foot on both legs. Each torque lies between minus one and one. The agent must coordinate these joints into a sustained forward gait.
 
-### Slide 5: Forward motion earns reward (2:30-3:30)
+### Slide 5: Reward and episode length (2:30-3:30)
 
 **Show:** Explain the example, point to speed and effort, then trace the full episode line. Emphasize the difference between a fall and the time limit.
 
@@ -66,7 +66,7 @@ HalfCheetah-v5 is a two-dimensional locomotion task in Gymnasium and MuJoCo. Its
 
 Reward is forward velocity minus 0.1 times squared action effort. In this example, speed contributes 5 and control costs 0.15, giving 4.85 reward. The goal is efficient, sustained forward motion. A fall does not end HalfCheetah: the episode lasts 1,000 steps, about 50 simulated seconds. Time-limit truncation preserves next-state value bootstrapping. We inspect complete episodes to detect falls and stalls.
 
-### Slide 6: A reproducible training and evaluation plan (3:30-3:50)
+### Slide 6: Training and evaluation (3:30-3:50)
 
 **Show:** Point to the three large numbers and trace train, select, final test.
 
@@ -74,7 +74,7 @@ Reward is forward velocity minus 0.1 times squared action effort. In this exampl
 
 We use one million Minari transitions. Three training seeds receive 500k updates each. Checkpoints use ten evaluation episodes and a random baseline. The selected policy then uses separate final-test seeds. We retain full videos and pin MuJoCo 3.2.3 for reproducibility.
 
-### Slide 7: Why this algorithm fits this task (3:50-4:30)
+### Slide 7: Why HalfCheetah fits IQL (3:50-4:30)
 
 **Show:** Connect each environment property to IQL. Point to the risks and team ownership line.
 
@@ -82,7 +82,7 @@ We use one million Minari transitions. Three training seeds receive 500k updates
 
 HalfCheetah fits IQL because it has continuous controls, available offline data, and measurable locomotion. Advantage weighting can favor better actions, but improvement must be tested. Main challenges are data coverage, seed failures and physics differences. We address them with multiple seeds, pinned dependencies and full-episode evaluation. Team responsibilities and deliverables appear here.
 
-### Slide 8: Learning progress and final test (4:30-5:00)
+### Slide 8: Learning curves and final test (4:30-5:00)
 
 **Show:** Trace the measured curves, point to the independent test metrics, and state the limitation.
 
