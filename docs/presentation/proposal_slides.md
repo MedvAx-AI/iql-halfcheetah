@@ -1,81 +1,134 @@
-# Proposal slides — Person 5 (5–6 slides)
+# IQL proposal slide source
 
-Use this as speaker notes / paste into Google Slides / PowerPoint. Keep one slide per section.
+This source matches the eight-slide PPTX/PDF. Full narration is in `RECORDING_GUIDE.md` and PowerPoint speaker notes.
 
----
+## Slide 1: Implicit Q-Learning on HalfCheetah
 
-## Slide 1 — Title / problem
+Suggested speaker: Aleksandr Medvedev. Time: 20 seconds.
 
-**Implicit Q-Learning on HalfCheetah-v5**  
-Offline RL course project · 5-person team · lead MedvAx-AI
+RL project proposal
 
-**Problem.** Learn a strong continuous-control policy from a **fixed** offline dataset, then run it in Gymnasium HalfCheetah-v5 — without collecting new environment interactions during training.
+**Team:** Aleksandr Medvedev, Nikita Shankin, Leo Vesin Ruslan Nasibullin, Telman Nuruzov
 
----
+Sources:
 
-## Slide 2 — Environment
+- https://github.com/MedvAx-AI/iql-halfcheetah
 
-**HalfCheetah-v5** (Gymnasium / MuJoCo)
+## Slide 2: IQL: learning from a fixed dataset
 
-- Observation: `(17,)` continuous body/joint state
-- Action: `(6,)` continuous torques in `[-1, 1]`
-- Goal: run forward efficiently
-- Reward: forward progress − control cost
+Suggested speaker: Leo Vesin. Time: 45 seconds.
 
-Why it fits IQL: continuous actions, standard offline locomotion benchmark, dataset and eval env share the same spec when recovered via Minari.
+**Classification:** Offline, model-free actor-critic RL
 
----
+**Training data:** Recorded transitions: state, action, reward, next state
 
-## Slide 3 — Offline dataset
+**Main idea:** Learn values from dataset actions, then give better actions more weight when fitting the policy
 
-**Minari:** `mujoco/halfcheetah/medium-v0` (from HalfCheetah-v5)
+**Interaction:** Simulator rollouts evaluate the policy after training
 
-- Transitions: `(s, a, r, s', terminated, truncated)`
-- Medium behavior policy — neither random nor expert
-- Training uses **only** this fixed buffer (Person 2: load, normalize, sample)
+Sources:
 
-Key contract: termination masks Q bootstrap; truncation does **not**.
+- https://arxiv.org/abs/2110.06169
+- https://github.com/ikostrikov/implicit_q_learning
 
----
+## Slide 3: The IQL update
 
-## Slide 4 — IQL idea
+Suggested speaker: Leo Vesin. Time: 55 seconds.
 
-Standard offline Q-learning can overestimate **out-of-distribution** actions (`max` over unseen `a'`).
+**State value V:** Upper expectile regression on dataset Q-values Expectile = 0.7
 
-**IQL** (Kostrikov et al., ICLR 2022):
+**Twin critics Q1, Q2:** Target = reward + 0.99 × (1 - terminated) × V(next state)
 
-1. **V** — upper expectile regression on **dataset** actions  
-2. **Q** — backup with `V(s')`, no max over actions  
-3. **π** — advantage-weighted regression on dataset actions  
+**Policy:** Advantage = min(target Q1, target Q2) - V Weighted log-likelihood of recorded actions
 
-Project convention: **β = inverse temperature** (`inverse_temperature=3.0`), weights capped by `max_weight=100`.
+**Policy weight:** min(exp(3 × advantage), 100) Tanh-squashed Gaussian actions stay within [-1, 1]
 
----
+Sources:
 
-## Slide 5 — Pipeline / team plan
+- https://arxiv.org/abs/2110.06169
+- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/src/iql_project/iql.py
+- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/configs/halfcheetah.toml
 
-```text
-Dataset (P2) → IQL learner (P3) → Train → Eval + video (P4)
-                      ↓
-              Notebook + slides (P5) → Colab acceptance (P1)
-```
+## Slide 4: HalfCheetah-v5: observation and action
 
-| Person | Deliverable |
-|---|---|
-| 1 | Repo, interfaces, final Colab |
-| 2 | Env + Minari loader |
-| 3 | Networks, losses, train |
-| 4 | Metrics, plots, MP4 |
-| 5 | Theory, manual example, slides |
+Suggested speaker: Nikita Shankin. Time: 65 seconds.
 
----
+**Environment:** 2D locomotion in Gymnasium and MuJoCo
 
-## Slide 6 — Intended evaluation / demo
+**Observation: 17 values:** 8 position / angle values + 9 velocities Absolute horizontal position is excluded
 
-- Train offline for configured steps (`configs/halfcheetah.toml`)
-- Evaluate raw episode returns vs random baseline (multi-seed)
-- Record HalfCheetah MP4 demo
-- Notebook: offline RL explanation + **one worked numerical transition**
-- Fresh Google Colab `Run all` at a recorded commit
+**Action: 6 values:** Continuous torques for front and back leg joints Each action component lies in [-1, 1]
 
-*(Measured numbers and video link come in the final slides after M2–M3.)*
+Sources:
+
+- https://gymnasium.farama.org/environments/mujoco/half_cheetah/
+- Image: project rollout, seed 1, 500k checkpoint, evaluation seed 10000, frame at 10 seconds. https://github.com/MedvAx-AI/iql-halfcheetah/releases/tag/policy-continuation-experiment
+
+## Slide 5: Reward, goal and episode ending
+
+Suggested speaker: Nikita Shankin. Time: 55 seconds.
+
+**Reward:** Forward velocity - 0.1 × sum(action²)
+
+**Agent goal:** Sustained forward motion with efficient torque use
+
+**Episode ending:** No natural termination, including after a fall Time limit: 1,000 steps, about 50 simulated seconds
+
+**Learning target:** A coordinated gait that maintains speed Time-limit truncation preserves value bootstrapping
+
+Sources:
+
+- https://gymnasium.farama.org/environments/mujoco/half_cheetah/
+- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/src/iql_project/iql.py
+
+## Slide 6: Offline data and evaluation protocol
+
+Suggested speaker: Ruslan Nasibullin. Time: 40 seconds.
+
+**Dataset:** Minari mujoco/halfcheetah/medium-v0 1,000 episodes and 1,000,000 transitions
+
+**Training budget:** 500,000 offline updates per training seed Seeds 0, 1 and 2, batch size 256
+
+**Evaluation:** Intermediate checkpoints, 10 episodes per run Raw return, uniform random baseline and full rollouts
+
+**Reproducibility:** Dataset-matched environment, MuJoCo 3.2.3 Separate checkpoint selection and final test episodes
+
+Sources:
+
+- https://minari.farama.org/datasets/mujoco/halfcheetah/medium-v0/
+- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/docs/POLICY_CONTINUATION.md
+
+## Slide 7: Why IQL and HalfCheetah fit
+
+Suggested speaker: Telman Nuruzov. Time: 50 seconds.
+
+**Continuous control:** The policy learns bounded joint torques directly
+
+**Available offline data:** A fixed locomotion dataset supports IQL training without collecting new training rollouts
+
+**Learning opportunity:** Advantage weights emphasize better recorded actions Improvement over the behavior policy is a hypothesis
+
+**Practical environment:** Standard benchmark with measurable returns and visible locomotion behavior
+
+Sources:
+
+- https://arxiv.org/abs/2110.06169
+- https://minari.farama.org/datasets/mujoco/halfcheetah/medium-v0/
+- https://gymnasium.farama.org/environments/mujoco/half_cheetah/
+
+## Slide 8: Challenges and final-project plan
+
+Suggested speaker: Aleksandr Medvedev. Time: 50 seconds.
+
+**Coverage and stability:** Limited data coverage and seed-dependent failures Multiple seeds, separate final tests and full videos
+
+**Reliable comparisons:** Physics versions and checkpoint selection affect results Pinned dependencies and documented evaluation seeds
+
+**Team ownership:** Aleksandr: integration and reproducibility Nikita: environment and dataset; Leo: IQL Ruslan: evaluation; Telman: notebook and presentation
+
+**Final deliverables:** Reproducible Colab, checkpoints, evaluation plots and a complete policy demonstration
+
+Sources:
+
+- https://github.com/MedvAx-AI/iql-halfcheetah
+- https://github.com/MedvAx-AI/iql-halfcheetah/blob/c372ec0423b81839956ec00dd7338700db8d3737/docs/POLICY_CONTINUATION.md
