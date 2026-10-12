@@ -31,6 +31,7 @@ include checksums and the original experiment snapshot.
 
 ## Start here
 
+- [Proposal presentation, recording script and submission checklist](docs/presentation/README.md)
 - [Project plan, role deliverables and roadmap](IQL_5_Person_Project_Plan.md)
 - [Person 2 environment, preprocessing and measured dataset statistics](docs/ENVIRONMENT_DATASET.md)
 - [Person 3 IQL losses, likelihood, training and checkpoints](docs/IQL.md)
