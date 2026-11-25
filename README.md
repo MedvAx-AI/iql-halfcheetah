@@ -31,6 +31,8 @@ include checksums and the original experiment snapshot.
 
 ## Start here
 
+- [Final defense walkthrough and demo cues](docs/presentation/FINAL_DEFENSE.md)
+
 - [Proposal presentation, recording script and submission checklist](docs/presentation/README.md)
 - [Project plan, role deliverables and roadmap](IQL_5_Person_Project_Plan.md)
 - [Person 2 environment, preprocessing and measured dataset statistics](docs/ENVIRONMENT_DATASET.md)
